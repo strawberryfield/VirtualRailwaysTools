@@ -58,6 +58,11 @@ namespace CasaSoft.vrt
             height = Convert.ToDouble(result[2], provider);
         }
 
+        public virtual string Text()
+        {
+            return string.Format("Lat: {0}\tLon: {1}\tH: {2}\t{3}", new object[] { lat, lon, height, name });
+        }
+
     }
 
     /// <summary>

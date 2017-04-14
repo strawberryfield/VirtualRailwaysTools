@@ -98,5 +98,17 @@ namespace CasaSoft.vrt
             }
         }
         #endregion
+
+        #region textdump
+        public virtual string DumpPlacemarks()
+        {
+            string ret = "";
+            foreach (placemark pm in listaPm)
+            {
+                ret += pm.Text() + "\n";
+            }
+            return ret;
+        }
+        #endregion
     }
 }
