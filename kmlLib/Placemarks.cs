@@ -58,11 +58,53 @@ namespace CasaSoft.vrt
             height = Convert.ToDouble(result[2], provider);
         }
 
+        /// <summary>
+        /// Format data for tabubular text output
+        /// </summary>
+        /// <returns></returns>
         public virtual string Text()
         {
             return string.Format("Lat: {0}\tLon: {1}\tH: {2}\t{3}", new object[] { lat, lon, height, name });
         }
 
+        /// <summary>
+        /// Format data for FlyTo output with placemark name
+        /// </summary>
+        /// <returns></returns>
+        public virtual string FlyTo()
+        {
+            return FlyTo(name);
+        }
+
+        /// <summary>
+        /// Format data for FlyTo with specified text
+        /// </summary>
+        /// <param name="text">Text label for target</param>
+        /// <returns></returns>
+        public virtual string FlyTo(string text)
+        {
+            return string.Format(CultureInfo.InvariantCulture, "\"{0}\",{1},{2}", new object[] { text, lon, lat });
+        }
+
+        /// <summary>
+        /// Format data for Markers output with placemark name
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Mkr()
+        {
+            return Mkr(name);
+        }
+
+        /// <summary>
+        /// Format data for Markers with specified text
+        /// </summary>
+        /// <param name="text">Text label for target</param>
+        /// <returns></returns>
+        public virtual string Mkr(string text)
+        {
+            return string.Format(CultureInfo.InvariantCulture, "Marker ( {1} {2} {0} 2 )", 
+                new object[] { text.Replace(' ', '_'), lon, lat });
+        }
     }
 
     /// <summary>
@@ -106,6 +148,53 @@ namespace CasaSoft.vrt
             }
         }
 
+        /// <summary>
+        /// Dumps all placemarks data for tabular text
+        /// </summary>
+        /// <param name="mode">'Path' or 'Polygon'</param>
+        /// <returns></returns>
+        public virtual string Text(string mode)
+        {
+            string ret = string.Format("{1}: {0}\n", name, mode);
+            foreach (placemark pm in nodi)
+            {
+                ret += pm.Text() + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps alla placemarks data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string FlyTo()
+        {
+            string ret = "";
+            int counter = 0;
+            foreach (placemark pm in nodi)
+            {
+                counter++;
+                ret += pm.FlyTo(string.Format("{0}_{1}", name, counter)) + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps alla placemarks data for Markers
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Mkr()
+        {
+            string ret = "";
+            int counter = 0;
+            foreach (placemark pm in nodi)
+            {
+                counter++;
+                ret += pm.Mkr(string.Format("{0}_{1}", name, counter)) + "\n";
+            }
+            return ret;
+        }
+
     }
 
     /// <summary>
@@ -122,6 +211,15 @@ namespace CasaSoft.vrt
         {
             String coords = pmdata.SelectSingleNode("ns:LineString", ns).SelectSingleNode("ns:coordinates", ns).InnerText;
             base.setData(pmdata, ns, coords);
+        }
+
+        /// <summary>
+        /// Dump all points of the path
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Text()
+        {
+            return base.Text("Path");
         }
     }
 
@@ -143,6 +241,16 @@ namespace CasaSoft.vrt
                 SelectSingleNode("ns:coordinates", ns).InnerText;
             base.setData(pmdata, ns, coords);
         }
+
+        /// <summary>
+        /// Dump all points of the poly
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Text()
+        {
+            return base.Text("Polygon");
+        }
+
     }
 
 }

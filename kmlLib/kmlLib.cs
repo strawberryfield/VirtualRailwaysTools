@@ -100,7 +100,11 @@ namespace CasaSoft.vrt
         #endregion
 
         #region textdump
-        public virtual string DumpPlacemarks()
+        /// <summary>
+        /// Dumps all placemarks data for tabular text
+        /// </summary>
+        /// <returns></returns>
+        public virtual string TextPlacemarks()
         {
             string ret = "";
             foreach (placemark pm in listaPm)
@@ -109,6 +113,123 @@ namespace CasaSoft.vrt
             }
             return ret;
         }
+
+        /// <summary>
+        /// Dumps all path data for tabular text
+        /// </summary>
+        /// <returns></returns>
+        public virtual string TextPaths()
+        {
+            string ret = "";
+            foreach (path pa in listaPath)
+            {
+                ret += pa.Text() + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all polygons data for tabular text
+        /// </summary>
+        /// <returns></returns>
+        public virtual string TextPolys()
+        {
+            string ret = "";
+            foreach (poly po in listaPoly)
+            {
+                ret += po.Text() + "\n";
+            }
+            return ret;
+        }
         #endregion
+
+        #region flytodump
+        /// <summary>
+        /// Dumps all placemarks data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string FlyToPlacemarks()
+        {
+            string ret = "";
+            foreach (placemark pm in listaPm)
+            {
+                ret += pm.FlyTo() + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all path data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string FlyToPaths()
+        {
+            string ret = "";
+            foreach (path pa in listaPath)
+            {
+                ret += pa.FlyTo();
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all polygons data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string FlyToPolys()
+        {
+            string ret = "";
+            foreach (poly po in listaPoly)
+            {
+                ret += po.FlyTo();
+            }
+            return ret;
+        }
+        #endregion
+
+        #region mkrdump
+        /// <summary>
+        /// Dumps all placemarks data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string MkrPlacemarks()
+        {
+            string ret = "";
+            foreach (placemark pm in listaPm)
+            {
+                ret += pm.Mkr() + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all path data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string MkrPaths()
+        {
+            string ret = "";
+            foreach (path pa in listaPath)
+            {
+                ret += pa.Mkr();
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all polygons data for FlyTo
+        /// </summary>
+        /// <returns></returns>
+        public virtual string MkrPolys()
+        {
+            string ret = "";
+            foreach (poly po in listaPoly)
+            {
+                ret += po.Mkr();
+            }
+            return ret;
+        }
+        #endregion
+
     }
 }

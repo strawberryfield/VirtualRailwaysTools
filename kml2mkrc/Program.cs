@@ -85,14 +85,47 @@ namespace CasaSoft.vrt
             PrintBanner();
 
             // Scan for input files
-            string ret = string.Empty;
+            string ret;
+            switch (mode)
+            {
+                case outMode.Text:
+                    ret = string.Empty;
+                    break;
+                case outMode.Markers:
+                    ret = "SIMISA@@@@@@@@@@JINX0I0t______\n\n";
+                    break;
+                case outMode.Flyto:
+                    ret = "\"MSTSFlyTo 2.0\"\n";
+                    break;
+                default:
+                    ret = string.Empty;
+                    break;
+            }
+
             for (int i = options.Optind; i < options.Argv.Length; i++)
             {
                 string inputfile = options.Argv[i];
                 if(File.Exists(inputfile))
                 {
                     kmlLib kml = new kmlLib(inputfile);
-                    ret += kml.DumpPlacemarks();
+                    switch (mode)
+                    {
+                        case outMode.Text:
+                            ret += kml.TextPlacemarks();
+                            ret += kml.TextPaths();
+                            ret += kml.TextPolys();
+                            break;
+                        case outMode.Markers:
+                            ret += kml.MkrPlacemarks();
+                            ret += kml.MkrPaths();
+                            ret += kml.MkrPolys();
+                            break;
+                        case outMode.Flyto:
+                            ret += kml.FlyToPlacemarks();
+                            break;
+                        default:
+                            break;
+                    }
                 }
                 else
                 {
@@ -106,9 +139,19 @@ namespace CasaSoft.vrt
             }
             else
             {
-                using (StreamWriter file = new StreamWriter(outputfile))
+                if (mode == outMode.Markers)
                 {
+                    using (StreamWriter file = new StreamWriter(outputfile, false, Encoding.Unicode))
+                    {
                         file.WriteLine(ret);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter file = new StreamWriter(outputfile))
+                    {
+                        file.WriteLine(ret);
+                    }
                 }
             }
                 
