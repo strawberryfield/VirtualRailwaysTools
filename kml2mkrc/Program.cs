@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Globalization;
 using System.Text;
 using Gnu.Getopt;
+using NGettext;
 
 namespace CasaSoft.vrt
 {
@@ -14,11 +15,15 @@ namespace CasaSoft.vrt
         const string prgVer = "2.0";
         const string prgYears = "2017";
 
+        static ICatalog catalog;
+
         enum outMode { Text, Markers, Flyto }
         static bool nobanner;
 
         static void Main(string[] args)
         {
+            catalog = new Catalog(prgName, "./locale");
+
             string outputfile = String.Empty;
             outMode mode = outMode.Text;
             nobanner = false;
@@ -44,12 +49,12 @@ namespace CasaSoft.vrt
                         break;
 
                     case ':':
-                        Console.Error.WriteLine("Doh! You need an argument for option '{0}'", (char)options.getopt());
+                        Console.Error.WriteLine(catalog.GetString("Doh! You need an argument for option '{0}'", (char)options.getopt()));
                         Environment.Exit(1);
                         break;
 
                     case '?':
-                        Console.Error.WriteLine("The option '{0}' is not valid", options.Argv[options.Optind - 1]);
+                        Console.Error.WriteLine(catalog.GetString("The option '{0}' is not valid", options.Argv[options.Optind - 1]));
                         Environment.Exit(1);
                         break;
 
@@ -78,7 +83,7 @@ namespace CasaSoft.vrt
             // checks if inputfile is specified
             if(options.Argv.Length <= options.Optind)
             {
-                Console.Error.WriteLine("No input file specified.");
+                Console.Error.WriteLine(catalog.GetString("No input file specified."));
                 Environment.Exit(2);
             }
 
@@ -129,7 +134,7 @@ namespace CasaSoft.vrt
                 }
                 else
                 {
-                    Console.Error.WriteLine("File '{0}' not found: ignoring.", inputfile);
+                    Console.Error.WriteLine(catalog.GetString("File '{0}' not found: ignoring.", inputfile));
                 }
             }
 
@@ -175,21 +180,16 @@ namespace CasaSoft.vrt
         static void PrintHelp()
         {
             PrintBanner();
-            Console.Error.WriteLine(@"
-Usage:
-{0} [options] inputfile [-o | --output_file outputfile]
-If outputfile is omitted data are written to stdout
-
-Options:
---text      Prints tabular data (default)
---markers   Write a MSTS .mkr file
---flyto     Write data for FlyTo program
-
---nobanner  Suppress banner
-
-{0} -h | --help
-Prints this help.
-", prgName);
+            Console.Error.WriteLine(catalog.GetString("\nUsage:"));
+            Console.Error.WriteLine(catalog.GetString("{0} [options] inputfile [-o | --output_file outputfile]", prgName));
+            Console.Error.WriteLine(catalog.GetString("\nIf outputfile is omitted data are written to stdout"));
+            Console.Error.WriteLine(catalog.GetString("\nOptions:"));
+            Console.Error.WriteLine(catalog.GetString("--text      Prints tabular data (default)"));
+            Console.Error.WriteLine(catalog.GetString("--markers   Write a MSTS .mkr file"));
+            Console.Error.WriteLine(catalog.GetString("--flyto     Write data for FlyTo program"));
+            Console.Error.WriteLine(catalog.GetString("\n--nobanner  Suppress banner"));
+            Console.Error.WriteLine(catalog.GetString("\n{0} -h | --help", prgName));
+            Console.Error.WriteLine(catalog.GetString("Prints this help."));
         }
 
     }
