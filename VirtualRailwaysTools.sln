@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kmlLib", "kmlLib\kmlLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlForms", "KmlForms\KmlForms.csproj", "{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkr", "kml2mkr\kml2mkr.csproj", "{AB082F4A-DB68-4C58-8DF9-D325A495EF60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
