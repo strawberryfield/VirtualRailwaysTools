@@ -59,12 +59,21 @@ namespace CasaSoft.vrt
         }
 
         /// <summary>
-        /// Format data for tabubular text output
+        /// Format data for tabubular text output with placemark name
         /// </summary>
         /// <returns></returns>
         public virtual string Text()
         {
-            return string.Format("Lat: {0}\tLon: {1}\tH: {2}\t{3}", new object[] { lat, lon, height, name });
+            return Text(name);
+        }
+        /// <summary>
+        /// Format data for tabubular text output
+        /// </summary>
+        /// <param name="text">Text label for target</param>
+        /// <returns></returns>
+        public virtual string Text(string text)
+        {
+            return string.Format(CultureInfo.InvariantCulture, "Lat: {0}\tLon: {1}\tH: {2}\t\"{3}\"", new object[] { lat, lon, height, text });
         }
 
         /// <summary>

@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Reflection;
+using System.Diagnostics;
 using System.IO;
 using System.Configuration;
 using System.Globalization;
@@ -11,23 +12,33 @@ namespace CasaSoft.vrt
 {
     class Program
     {
-        const string prgName = "kml2mkrc";
+        static string prgName;
         const string prgVer = "2.0";
-        const string prgYears = "2017";
-
+        static Assembly assembly;
         static ICatalog catalog;
 
-        enum outMode { Text, Markers, Flyto }
         static bool nobanner;
 
         static void Main(string[] args)
         {
-            catalog = new Catalog(prgName, "./locale");
+            // Get infos from assembly
+            assembly = Assembly.GetExecutingAssembly();
+            prgName = assembly.GetName().Name;
 
+            // locales management
+            string locale = ConfigurationManager.AppSettings["locale"];
+
+            if(string.IsNullOrWhiteSpace(locale)) 
+                catalog = new Catalog(prgName, "./locale");
+            else
+                catalog = new Catalog(prgName, "./locale", new CultureInfo(locale));
+
+            // status vars
             string outputfile = String.Empty;
             outMode mode = outMode.Text;
             nobanner = false;
 
+            // GNU Getopt options
             LongOpt[] longopts = new LongOpt[6];
             longopts[0] = new LongOpt("help", Argument.No, null, 'h');
             longopts[1] = new LongOpt("nobanner", Argument.No, null, 1000);
@@ -36,7 +47,7 @@ namespace CasaSoft.vrt
             longopts[4] = new LongOpt("markers", Argument.No, null, 1002);
             longopts[5] = new LongOpt("flyto", Argument.No, null, 1003);
 
-            Getopt options = new Getopt("kml2mkrc", args, "ho:", longopts);
+            Getopt options = new Getopt(prgName, args, "ho:", longopts);
 
             int c;
             while ((c = options.getopt()) != -1)
@@ -90,47 +101,15 @@ namespace CasaSoft.vrt
             PrintBanner();
 
             // Scan for input files
-            string ret;
-            switch (mode)
-            {
-                case outMode.Text:
-                    ret = string.Empty;
-                    break;
-                case outMode.Markers:
-                    ret = "SIMISA@@@@@@@@@@JINX0I0t______\n\n";
-                    break;
-                case outMode.Flyto:
-                    ret = "\"MSTSFlyTo 2.0\"\n";
-                    break;
-                default:
-                    ret = string.Empty;
-                    break;
-            }
+            Converter conv = new Converter(mode);
+            string ret = conv.fileHead();            
 
             for (int i = options.Optind; i < options.Argv.Length; i++)
             {
                 string inputfile = options.Argv[i];
                 if(File.Exists(inputfile))
                 {
-                    kmlLib kml = new kmlLib(inputfile);
-                    switch (mode)
-                    {
-                        case outMode.Text:
-                            ret += kml.TextPlacemarks();
-                            ret += kml.TextPaths();
-                            ret += kml.TextPolys();
-                            break;
-                        case outMode.Markers:
-                            ret += kml.MkrPlacemarks();
-                            ret += kml.MkrPaths();
-                            ret += kml.MkrPolys();
-                            break;
-                        case outMode.Flyto:
-                            ret += kml.FlyToPlacemarks();
-                            break;
-                        default:
-                            break;
-                    }
+                    ret += conv.fileBody(inputfile);
                 }
                 else
                 {
@@ -138,28 +117,7 @@ namespace CasaSoft.vrt
                 }
             }
 
-            if(string.IsNullOrEmpty(outputfile))
-            {
-                Console.WriteLine(ret);
-            }
-            else
-            {
-                if (mode == outMode.Markers)
-                {
-                    using (StreamWriter file = new StreamWriter(outputfile, false, Encoding.Unicode))
-                    {
-                        file.WriteLine(ret);
-                    }
-                }
-                else
-                {
-                    using (StreamWriter file = new StreamWriter(outputfile))
-                    {
-                        file.WriteLine(ret);
-                    }
-                }
-            }
-                
+            conv.fileOut(ret, outputfile);
         }
 
         /// <summary>
@@ -169,8 +127,9 @@ namespace CasaSoft.vrt
         {
             if (!nobanner)
             {
+                var versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
                 Console.Error.WriteLine("CasaSoft {0} v.{1}", prgName, prgVer);
-                Console.Error.WriteLine("copyright (c) {0} Roberto Ceccarelli - CasaSoft", prgYears);
+                Console.Error.WriteLine(versionInfo.LegalCopyright);
             }
         }
 

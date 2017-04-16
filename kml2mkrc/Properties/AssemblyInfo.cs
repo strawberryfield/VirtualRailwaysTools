@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("kml2mkrc")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CasaSoft kml2mkrc")]
+[assembly: AssemblyDescription("Covertitore kml /kmz per MSTS")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("kml2mkrc")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("CasaSoft")]
+[assembly: AssemblyProduct("Virtual Railways Tools")]
+[assembly: AssemblyCopyright("Copyright ©  2017 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
