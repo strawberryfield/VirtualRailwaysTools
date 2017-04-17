@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kmlLib", "kmlLib\kmlLib.csproj", "{8E618B05-4E4B-4B9A-B66A-05D9776B9C37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlLib", "kmlLib\KmlLib.csproj", "{8E618B05-4E4B-4B9A-B66A-05D9776B9C37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject

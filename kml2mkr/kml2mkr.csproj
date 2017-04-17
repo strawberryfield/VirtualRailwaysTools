@@ -103,9 +103,9 @@
       <Project>{f6f5b4c7-8ce0-4150-b5a0-a3d39e2c31f4}</Project>
       <Name>KmlForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\kmlLib\kmlLib.csproj">
+    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
       <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
-      <Name>kmlLib</Name>
+      <Name>KmlLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

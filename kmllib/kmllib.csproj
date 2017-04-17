@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converter.cs" />
-    <Compile Include="kmlLib.cs" />
+    <Compile Include="KmlLib.cs" />
     <Compile Include="Placemarks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

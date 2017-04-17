@@ -26,7 +26,7 @@ using ICSharpCode.SharpZipLib.Zip;
 
 namespace CasaSoft.vrt
 {
-    public class kmlLib
+    public class KmlLib
     {
         #region properties
         /// <summary>
@@ -49,7 +49,7 @@ namespace CasaSoft.vrt
         /// Constructor
         /// </summary>
         /// <param name="Filename">.kml or .kmz file</param>
-        public kmlLib(string Filename)
+        public KmlLib(string Filename)
         {
             Stream kmlStream = null;
             XmlDocument Kml;
@@ -244,6 +244,35 @@ namespace CasaSoft.vrt
                 ret += po.Mkr();
             }
             return ret;
+        }
+        #endregion
+
+        #region counters
+        /// <summary>
+        /// Returns number of placemarks in file
+        /// </summary>
+        /// <returns></returns>
+        public int CountPlacemarks()
+        {
+            return listaPm.Count;
+        }
+
+        /// <summary>
+        /// Returns number of paths in file
+        /// </summary>
+        /// <returns></returns>
+        public int CountPaths()
+        {
+            return listaPath.Count;
+        }
+
+        /// <summary>
+        /// Returns number of polygons in file
+        /// </summary>
+        /// <returns></returns>
+        public int CountPolys()
+        {
+            return listaPoly.Count;
         }
         #endregion
 

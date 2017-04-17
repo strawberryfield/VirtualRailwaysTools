@@ -64,5 +64,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
+      <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
+      <Name>KmlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

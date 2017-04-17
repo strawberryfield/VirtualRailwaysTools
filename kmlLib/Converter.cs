@@ -78,7 +78,7 @@ namespace CasaSoft.vrt
         public string fileBody(string filename)
         {
             string ret = "";
-            kmlLib kml = new kmlLib(filename);
+            KmlLib kml = new KmlLib(filename);
             switch (mode)
             {
                 case outMode.Text:
