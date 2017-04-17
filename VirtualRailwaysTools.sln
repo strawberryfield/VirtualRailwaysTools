@@ -27,6 +27,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc_src", "doc_src", "{B27F
 		doc_src\Makefile = doc_src\Makefile
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9E8B15D8-B769-4E37-9268-9260F51125D1}"
+	ProjectSection(SolutionItems) = preProject
+		doc_src\images\cover_image.png = doc_src\images\cover_image.png
+		doc_src\images\logo.png = doc_src\images\logo.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,5 +58,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E8B15D8-B769-4E37-9268-9260F51125D1} = {B27FB787-6DFD-43EF-8053-DC74D384392B}
 	EndGlobalSection
 EndGlobal
