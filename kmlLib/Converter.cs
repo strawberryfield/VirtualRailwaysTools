@@ -77,8 +77,17 @@ namespace CasaSoft.vrt
         /// <returns></returns>
         public string fileBody(string filename)
         {
+            return fileBody(new KmlLib(filename));
+        }
+
+        /// <summary>
+        /// Returns file body
+        /// </summary>
+        /// <param name="kml">kmlLib istance to process</param>
+        /// <returns></returns>
+        public string fileBody(KmlLib kml)
+        {
             string ret = "";
-            KmlLib kml = new KmlLib(filename);
             switch (mode)
             {
                 case outMode.Text:

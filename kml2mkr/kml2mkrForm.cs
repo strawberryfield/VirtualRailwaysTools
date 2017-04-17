@@ -34,6 +34,53 @@ namespace CasaSoft.vrt.forms
         public kml2mkrForm()
         {
             InitializeComponent();
+            Text = "CasaSoft kml2mkr v.2.0";
+        }
+
+        protected override void initSaveDlg()
+        {
+            base.initSaveDlg();
+            if(rdMkr.Checked)
+            {
+                saveFileDialog.Title = "Create MSTS markes file";
+                saveFileDialog.Filter = "Markers file (*.mkr)|*.mkr|All files|*.*";
+                saveFileDialog.DefaultExt = ".mkr";
+            }
+            else if(rdFlyTo.Checked)
+            {
+                saveFileDialog.Title = "Create FlyTo targets list";
+                saveFileDialog.Filter = "FlyTo targets list (*.spt)|*.spt|All files|*.*";
+                saveFileDialog.DefaultExt = ".spt";
+            }
+            else
+            {
+                saveFileDialog.Title = "Create text list";
+                saveFileDialog.Filter = "Text file (*.txt)|*.txt|All files|*.*";
+                saveFileDialog.DefaultExt = ".txt";
+            }
+        }
+
+        protected override void doSave(string filename)
+        {
+            Converter conv;
+            base.doSave(filename);
+
+            if (rdMkr.Checked)
+            {
+                conv = new Converter(outMode.Markers);
+            }
+            else if (rdFlyTo.Checked)
+            {
+                conv = new Converter(outMode.Flyto);
+            }
+            else
+            {
+                conv = new Converter(outMode.Text);
+            }
+
+            string ret = conv.fileHead();
+            ret += conv.fileBody(kml);
+            conv.fileOut(ret, filename);
         }
     }
 }

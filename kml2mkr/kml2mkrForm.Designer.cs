@@ -48,11 +48,70 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.rdMkr = new System.Windows.Forms.RadioButton();
+            this.rdFlyTo = new System.Windows.Forms.RadioButton();
+            this.rdText = new System.Windows.Forms.RadioButton();
+            this.SuspendLayout();
+            // 
+            // rdMkr
+            // 
+            this.rdMkr.AutoSize = true;
+            this.rdMkr.Checked = true;
+            this.rdMkr.Location = new System.Drawing.Point(12, 148);
+            this.rdMkr.Name = "rdMkr";
+            this.rdMkr.Size = new System.Drawing.Size(129, 17);
+            this.rdMkr.TabIndex = 7;
+            this.rdMkr.TabStop = true;
+            this.rdMkr.Text = "Markers (MSTS *.mkr)";
+            this.rdMkr.UseVisualStyleBackColor = true;
+            // 
+            // rdFlyTo
+            // 
+            this.rdFlyTo.AutoSize = true;
+            this.rdFlyTo.Location = new System.Drawing.Point(12, 171);
+            this.rdFlyTo.Name = "rdFlyTo";
+            this.rdFlyTo.Size = new System.Drawing.Size(131, 17);
+            this.rdFlyTo.TabIndex = 8;
+            this.rdFlyTo.TabStop = true;
+            this.rdFlyTo.Text = "FlyTo targets list (*.spt)";
+            this.rdFlyTo.UseVisualStyleBackColor = true;
+            // 
+            // rdText
+            // 
+            this.rdText.AutoSize = true;
+            this.rdText.Location = new System.Drawing.Point(12, 194);
+            this.rdText.Name = "rdText";
+            this.rdText.Size = new System.Drawing.Size(61, 17);
+            this.rdText.TabIndex = 9;
+            this.rdText.TabStop = true;
+            this.rdText.Text = "Text list";
+            this.rdText.UseVisualStyleBackColor = true;
+            // 
+            // kml2mkrForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(585, 261);
+            this.Controls.Add(this.rdText);
+            this.Controls.Add(this.rdFlyTo);
+            this.Controls.Add(this.rdMkr);
+            this.Name = "kml2mkrForm";
             this.Text = "kml2mkrForm";
+            this.Controls.SetChildIndex(this.chkPlacemarks, 0);
+            this.Controls.SetChildIndex(this.chkPaths, 0);
+            this.Controls.SetChildIndex(this.chkPolys, 0);
+            this.Controls.SetChildIndex(this.rdMkr, 0);
+            this.Controls.SetChildIndex(this.rdFlyTo, 0);
+            this.Controls.SetChildIndex(this.rdText, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RadioButton rdMkr;
+        private System.Windows.Forms.RadioButton rdFlyTo;
+        private System.Windows.Forms.RadioButton rdText;
     }
 }
