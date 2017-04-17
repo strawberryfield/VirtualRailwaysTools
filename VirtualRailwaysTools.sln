@@ -11,6 +11,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlForms", "KmlForms\KmlFor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkr", "kml2mkr\kml2mkr.csproj", "{AB082F4A-DB68-4C58-8DF9-D325A495EF60}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{EBA5D35A-34A1-43C8-B110-1248F5162942}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc_src", "doc_src", "{B27FB787-6DFD-43EF-8053-DC74D384392B}"
+	ProjectSection(SolutionItems) = preProject
+		doc_src\conf.py = doc_src\conf.py
+		doc_src\index.rst = doc_src\index.rst
+		doc_src\legal.rst = doc_src\legal.rst
+		doc_src\license.xmp = doc_src\license.xmp
+		doc_src\make.bat = doc_src\make.bat
+		doc_src\Makefile = doc_src\Makefile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
