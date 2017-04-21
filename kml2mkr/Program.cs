@@ -19,9 +19,9 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
+using System.Configuration;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CasaSoft.vrt
@@ -36,7 +36,17 @@ namespace CasaSoft.vrt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new forms.kml2mkrForm());
+
+            // locales management
+            string localeName = ConfigurationManager.AppSettings["locale"];
+            CultureInfo locale;
+
+            if (string.IsNullOrWhiteSpace(localeName))
+                locale = CultureInfo.CurrentCulture;
+            else
+                locale = new CultureInfo(localeName);
+
+            Application.Run(new forms.kml2mkrForm(Assembly.GetExecutingAssembly(), locale));
         }
     }
 }

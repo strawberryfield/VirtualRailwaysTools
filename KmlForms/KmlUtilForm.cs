@@ -20,19 +20,32 @@
 
 using System;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Globalization;
+using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
     public partial class KmlUtilForm : Form
     {
+        protected ICatalog catalog;
+        protected Assembly assembly;
+        protected string prgName;
         protected KmlLib kml;
 
         #region constructors and init
         /// <summary>
         /// Constructor
         /// </summary>
-        public KmlUtilForm()
+        public KmlUtilForm(Assembly program, CultureInfo locale)
         {
+            // Get infos from assembly
+            assembly = program;
+            prgName = assembly.GetName().Name;
+
+            // locales management
+            catalog = new Catalog(prgName, "./locale", locale);
+
             InitializeComponent();
             InitControls();
         }
@@ -40,9 +53,14 @@ namespace CasaSoft.vrt.forms
         /// <summary>
         /// Controls bas init
         /// </summary>
-        protected virtual void InitControls()
+        private void InitControls()
         {
             kml = null;
+
+            // Localizable captions
+            chkPlacemarks.Tag = catalog.GetString("Placemarks");
+            chkPaths.Tag = catalog.GetString("Paths");
+            chkPolys.Tag = catalog.GetString("Polygons");
 
             chkPlacemarks.Text = (string)chkPlacemarks.Tag;
             chkPaths.Text = (string)chkPaths.Tag;
@@ -51,6 +69,13 @@ namespace CasaSoft.vrt.forms
             chkPlacemarks.Enabled = false;
             chkPaths.Enabled = false;
             chkPolys.Enabled = false;
+
+            this.label1.Text = catalog.GetString("kml / kmz file");
+            this.btnOpen.Text = catalog.GetString("Open");
+            this.openFileDialog.Filter = catalog.GetString("Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*");
+            this.openFileDialog.Title = catalog.GetString("Select placemarks file");
+            this.btnSave.Text = catalog.GetString("Save");
+
         }
         #endregion
 
@@ -94,7 +119,7 @@ namespace CasaSoft.vrt.forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(string.Format("Error processing file '{0}':\n{1}", file, ex.Message));
+                    MessageBox.Show(catalog.GetString("Error processing file '{0}':\n{1}", file, ex.Message));
                 }
                 
                 if(kml != null)

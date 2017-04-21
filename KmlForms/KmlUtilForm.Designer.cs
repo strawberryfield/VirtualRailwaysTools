@@ -159,7 +159,7 @@ namespace CasaSoft.vrt.forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.KmlFile);
             this.Name = "KmlUtilForm";
-            this.Text = "kml2mkr";
+            this.Text = "KmlUtilForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

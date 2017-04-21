@@ -18,48 +18,65 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+using System.Reflection;
+using System.Globalization;
 
 namespace CasaSoft.vrt.forms
 {
     public partial class kml2mkrForm : KmlUtilForm
     {
-        public kml2mkrForm()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public kml2mkrForm(Assembly program, CultureInfo locale) : base(program, locale)
         {
             InitializeComponent();
-            Text = "CasaSoft kml2mkr v.2.0";
+            Text = string.Format("CasaSoft {0} v.2.0", program.GetName().Name);
+            InitControls();
         }
 
+        /// <summary>
+        /// Components initialization
+        /// </summary>
+        private void InitControls()
+        {
+            // localizable strings
+            this.rdMkr.Text = catalog.GetString("Markers (MSTS *.mkr)");
+            this.rdFlyTo.Text = catalog.GetString("FlyTo targets list (*.spt)");
+            this.rdText.Text = catalog.GetString("Text list");
+
+        }
+
+        /// <summary>
+        /// Save dialog init
+        /// </summary>
         protected override void initSaveDlg()
         {
             base.initSaveDlg();
             if(rdMkr.Checked)
             {
-                saveFileDialog.Title = "Create MSTS markes file";
-                saveFileDialog.Filter = "Markers file (*.mkr)|*.mkr|All files|*.*";
+                saveFileDialog.Title = catalog.GetString("Create MSTS markes file");
+                saveFileDialog.Filter = catalog.GetString("Markers file (*.mkr)|*.mkr|All files|*.*");
                 saveFileDialog.DefaultExt = ".mkr";
             }
             else if(rdFlyTo.Checked)
             {
-                saveFileDialog.Title = "Create FlyTo targets list";
-                saveFileDialog.Filter = "FlyTo targets list (*.spt)|*.spt|All files|*.*";
+                saveFileDialog.Title = catalog.GetString("Create FlyTo targets list");
+                saveFileDialog.Filter = catalog.GetString("FlyTo targets list (*.spt)|*.spt|All files|*.*");
                 saveFileDialog.DefaultExt = ".spt";
             }
             else
             {
-                saveFileDialog.Title = "Create text list";
-                saveFileDialog.Filter = "Text file (*.txt)|*.txt|All files|*.*";
+                saveFileDialog.Title = catalog.GetString("Create text list");
+                saveFileDialog.Filter = catalog.GetString("Text file (*.txt)|*.txt|All files|*.*");
                 saveFileDialog.DefaultExt = ".txt";
             }
         }
 
+        /// <summary>
+        /// Save dirty work
+        /// </summary>
+        /// <param name="filename">File to save on</param>
         protected override void doSave(string filename)
         {
             Converter conv;
