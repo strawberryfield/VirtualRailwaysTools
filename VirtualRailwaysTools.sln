@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9E8B15
 		doc_src\images\logo.png = doc_src\images\logo.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseForms", "BaseForms\BaseForms.csproj", "{FFDBC7FB-F2A2-49C7-9718-9F29706A7A91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB082F4A-DB68-4C58-8DF9-D325A495EF60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDBC7FB-F2A2-49C7-9718-9F29706A7A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDBC7FB-F2A2-49C7-9718-9F29706A7A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDBC7FB-F2A2-49C7-9718-9F29706A7A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDBC7FB-F2A2-49C7-9718-9F29706A7A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
