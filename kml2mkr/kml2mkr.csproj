@@ -108,6 +108,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseForms\BaseForms.csproj">
+      <Project>{ffdbc7fb-f2a2-49c7-9718-9f29706a7a91}</Project>
+      <Name>BaseForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KmlForms\KmlForms.csproj">
       <Project>{f6f5b4c7-8ce0-4150-b5a0-a3d39e2c31f4}</Project>
       <Name>KmlForms</Name>

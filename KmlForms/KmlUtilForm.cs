@@ -26,26 +26,16 @@ using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
-    public partial class KmlUtilForm : Form
+    public partial class KmlUtilForm : FormBase
     {
-        protected ICatalog catalog;
-        protected Assembly assembly;
-        protected string prgName;
         protected KmlLib kml;
 
         #region constructors and init
         /// <summary>
         /// Constructor
         /// </summary>
-        public KmlUtilForm(Assembly program, CultureInfo locale)
+        public KmlUtilForm(Assembly program, CultureInfo locale) : base(program, locale)
         {
-            // Get infos from assembly
-            assembly = program;
-            prgName = assembly.GetName().Name;
-
-            // locales management
-            catalog = new Catalog(prgName, "./locale", locale);
-
             InitializeComponent();
             InitControls();
         }
@@ -70,46 +60,18 @@ namespace CasaSoft.vrt.forms
             chkPaths.Enabled = false;
             chkPolys.Enabled = false;
 
-            this.label1.Text = catalog.GetString("kml / kmz file");
-            this.btnOpen.Text = catalog.GetString("Open");
+            this.labelFile.Text = catalog.GetString("kml / kmz file");
             this.openFileDialog.Filter = catalog.GetString("Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*");
             this.openFileDialog.Title = catalog.GetString("Select placemarks file");
-            this.btnSave.Text = catalog.GetString("Save");
 
         }
         #endregion
 
         #region open kml
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            DialogResult ret = openFileDialog.ShowDialog();
-            if(ret == DialogResult.OK)
-            {
-                KmlFile.Text = openFileDialog.FileName;
-            }
-        }
 
-
-        private void KmlFile_DragDrop(object sender, DragEventArgs e)
+        protected override void openFile()
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
-            {
-                e.Effect = DragDropEffects.All;
-            }
-        }
-
-        private void KmlFile_DragEnter(object sender, DragEventArgs e)
-        {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            if (files != null && files.Length != 0)
-            {
-                KmlFile.Text = files[0];
-            }
-        }
-
-        private void KmlFile_TextChanged(object sender, EventArgs e)
-        {
-            string file = KmlFile.Text;
+            string file = txtFile.Text;
             InitControls();
             if(!string.IsNullOrWhiteSpace(file))
             {
@@ -141,37 +103,6 @@ namespace CasaSoft.vrt.forms
                     }
                 }
             }
-        }
-        #endregion
-
-        #region save
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            initSaveDlg();
-            saveFileDialog.ShowDialog();
-        }
-
-        /// <summary>
-        /// Vitual method for custom save dialog
-        /// </summary>
-        protected virtual void initSaveDlg()
-        {
-            // nothig to do
-        }
-
-        private void saveFileDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            string name = saveFileDialog.FileName;
-            doSave(name);
-        }
-
-        /// <summary>
-        /// Virtual method for save dirty work
-        /// </summary>
-        /// <param name="filename">File to save</param>
-        protected virtual void doSave(string filename)
-        {
-            // nothing to do
         }
         #endregion
 

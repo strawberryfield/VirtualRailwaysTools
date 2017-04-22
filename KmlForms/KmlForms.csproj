@@ -69,6 +69,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseForms\BaseForms.csproj">
+      <Project>{ffdbc7fb-f2a2-49c7-9718-9f29706a7a91}</Project>
+      <Name>BaseForms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\kmlLib\KmlLib.csproj">
       <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
       <Name>KmlLib</Name>

@@ -139,7 +139,7 @@ namespace CasaSoft.vrt.forms
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFile;
+        protected System.Windows.Forms.TextBox txtFile;
         protected System.Windows.Forms.Label labelFile;
         private System.Windows.Forms.Button btnOpen;
         protected System.Windows.Forms.OpenFileDialog openFileDialog;
