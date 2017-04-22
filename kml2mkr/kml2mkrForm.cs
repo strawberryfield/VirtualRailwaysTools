@@ -31,7 +31,7 @@ namespace CasaSoft.vrt.forms
         public kml2mkrForm(Assembly program, CultureInfo locale) : base(program, locale)
         {
             InitializeComponent();
-            Text = string.Format("CasaSoft {0} v.2.0", program.GetName().Name);
+            Text = getProgramTitle();
             InitControls();
         }
 

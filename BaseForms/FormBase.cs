@@ -22,6 +22,7 @@ using System;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
+using System.Diagnostics;
 using NGettext;
 
 namespace CasaSoft.vrt.forms
@@ -30,6 +31,7 @@ namespace CasaSoft.vrt.forms
     {
         protected ICatalog catalog;
         protected Assembly assembly;
+        protected CultureInfo locale;
         protected string prgName;
 
         #region constructors and init
@@ -43,6 +45,7 @@ namespace CasaSoft.vrt.forms
             prgName = assembly.GetName().Name;
 
             // locales management
+            this.locale = locale;
             catalog = new Catalog(prgName, "./locale", locale);
 
             InitializeComponent();
@@ -62,7 +65,7 @@ namespace CasaSoft.vrt.forms
         }
         #endregion
 
-        #region open kml
+        #region open file
         private void btnOpen_Click(object sender, EventArgs e)
         {
             DialogResult ret = openFileDialog.ShowDialog();
@@ -135,5 +138,24 @@ namespace CasaSoft.vrt.forms
         }
         #endregion
 
+        #region program info
+        /// <summary>
+        /// Show the About Box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            AboutBox box = new AboutBox(assembly, locale);
+            box.ShowDialog();
+        }
+
+        public string getProgramTitle()
+        {
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+            return string.Format("{0} v.{1}.{2}",
+                versionInfo.FileDescription, versionInfo.ProductMajorPart, versionInfo.ProductMinorPart);
+        }
+        #endregion
     }
 }
