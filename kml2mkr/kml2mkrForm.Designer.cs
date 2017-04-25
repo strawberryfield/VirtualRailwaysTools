@@ -97,9 +97,6 @@ namespace CasaSoft.vrt.forms
             this.Controls.Add(this.rdMkr);
             this.Name = "kml2mkrForm";
             this.Text = "kml2mkrForm";
-            this.Controls.SetChildIndex(this.chkPlacemarks, 0);
-            this.Controls.SetChildIndex(this.chkPaths, 0);
-            this.Controls.SetChildIndex(this.chkPolys, 0);
             this.Controls.SetChildIndex(this.rdMkr, 0);
             this.Controls.SetChildIndex(this.rdFlyTo, 0);
             this.Controls.SetChildIndex(this.rdText, 0);

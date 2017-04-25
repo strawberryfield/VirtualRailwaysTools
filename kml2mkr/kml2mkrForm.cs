@@ -25,6 +25,11 @@ namespace CasaSoft.vrt.forms
 {
     public partial class kml2mkrForm : KmlUtilForm
     {
+        public kml2mkrForm() : base()
+        {
+            InitializeComponent();
+        }
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -44,7 +49,6 @@ namespace CasaSoft.vrt.forms
             this.rdMkr.Text = catalog.GetString("Markers (MSTS *.mkr)");
             this.rdFlyTo.Text = catalog.GetString("FlyTo targets list (*.spt)");
             this.rdText.Text = catalog.GetString("Text list");
-
         }
 
         /// <summary>
@@ -99,5 +103,6 @@ namespace CasaSoft.vrt.forms
             ret += conv.fileBody(kml);
             conv.fileOut(ret, filename);
         }
+
     }
 }

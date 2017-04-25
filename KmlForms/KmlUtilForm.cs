@@ -49,24 +49,11 @@ namespace CasaSoft.vrt.forms
         {
             kml = null;
 
-            // Localizable captions
-            chkPlacemarks.Tag = catalog.GetString("Placemarks");
-            chkPaths.Tag = catalog.GetString("Paths");
-            chkPolys.Tag = catalog.GetString("Polygons");
-
-            chkPlacemarks.Text = (string)chkPlacemarks.Tag;
-            chkPaths.Text = (string)chkPaths.Tag;
-            chkPolys.Text = (string)chkPolys.Tag;
-
-            chkPlacemarks.Enabled = false;
-            chkPaths.Enabled = false;
-            chkPolys.Enabled = false;
-
             this.labelFile.Text = catalog.GetString("kml / kmz file");
             this.openFileDialog.Filter = catalog.GetString("Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*");
             this.openFileDialog.Title = catalog.GetString("Select placemarks file");
-
         }
+
         #endregion
 
         #region open kml
@@ -88,25 +75,15 @@ namespace CasaSoft.vrt.forms
                 
                 if(kml != null)
                 {
-                    chkPlacemarks.Text = string.Format("{0} ({1})", chkPlacemarks.Tag, kml.CountPlacemarks());
-                    if(kml.CountPlacemarks() > 0)
-                    {
-                        chkPlacemarks.Enabled = true;
-                    }
-                    chkPaths.Text = string.Format("{0} ({1})", chkPaths.Tag, kml.CountPaths());
-                    if (kml.CountPaths() > 0)
-                    {
-                        chkPaths.Enabled = true;
-                    }
-                    chkPolys.Text = string.Format("{0} ({1})", chkPolys.Tag, kml.CountPolys());
-                    if (kml.CountPolys() > 0)
-                    {
-                        chkPolys.Enabled = true;
-                    }
+                    ContentSelector.initFromKml(kml);
                 }
             }
         }
         #endregion
 
+        private void KmlUtilForm_Shown(object sender, EventArgs e)
+        {
+            ContentSelector.setLocale(catalog);
+        }
     }
 }

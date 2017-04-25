@@ -48,59 +48,28 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkPlacemarks = new System.Windows.Forms.CheckBox();
-            this.chkPaths = new System.Windows.Forms.CheckBox();
-            this.chkPolys = new System.Windows.Forms.CheckBox();
+            this.ContentSelector = new CasaSoft.vrt.forms.kmlContentSelector();
             this.SuspendLayout();
             // 
-            // chkPlacemarks
+            // ContentSelector
             // 
-            this.chkPlacemarks.AutoSize = true;
-            this.chkPlacemarks.Location = new System.Drawing.Point(12, 67);
-            this.chkPlacemarks.Name = "chkPlacemarks";
-            this.chkPlacemarks.Size = new System.Drawing.Size(81, 17);
-            this.chkPlacemarks.TabIndex = 3;
-            this.chkPlacemarks.Tag = "Placemarks";
-            this.chkPlacemarks.Text = "Placemarks";
-            this.chkPlacemarks.UseVisualStyleBackColor = true;
-            // 
-            // chkPaths
-            // 
-            this.chkPaths.AutoSize = true;
-            this.chkPaths.Location = new System.Drawing.Point(12, 90);
-            this.chkPaths.Name = "chkPaths";
-            this.chkPaths.Size = new System.Drawing.Size(53, 17);
-            this.chkPaths.TabIndex = 4;
-            this.chkPaths.Tag = "Paths";
-            this.chkPaths.Text = "Paths";
-            this.chkPaths.UseVisualStyleBackColor = true;
-            // 
-            // chkPolys
-            // 
-            this.chkPolys.AutoSize = true;
-            this.chkPolys.Location = new System.Drawing.Point(12, 113);
-            this.chkPolys.Name = "chkPolys";
-            this.chkPolys.Size = new System.Drawing.Size(69, 17);
-            this.chkPolys.TabIndex = 5;
-            this.chkPolys.Tag = "Polygons";
-            this.chkPolys.Text = "Polygons";
-            this.chkPolys.UseVisualStyleBackColor = true;
+            this.ContentSelector.Location = new System.Drawing.Point(2, 57);
+            this.ContentSelector.Name = "ContentSelector";
+            this.ContentSelector.Size = new System.Drawing.Size(147, 83);
+            this.ContentSelector.TabIndex = 8;
             // 
             // KmlUtilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 261);
-            this.Controls.Add(this.chkPolys);
-            this.Controls.Add(this.chkPaths);
-            this.Controls.Add(this.chkPlacemarks);
+            this.Controls.Add(this.ContentSelector);
             this.Name = "KmlUtilForm";
             this.Text = "KmlUtilForm";
-            this.Controls.SetChildIndex(this.chkPlacemarks, 0);
-            this.Controls.SetChildIndex(this.chkPaths, 0);
-            this.Controls.SetChildIndex(this.chkPolys, 0);
+            this.Shown += new System.EventHandler(this.KmlUtilForm_Shown);
             this.Controls.SetChildIndex(this.txtFile, 0);
             this.Controls.SetChildIndex(this.labelFile, 0);
+            this.Controls.SetChildIndex(this.ContentSelector, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,8 +77,6 @@ namespace CasaSoft.vrt.forms
 
         #endregion
 
-        protected System.Windows.Forms.CheckBox chkPlacemarks;
-        protected System.Windows.Forms.CheckBox chkPaths;
-        protected System.Windows.Forms.CheckBox chkPolys;
+        protected kmlContentSelector ContentSelector;
     }
 }

@@ -29,28 +29,12 @@ namespace CasaSoft.vrt.forms
         /// <summary>
         /// Base constructor
         /// </summary>
-        public kmlContentSelector()
+        public kmlContentSelector() : base()
         {
             InitializeComponent();
-            chkPlacemarks.Tag = chkPlacemarks.Text;
-            chkPaths.Tag = chkPaths.Text;
-            chkPolys.Tag = chkPolys.Text;
-        }
-
-        /// <summary>
-        /// Constructor for localization
-        /// </summary>
-        /// <param name="catalog">locale strings</param>
-        public kmlContentSelector(ICatalog catalog)
-        {
-            InitializeComponent();
-
-            // Localizable captions
-            chkPlacemarks.Tag = catalog.GetString("Placemarks");
-            chkPaths.Tag = catalog.GetString("Paths");
-            chkPolys.Tag = catalog.GetString("Polygons");
-
-            resetControls();
+            //chkPlacemarks.Tag = chkPlacemarks.Text;
+            //chkPaths.Tag = chkPaths.Text;
+            //chkPolys.Tag = chkPolys.Text;
         }
         #endregion;
 
@@ -72,6 +56,20 @@ namespace CasaSoft.vrt.forms
         #endregion
 
         #region controls management
+        /// <summary>
+        /// Sets localizable strings
+        /// </summary>
+        /// <param name="catalog"></param>
+        public void setLocale(ICatalog catalog)
+        {
+            // Localizable captions
+            chkPlacemarks.Tag = catalog.GetString("Placemarks");
+            chkPaths.Tag = catalog.GetString("Paths");
+            chkPolys.Tag = catalog.GetString("Polygons");
+
+            resetControls();
+        }
+
         /// <summary>
         /// Reset checkboxes to defualt values
         /// </summary>
