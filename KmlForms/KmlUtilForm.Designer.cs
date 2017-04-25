@@ -96,6 +96,11 @@ namespace CasaSoft.vrt.forms
             this.Controls.Add(this.chkPlacemarks);
             this.Name = "KmlUtilForm";
             this.Text = "KmlUtilForm";
+            this.Controls.SetChildIndex(this.chkPlacemarks, 0);
+            this.Controls.SetChildIndex(this.chkPaths, 0);
+            this.Controls.SetChildIndex(this.chkPolys, 0);
+            this.Controls.SetChildIndex(this.txtFile, 0);
+            this.Controls.SetChildIndex(this.labelFile, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

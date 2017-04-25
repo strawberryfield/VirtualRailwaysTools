@@ -31,6 +31,8 @@ namespace CasaSoft.vrt.forms
         protected KmlLib kml;
 
         #region constructors and init
+        public KmlUtilForm() : base() { }
+        
         /// <summary>
         /// Constructor
         /// </summary>

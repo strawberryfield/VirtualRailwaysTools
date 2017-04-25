@@ -52,6 +52,8 @@ namespace CasaSoft.vrt.forms
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
+            this.txtLicense = new System.Windows.Forms.TextBox();
+            this.labelLicense = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelProgramName
@@ -67,9 +69,10 @@ namespace CasaSoft.vrt.forms
             // labelVersion
             // 
             this.labelVersion.AutoSize = true;
-            this.labelVersion.Location = new System.Drawing.Point(12, 50);
+            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersion.Location = new System.Drawing.Point(12, 41);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(41, 13);
+            this.labelVersion.Size = new System.Drawing.Size(46, 15);
             this.labelVersion.TabIndex = 1;
             this.labelVersion.Text = "version";
             // 
@@ -85,7 +88,7 @@ namespace CasaSoft.vrt.forms
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(247, 222);
+            this.btnOK.Location = new System.Drawing.Point(302, 233);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(49, 27);
             this.btnOK.TabIndex = 3;
@@ -93,11 +96,35 @@ namespace CasaSoft.vrt.forms
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // txtLicense
+            // 
+            this.txtLicense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLicense.Location = new System.Drawing.Point(15, 126);
+            this.txtLicense.Multiline = true;
+            this.txtLicense.Name = "txtLicense";
+            this.txtLicense.ReadOnly = true;
+            this.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtLicense.Size = new System.Drawing.Size(336, 101);
+            this.txtLicense.TabIndex = 4;
+            // 
+            // labelLicense
+            // 
+            this.labelLicense.AutoSize = true;
+            this.labelLicense.Location = new System.Drawing.Point(12, 110);
+            this.labelLicense.Name = "labelLicense";
+            this.labelLicense.Size = new System.Drawing.Size(64, 13);
+            this.labelLicense.TabIndex = 5;
+            this.labelLicense.Text = "License info";
+            // 
             // AboutBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 261);
+            this.ClientSize = new System.Drawing.Size(363, 272);
+            this.Controls.Add(this.labelLicense);
+            this.Controls.Add(this.txtLicense);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelVersion);
@@ -115,5 +142,7 @@ namespace CasaSoft.vrt.forms
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.TextBox txtLicense;
+        private System.Windows.Forms.Label labelLicense;
     }
 }

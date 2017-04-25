@@ -19,6 +19,7 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System;
+using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
@@ -41,6 +42,18 @@ namespace CasaSoft.vrt.forms
             labelProgramName.Text = versionInfo.FileDescription;
             labelCopyright.Text = versionInfo.LegalCopyright;
             labelVersion.Text = catalog.GetString("version {0}.{1}", versionInfo.ProductMajorPart, versionInfo.ProductMinorPart);
+            labelLicense.Text = catalog.GetString("License info");
+
+            // get license text
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "CasaSoft.vrt.forms.Resources.LICENSE.txt";
+            //string[] risorse = assembly.GetManifestResourceNames();
+
+            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                txtLicense.Text = reader.ReadToEnd();
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)

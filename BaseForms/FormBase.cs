@@ -35,6 +35,11 @@ namespace CasaSoft.vrt.forms
         protected string prgName;
 
         #region constructors and init
+        public FormBase() : base()
+        {
+            InitializeComponent();
+        }
+
         /// <summary>
         /// Constructor
         /// </summary>
