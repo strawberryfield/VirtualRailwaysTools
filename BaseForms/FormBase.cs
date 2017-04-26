@@ -62,53 +62,7 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitControls()
         {
-            this.labelFile.Text = catalog.GetString("File name");
-            this.btnOpen.Text = catalog.GetString("Open");
-            this.openFileDialog.Filter = catalog.GetString("File|*.*");
-            this.openFileDialog.Title = catalog.GetString("Select file");
             this.btnSave.Text = catalog.GetString("Save");
-        }
-        #endregion
-
-        #region open file
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            DialogResult ret = openFileDialog.ShowDialog();
-            if (ret == DialogResult.OK)
-            {
-                txtFile.Text = openFileDialog.FileName;
-            }
-        }
-
-
-        private void txtFile_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
-            {
-                e.Effect = DragDropEffects.All;
-            }
-        }
-
-        private void txtFile_DragEnter(object sender, DragEventArgs e)
-        {
-            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-            if (files != null && files.Length != 0)
-            {
-                txtFile.Text = files[0];
-            }
-        }
-
-        private void txtFile_TextChanged(object sender, EventArgs e)
-        {
-            openFile();
-        }
-
-        /// <summary>
-        /// Virtual method for file opening
-        /// </summary>
-        protected virtual void openFile()
-        {
-            // Nothing to do
         }
         #endregion
 

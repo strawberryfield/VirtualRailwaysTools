@@ -20,6 +20,7 @@
 
 using NGettext;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace CasaSoft.vrt.forms
 {
@@ -32,9 +33,6 @@ namespace CasaSoft.vrt.forms
         public kmlContentSelector() : base()
         {
             InitializeComponent();
-            //chkPlacemarks.Tag = chkPlacemarks.Text;
-            //chkPaths.Tag = chkPaths.Text;
-            //chkPolys.Tag = chkPolys.Text;
         }
         #endregion;
 
@@ -42,16 +40,19 @@ namespace CasaSoft.vrt.forms
         /// <summary>
         /// Return status of Placemarks chechbox
         /// </summary>
+        [Description("status of Placemarks chechbox"), Category()]
         public bool PlacemarksSelected { get { return chkPlacemarks.Checked; } }
 
         /// <summary>
         /// Return status of Paths chechbox
         /// </summary>
+        [Description("status of Paths chechbox"), Category()]
         public bool PathsSelected { get { return chkPaths.Checked; } }
 
         /// <summary>
         /// Return status of Polys chechbox
         /// </summary>
+        [Description("status of Polys chechbox"), Category()]
         public bool PolysSelected { get { return chkPolys.Checked; } }
         #endregion
 

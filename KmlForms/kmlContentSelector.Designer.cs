@@ -56,30 +56,33 @@ namespace CasaSoft.vrt.forms
             // chkPlacemarks
             // 
             this.chkPlacemarks.AutoSize = true;
-            this.chkPlacemarks.Location = new System.Drawing.Point(9, 13);
+            this.chkPlacemarks.Location = new System.Drawing.Point(3, 3);
             this.chkPlacemarks.Name = "chkPlacemarks";
             this.chkPlacemarks.Size = new System.Drawing.Size(81, 17);
             this.chkPlacemarks.TabIndex = 0;
+            this.chkPlacemarks.Tag = "Placemarks";
             this.chkPlacemarks.Text = "Placemarks";
             this.chkPlacemarks.UseVisualStyleBackColor = true;
             // 
             // chkPaths
             // 
             this.chkPaths.AutoSize = true;
-            this.chkPaths.Location = new System.Drawing.Point(9, 36);
+            this.chkPaths.Location = new System.Drawing.Point(3, 26);
             this.chkPaths.Name = "chkPaths";
             this.chkPaths.Size = new System.Drawing.Size(53, 17);
             this.chkPaths.TabIndex = 1;
+            this.chkPaths.Tag = "Paths";
             this.chkPaths.Text = "Paths";
             this.chkPaths.UseVisualStyleBackColor = true;
             // 
             // chkPolys
             // 
             this.chkPolys.AutoSize = true;
-            this.chkPolys.Location = new System.Drawing.Point(9, 59);
+            this.chkPolys.Location = new System.Drawing.Point(3, 49);
             this.chkPolys.Name = "chkPolys";
             this.chkPolys.Size = new System.Drawing.Size(69, 17);
             this.chkPolys.TabIndex = 2;
+            this.chkPolys.Tag = "Polygons";
             this.chkPolys.Text = "Polygons";
             this.chkPolys.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +94,7 @@ namespace CasaSoft.vrt.forms
             this.Controls.Add(this.chkPaths);
             this.Controls.Add(this.chkPlacemarks);
             this.Name = "kmlContentSelector";
-            this.Size = new System.Drawing.Size(150, 85);
+            this.Size = new System.Drawing.Size(150, 66);
             this.ResumeLayout(false);
             this.PerformLayout();
 

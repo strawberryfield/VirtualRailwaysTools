@@ -48,52 +48,10 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFile = new System.Windows.Forms.TextBox();
-            this.labelFile = new System.Windows.Forms.Label();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txtFile
-            // 
-            this.txtFile.AllowDrop = true;
-            this.txtFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFile.Location = new System.Drawing.Point(12, 31);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(476, 20);
-            this.txtFile.TabIndex = 0;
-            this.txtFile.TextChanged += new System.EventHandler(this.txtFile_TextChanged);
-            this.txtFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.txtFile_DragDrop);
-            this.txtFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.txtFile_DragEnter);
-            // 
-            // labelFile
-            // 
-            this.labelFile.AutoSize = true;
-            this.labelFile.Location = new System.Drawing.Point(12, 15);
-            this.labelFile.Name = "labelFile";
-            this.labelFile.Size = new System.Drawing.Size(69, 13);
-            this.labelFile.TabIndex = 1;
-            this.labelFile.Text = "kml / kmz file";
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpen.Location = new System.Drawing.Point(494, 31);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(85, 20);
-            this.btnOpen.TabIndex = 2;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.Filter = "File|*.*";
-            this.openFileDialog.Title = "Select file";
             // 
             // saveFileDialog
             // 
@@ -128,22 +86,13 @@ namespace CasaSoft.vrt.forms
             this.ClientSize = new System.Drawing.Size(585, 261);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.labelFile);
-            this.Controls.Add(this.txtFile);
             this.Name = "FormBase";
             this.Text = "FormBase";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        protected System.Windows.Forms.TextBox txtFile;
-        protected System.Windows.Forms.Label labelFile;
-        private System.Windows.Forms.Button btnOpen;
-        protected System.Windows.Forms.OpenFileDialog openFileDialog;
         protected System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAbout;
