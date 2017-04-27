@@ -168,7 +168,7 @@ latex_documents = [
      'Roberto Ceccarelli - CasaSoft', 'manual'),
 ]
 
-#latex_toplevel_sectioning = 'chapter'
+latex_toplevel_sectioning = 'part'
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.

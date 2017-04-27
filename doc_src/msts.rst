@@ -18,19 +18,15 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-.. Virtual Railways Tools documentation master file, created by
-   sphinx-quickstart on Mon Apr 17 19:40:18 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. _msts:
 
-Welcome to Virtual Railways Tools's documentation!
-==================================================
+Software for MS Train Simulator and OpenRails
+*********************************************
 
 .. toctree::
    :maxdepth: 3
-   :numbered:
-   :caption: Contents:
+   :caption: The available tools are:
 
-   userguides
-   final
+   kml2mkr: converter for placemarks and path from Google Earth to .mkr and FlyTo utility <kml2mkr>
+   kml2mkrc: command line version of kml2mkr <kml2mkrc>
 

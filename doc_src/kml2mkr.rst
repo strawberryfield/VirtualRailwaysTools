@@ -18,19 +18,9 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-.. Virtual Railways Tools documentation master file, created by
-   sphinx-quickstart on Mon Apr 17 19:40:18 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. _kml2mkr:
 
-Welcome to Virtual Railways Tools's documentation!
-==================================================
+kml2mkr
+*******
 
-.. toctree::
-   :maxdepth: 3
-   :numbered:
-   :caption: Contents:
-
-   userguides
-   final
-
+Todo.
