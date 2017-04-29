@@ -3,6 +3,8 @@
 
 ### Intro
 
+You can read online documentation here: https://strawberryfield.github.io/VirtualRailwaysTools/
+
 ### Build binaries and documentation
 
 #### Programs
