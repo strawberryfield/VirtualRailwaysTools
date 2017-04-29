@@ -13,6 +13,8 @@ xcopy %builddir%\html %site%  /S /Y
 rem call make.bat latexpdf
 rem copy /Y %builddir%\latex\*.pdf %downloads%
 
+cd ..
 git add .
 git commit -m "Automatic site update"
 git push origin master
+cd doc_src
