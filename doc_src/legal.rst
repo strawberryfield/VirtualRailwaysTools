@@ -46,8 +46,8 @@ to identify the products or services of their respective owners.
 
 .. _legal-license:
 
-Accordi di Copyright e Licenza
-==============================
+Copyright Acknowledgment and License
+====================================
 
 .. include:: <isonum.txt>
 
@@ -59,5 +59,5 @@ the terms of the GNU General Public License as published by the Free
 Software Foundation, either version 3 of the License, or any later version.
 
 You should have received a copy of the GNU General Public License as part
-of the Open Rails distribution in ``/Copying.txt``.
+of the Open Rails distribution in ``/LICENSE.txt``.
 If not, see http://www.gnu.org/licenses/.
