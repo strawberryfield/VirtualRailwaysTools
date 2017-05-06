@@ -41,6 +41,10 @@ namespace CasaSoft.vrt
         public int Y;
     }
 
+    /// <summary>
+    /// Converts lat/lon coords to Rail3D layout coords
+    /// all data are relative to the starting point (usually 20000, 20000)
+    /// </summary>
     public class R3dCoordsConverter
     {
         #region properties

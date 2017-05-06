@@ -247,6 +247,53 @@ namespace CasaSoft.vrt
         }
         #endregion
 
+        #region R3D Labels dump
+        /// <summary>
+        /// Dumps all placemarks data for Rail3D labels
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <returns></returns>
+        public virtual string R3DlabelsPlacemarks(R3dCoordsConverter converter)
+        {
+            string ret = "";
+            foreach (placemark pm in listaPm)
+            {
+                ret += pm.R3Dlabel(converter) + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all path data for Rail3D labels
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <returns></returns>
+        public virtual string R3DlabelsPaths(R3dCoordsConverter converter)
+        {
+            string ret = "";
+            foreach (path pa in listaPath)
+            {
+                ret += pa.R3Dlabel(converter);
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all polygons data for Rail3D labels
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <returns></returns>
+        public virtual string R3DlabelsPolys(R3dCoordsConverter converter)
+        {
+            string ret = "";
+            foreach (poly po in listaPoly)
+            {
+                ret += po.R3Dlabel(converter);
+            }
+            return ret;
+        }
+        #endregion
+
         #region counters
         /// <summary>
         /// Returns number of placemarks in file

@@ -134,6 +134,30 @@ namespace CasaSoft.vrt
             return string.Format(CultureInfo.InvariantCulture, "Marker ( {1} {2} {0} 2 )", 
                 new object[] { text.Replace(' ', '_'), lon, lat });
         }
+
+        /// <summary>
+        /// Format data for Rail3D labels output with placemark name
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <returns></returns>
+        public virtual string R3Dlabel(R3dCoordsConverter converter)
+        {
+            return R3Dlabel(converter, name);
+        }
+
+        /// <summary>
+        /// Format data for Rail3D labels with specified text
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <param name="text">Text label for target</param>
+        /// <returns></returns>
+        public virtual string R3Dlabel(R3dCoordsConverter converter, string text)
+        {
+            XY point = converter.ToRail3D(new LatLon() { Lat = this.lat, Lon = this.lon });
+            return string.Format(CultureInfo.InvariantCulture, "TEXT\t{1}\t{2}\t{0}",
+                new object[] { text.Replace(' ', '_'), point.X, point.Y });
+        }
+
     }
 
     /// <summary>
@@ -220,6 +244,23 @@ namespace CasaSoft.vrt
             {
                 counter++;
                 ret += pm.Mkr(string.Format("{0}_{1}", name, counter)) + "\n";
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Dumps all placemarks for Rail3D labels
+        /// </summary>
+        /// <param name="converter">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        /// <returns></returns>
+        public virtual string R3Dlabel(R3dCoordsConverter converter)
+        {
+            string ret = "";
+            int counter = 0;
+            foreach (placemark pm in nodi)
+            {
+                counter++;
+                ret += pm.R3Dlabel(converter, string.Format("{0}_{1}", name, counter)) + "\n";
             }
             return ret;
         }
