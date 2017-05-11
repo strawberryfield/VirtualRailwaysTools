@@ -323,5 +323,54 @@ namespace CasaSoft.vrt
         }
         #endregion
 
+        #region items lists
+        /// <summary>
+        /// Lists all names of placemarks in object array useful for comboboxes
+        /// </summary>
+        /// <returns></returns>
+        public object[] PlacemarksNames()
+        {
+            object[] ret = new object[listaPm.Count];
+            int cnt = 0;
+            foreach(var p in listaPm)
+            {
+                ret[cnt] = p.name;
+                cnt++;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Lists all names of paths in object array useful for comboboxes
+        /// </summary>
+        /// <returns></returns>
+        public object[] PathsNames()
+        {
+            object[] ret = new object[listaPath.Count];
+            int cnt = 0;
+            foreach (var p in listaPath)
+            {
+                ret[cnt] = p.name;
+                cnt++;
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Lists all names of polygons in object array useful for comboboxes
+        /// </summary>
+        /// <returns></returns>
+        public object[] PolysNames()
+        {
+            object[] ret = new object[listaPoly.Count];
+            int cnt = 0;
+            foreach (var p in listaPoly)
+            {
+                ret[cnt] = p.name;
+                cnt++;
+            }
+            return ret;
+        }
+        #endregion
     }
 }

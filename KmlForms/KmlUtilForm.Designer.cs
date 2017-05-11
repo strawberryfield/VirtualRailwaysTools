@@ -61,6 +61,8 @@ namespace CasaSoft.vrt.forms
             // 
             // fileOpener
             // 
+            this.fileOpener.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fileOpener.ButtonText = "Open";
             this.fileOpener.FileDialogFilter = "";
             this.fileOpener.FileDialogTitle = "";
@@ -76,7 +78,7 @@ namespace CasaSoft.vrt.forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 261);
+            this.ClientSize = new System.Drawing.Size(595, 271);
             this.Controls.Add(this.fileOpener);
             this.Controls.Add(this.ContentSelector);
             this.Name = "KmlUtilForm";

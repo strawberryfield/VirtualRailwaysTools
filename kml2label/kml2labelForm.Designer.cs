@@ -20,7 +20,7 @@
 
 namespace CasaSoft.vrt.forms
 {
-    partial class FormBase
+    partial class kml2labelForm
     {
         /// <summary>
         /// Required designer variable.
@@ -48,53 +48,42 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
+            this.r3Dorigin1 = new CasaSoft.vrt.forms.R3Dorigin();
             this.SuspendLayout();
-            // 
-            // saveFileDialog
-            // 
-            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog_FileOk);
             // 
             // btnSave
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(494, 232);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(85, 20);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Location = new System.Drawing.Point(494, 291);
             // 
             // btnAbout
             // 
-            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAbout.Location = new System.Drawing.Point(12, 232);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(85, 20);
-            this.btnAbout.TabIndex = 7;
-            this.btnAbout.Text = "About";
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.btnAbout.Location = new System.Drawing.Point(12, 291);
             // 
-            // FormBase
+            // r3Dorigin1
+            // 
+            this.r3Dorigin1.Location = new System.Drawing.Point(12, 130);
+            this.r3Dorigin1.Name = "r3Dorigin1";
+            this.r3Dorigin1.Size = new System.Drawing.Size(312, 152);
+            this.r3Dorigin1.TabIndex = 10;
+            // 
+            // kml2labelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 261);
-            this.Controls.Add(this.btnAbout);
-            this.Controls.Add(this.btnSave);
-            this.Name = "FormBase";
-            this.Text = "FormBase";
+            this.ClientSize = new System.Drawing.Size(595, 323);
+            this.Controls.Add(this.r3Dorigin1);
+            this.Name = "kml2labelForm";
+            this.Text = "kml2labelForm";
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.ContentSelector, 0);
+            this.Controls.SetChildIndex(this.r3Dorigin1, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        protected System.Windows.Forms.SaveFileDialog saveFileDialog;
-        protected System.Windows.Forms.Button btnSave;
-        protected System.Windows.Forms.Button btnAbout;
+
+        private R3Dorigin r3Dorigin1;
     }
 }
