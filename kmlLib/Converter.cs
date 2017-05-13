@@ -24,19 +24,33 @@ using System.Text;
 
 namespace CasaSoft.vrt
 {
+    /// <summary>
+    /// Output types
+    /// </summary>
     public enum outMode { Text, Markers, Flyto, R3Dlabels, R3Dpath }
 
     public class Converter
     {
         protected outMode mode;
+        protected R3dCoordsConverter R3Dconv;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="exportMode">set the export type</param>
+        /// <param name="exportMode">set the export type as defined by <see cref="T:CasaSoft.vrt.outMode"/></param>
         public Converter(outMode exportMode)
         {
             mode = exportMode;
+        }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="exportMode">set the export type as defined by <see cref="T:CasaSoft.vrt.outMode"/></param>
+        /// <param name="conv">instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/></param>
+        public Converter(outMode exportMode, R3dCoordsConverter conv) : this(exportMode)
+        {
+            R3Dconv = conv;
         }
 
         /// <summary>
@@ -102,6 +116,20 @@ namespace CasaSoft.vrt
                     break;
                 case outMode.Flyto:
                     ret += kml.FlyToPlacemarks();
+                    break;
+                case outMode.R3Dlabels:
+                    if(R3Dconv != null)
+                    {
+                        ret += kml.R3DlabelsPlacemarks(R3Dconv);
+                        ret += kml.R3DlabelsPaths(R3Dconv);
+                        ret += kml.R3DlabelsPolys(R3Dconv);
+                    }
+                    break;
+                case outMode.R3Dpath:
+                    if (R3Dconv != null)
+                    {
+                        // todo
+                    }
                     break;
                 default:
                     break;

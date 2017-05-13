@@ -94,6 +94,10 @@
       <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
       <Name>KmlLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\R3DCoords\R3DCoords.csproj">
+      <Project>{da2258d3-71b7-494e-b651-4f86e239db21}</Project>
+      <Name>R3DCoords</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

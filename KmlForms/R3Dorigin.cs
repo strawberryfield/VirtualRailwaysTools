@@ -44,37 +44,89 @@ namespace CasaSoft.vrt.forms
         }
         #endregion
 
+        /// <summary>
+        /// Converts textbox input to int
+        /// </summary>
+        /// <param name="s">string to parse</param>
+        /// <returns></returns>
+        protected int parse4int(string s)
+        {
+            int ret = 0;
+            if (!int.TryParse(s, out ret)) ret = 0;
+            return ret;
+        }
+
+        /// <summary>
+        /// Converts textbox input to double
+        /// </summary>
+        /// <param name="s">string to parse</param>
+        /// <returns></returns>
+        protected double parse4double(string s)
+        {
+            double ret = 0;
+            if (!double.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out ret)) ret = 0;
+            return ret;
+        }
+
         #region properties
         /// <summary>
         /// Return Latitude
         /// </summary>
         [Description("Latitude"), Category()]
-        public double Lat { get { return Convert.ToDouble(txtLat.Text); } }
+        public double Lat { get { return parse4double(txtLat.Text); } }
 
         /// <summary>
         /// Return Longitude
         /// </summary>
         [Description("Longitude"), Category()]
-        public double Lon { get { return Convert.ToDouble(txtLon.Text); } }
+        public double Lon { get { return parse4double(txtLon.Text); } }
 
         /// <summary>
         /// Return UTM zone
         /// </summary>
         [Description("UTM zone"), Category()]
-        public int UTMzone { get { return Convert.ToInt32(txtZone.Text); } }
+        public int UTMzone { get { return parse4int(txtZone.Text); } }
 
         /// <summary>
         /// Return Rail3D X of origin
         /// </summary>
         [Description("Rail3D X of origin"), Category()]
-        public int X { get { return Convert.ToInt32(txtX.Text); } }
+        public int X { get { return parse4int(txtX.Text); } }
 
         /// <summary>
         /// Return Rail3D Y of origin
         /// </summary>
         [Description("Rail3D Y of origin"), Category()]
-        public int Y { get { return Convert.ToInt32(txtY.Text); } }
+        public int Y { get { return parse4int(txtY.Text); } }
         #endregion
+
+        /// <summary>
+        /// Returns an instance of <see cref="T:CasaSoft.vrt.R3dCoordsConverter"/>
+        /// initialized with control's data
+        /// </summary>
+        /// <returns></returns>
+        public R3dCoordsConverter CoordsConverter()
+        {
+            R3dCoordsConverter ret = null;
+            if (!string.IsNullOrWhiteSpace(txtLat.Text)
+                & !string.IsNullOrWhiteSpace(txtLon.Text)
+                & !string.IsNullOrWhiteSpace(txtX.Text)
+                & !string.IsNullOrWhiteSpace(txtY.Text))
+            {
+                LatLon ll = new LatLon() { Lat = this.Lat, Lon = this.Lon };
+                XY xy = new XY() { X = this.X, Y = this.Y };
+
+                if (!string.IsNullOrWhiteSpace(txtZone.Text))
+                {
+                    ret = new R3dCoordsConverter(ll, xy, this.UTMzone);
+                }
+                else
+                {
+                    ret = new R3dCoordsConverter(ll, xy);
+                }
+            }
+            return ret;
+        }
 
         #region init methods
         /// <summary>

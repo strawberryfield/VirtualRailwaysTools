@@ -106,8 +106,17 @@ namespace CasaSoft.vrt
         /// <param name="r3d">origin point of Rail3D layout</param>
         private void setValues(LatLon geo, XY r3d)
         {
-            setValues(geo, r3d,
-                (int)Math.Floor((geo.Lon < 0 ? geo.Lon + 360 : geo.Lon) / 6.0));
+            setValues(geo, r3d, FindUTMzone(geo.Lon));
+        }
+
+        /// <summary>
+        /// return UTM zone from longitude
+        /// </summary>
+        /// <param name="lon">longitude</param>
+        /// <returns>UTM zone</returns>
+        public int FindUTMzone(double lon)
+        {
+            return (int)Math.Floor((lon + 180) / 6) + 1;
         }
         #endregion
 
@@ -123,11 +132,11 @@ namespace CasaSoft.vrt
 
             //Sets up a array to contain the x and y coordinates
             double[] xy = new double[2];
-            xy[0] = 0;
-            xy[1] = 0;
+            xy[0] = geo.Lon;
+            xy[1] = geo.Lat;
             //An array for the z coordinate
             double[] z = new double[1];
-            z[0] = 1;
+            z[0] = 0;
             Reproject.ReprojectPoints(xy, z, pOrigin, pTarget, 0, 1);
 
             ret.X = Convert.ToInt32(xy[0]);

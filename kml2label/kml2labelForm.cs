@@ -70,12 +70,16 @@ namespace CasaSoft.vrt.forms
         /// <param name="filename">File to save on</param>
         protected override void doSave(string filename)
         {
-            base.doSave(filename);
-            Converter conv = new Converter(outMode.R3Dlabels);
+            R3dCoordsConverter R3Dconv = R3Dorigin.CoordsConverter();
+            if(R3Dconv != null)
+            {
+                base.doSave(filename);
+                Converter conv = new Converter(outMode.R3Dlabels, R3Dconv);
 
-            string ret = conv.fileHead();
-            ret += conv.fileBody(kml);
-            conv.fileOut(ret, filename);
+                string ret = conv.fileHead();
+                ret += conv.fileBody(kml);
+                conv.fileOut(ret, filename);
+            }
         }
         #endregion
     }
