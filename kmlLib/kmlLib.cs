@@ -372,5 +372,64 @@ namespace CasaSoft.vrt
             return ret;
         }
         #endregion
+
+        #region getElementByName
+        /// <summary>
+        /// Return placemark by its name
+        /// </summary>
+        /// <param name="name">name of the placemark</param>
+        /// <returns><see cref="T:CasaSoft.vrt.placemark"/> object or null if none found</returns>
+        public placemark GetPlacemarkByName(string name)
+        {
+            placemark ret = null;
+            foreach(var p in listaPm)
+            {
+                if(p.name == name)
+                {
+                    ret = p;
+                    break;
+                }
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Return path by its name
+        /// </summary>
+        /// <param name="name">name of the path</param>
+        /// <returns><see cref="T:CasaSoft.vrt.path"/> object or null if none found</returns>
+        public path GetPathByName(string name)
+        {
+            path ret = null;
+            foreach (var p in listaPath)
+            {
+                if (p.name == name)
+                {
+                    ret = p;
+                    break;
+                }
+            }
+            return ret;
+        }
+
+        /// <summary>
+        /// Return polygon by its name
+        /// </summary>
+        /// <param name="name">name of the polygon</param>
+        /// <returns><see cref="T:CasaSoft.vrt.poly"/> object or null if none found</returns>
+        public poly GetPolyByName(string name)
+        {
+            poly ret = null;
+            foreach (var p in listaPoly)
+            {
+                if (p.name == name)
+                {
+                    ret = p;
+                    break;
+                }
+            }
+            return ret;
+        }
+        #endregion
     }
 }

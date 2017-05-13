@@ -86,9 +86,18 @@ namespace CasaSoft.vrt.forms
                 if (kml != null)
                 {
                     ContentSelector.initFromKml(kml);
+                    AfterFileOpenerChanged();
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Virtual method for extra inits
+        /// </summary>
+        protected virtual void AfterFileOpenerChanged()
+        {
+            // virtual;
         }
         #endregion
 

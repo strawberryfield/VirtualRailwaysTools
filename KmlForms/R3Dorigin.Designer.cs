@@ -64,11 +64,13 @@ namespace CasaSoft.vrt.forms
             // 
             // cmbKml
             // 
+            this.cmbKml.Enabled = false;
             this.cmbKml.FormattingEnabled = true;
             this.cmbKml.Location = new System.Drawing.Point(3, 19);
             this.cmbKml.Name = "cmbKml";
             this.cmbKml.Size = new System.Drawing.Size(303, 21);
             this.cmbKml.TabIndex = 0;
+            this.cmbKml.Validated += new System.EventHandler(this.cmbKml_Validated);
             // 
             // lblKml
             // 
@@ -86,6 +88,7 @@ namespace CasaSoft.vrt.forms
             this.txtLat.Size = new System.Drawing.Size(113, 20);
             this.txtLat.TabIndex = 2;
             this.txtLat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblLat
             // 
@@ -112,6 +115,7 @@ namespace CasaSoft.vrt.forms
             this.txtLon.Size = new System.Drawing.Size(113, 20);
             this.txtLon.TabIndex = 1;
             this.txtLon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblZone
             // 
@@ -129,6 +133,7 @@ namespace CasaSoft.vrt.forms
             this.txtZone.Size = new System.Drawing.Size(65, 20);
             this.txtZone.TabIndex = 3;
             this.txtZone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtZone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblX
             // 
@@ -147,6 +152,7 @@ namespace CasaSoft.vrt.forms
             this.txtX.TabIndex = 4;
             this.txtX.Text = "20000";
             this.txtX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblY
             // 
@@ -165,6 +171,7 @@ namespace CasaSoft.vrt.forms
             this.txtY.TabIndex = 5;
             this.txtY.Text = "20000";
             this.txtY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtY.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // R3Dorigin
             // 

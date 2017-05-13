@@ -35,5 +35,48 @@ namespace CasaSoft.vrt.forms
             InitializeComponent();
             Text = getProgramTitle();
         }
+
+        protected override void AfterFileOpenerChanged()
+        {
+            base.AfterFileOpenerChanged();
+            R3Dorigin.SetKml(kml);
+        }
+
+        private void kml2labelForm_Shown(object sender, System.EventArgs e)
+        {
+            if (!this.DesignMode)
+            {
+                R3Dorigin.setLocale(catalog);
+            }
+
+        }
+
+        #region save
+        /// <summary>
+        /// Save dialog init
+        /// </summary>
+        protected override void initSaveDlg()
+        {
+            base.initSaveDlg();
+            saveFileDialog.Title = catalog.GetString("Create Rail3D labels file");
+            saveFileDialog.Filter = catalog.GetString("Text file (*.txt)|*.txt|All files|*.*");
+            saveFileDialog.DefaultExt = ".txt";
+
+        }
+
+        /// <summary>
+        /// Save dirty work
+        /// </summary>
+        /// <param name="filename">File to save on</param>
+        protected override void doSave(string filename)
+        {
+            base.doSave(filename);
+            Converter conv = new Converter(outMode.R3Dlabels);
+
+            string ret = conv.fileHead();
+            ret += conv.fileBody(kml);
+            conv.fileOut(ret, filename);
+        }
+        #endregion
     }
 }

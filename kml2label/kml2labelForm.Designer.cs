@@ -48,7 +48,7 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.r3Dorigin1 = new CasaSoft.vrt.forms.R3Dorigin();
+            this.R3Dorigin = new CasaSoft.vrt.forms.R3Dorigin();
             this.SuspendLayout();
             // 
             // btnSave
@@ -59,31 +59,32 @@ namespace CasaSoft.vrt.forms
             // 
             this.btnAbout.Location = new System.Drawing.Point(12, 291);
             // 
-            // r3Dorigin1
+            // R3Dorigin
             // 
-            this.r3Dorigin1.Location = new System.Drawing.Point(12, 130);
-            this.r3Dorigin1.Name = "r3Dorigin1";
-            this.r3Dorigin1.Size = new System.Drawing.Size(312, 152);
-            this.r3Dorigin1.TabIndex = 10;
+            this.R3Dorigin.Location = new System.Drawing.Point(12, 130);
+            this.R3Dorigin.Name = "R3Dorigin";
+            this.R3Dorigin.Size = new System.Drawing.Size(312, 152);
+            this.R3Dorigin.TabIndex = 10;
             // 
             // kml2labelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 323);
-            this.Controls.Add(this.r3Dorigin1);
+            this.Controls.Add(this.R3Dorigin);
             this.Name = "kml2labelForm";
             this.Text = "kml2labelForm";
+            this.Shown += new System.EventHandler(this.kml2labelForm_Shown);
             this.Controls.SetChildIndex(this.btnSave, 0);
             this.Controls.SetChildIndex(this.btnAbout, 0);
             this.Controls.SetChildIndex(this.ContentSelector, 0);
-            this.Controls.SetChildIndex(this.r3Dorigin1, 0);
+            this.Controls.SetChildIndex(this.R3Dorigin, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private R3Dorigin r3Dorigin1;
+        private R3Dorigin R3Dorigin;
     }
 }
