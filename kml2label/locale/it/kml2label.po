@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: kml2mkr\n"
-"POT-Creation-Date: 2017-05-13 21:40+0200\n"
-"PO-Revision-Date: 2017-05-13 21:43+0200\n"
+"Project-Id-Version: kml2label\n"
+"POT-Creation-Date: 2017-05-13 21:48+0200\n"
+"PO-Revision-Date: 2017-05-13 21:51+0200\n"
 "Last-Translator: Roberto Ceccarelli (The Strawberry Field) <strawberry."
 "field@libero.it>\n"
-"Language-Team: Roberto Ceccarelli\n"
+"Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Poedit-Basepath: ../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: kml2mkr\n"
-"X-Poedit-SearchPath-1: KmlForms\n"
-"X-Poedit-SearchPath-2: BaseForms\n"
+"X-Poedit-SearchPath-0: kml2label\n"
+"X-Poedit-SearchPath-1: BaseForms\n"
+"X-Poedit-SearchPath-2: KmlForms\n"
 
 #: BaseForms/AboutBox.cs:41
 #, csharp-format
@@ -101,38 +101,10 @@ msgstr "Percorsi"
 msgid "Polygons"
 msgstr "Poligoni"
 
-#: kml2mkr/kml2mkrForm.cs:49
-msgid "Markers (MSTS *.mkr)"
-msgstr ""
+#: kml2label/kml2labelForm.cs:61
+msgid "Create Rail3D labels file"
+msgstr "Creazione label per Rail3D"
 
-#: kml2mkr/kml2mkrForm.cs:50
-msgid "FlyTo targets list (*.spt)"
-msgstr "Lista destinazioni per FlyTo (*.spt)"
-
-#: kml2mkr/kml2mkrForm.cs:51
-msgid "Text list"
-msgstr "Lista in formato testo"
-
-#: kml2mkr/kml2mkrForm.cs:62
-msgid "Create MSTS markes file"
-msgstr "Creazione marker file per MSTS"
-
-#: kml2mkr/kml2mkrForm.cs:63
-msgid "Markers file (*.mkr)|*.mkr|All files|*.*"
-msgstr "File dei Markers (*.mkr)|*.mkr|Tutti i file|*.*"
-
-#: kml2mkr/kml2mkrForm.cs:68
-msgid "Create FlyTo targets list"
-msgstr "Creazione lista destinazioni per FlyTo"
-
-#: kml2mkr/kml2mkrForm.cs:69
-msgid "FlyTo targets list (*.spt)|*.spt|All files|*.*"
-msgstr "Lista FlyTo (*.spt)|*.spt|Tutti i file|*.*"
-
-#: kml2mkr/kml2mkrForm.cs:74
-msgid "Create text list"
-msgstr "Crea lista formato testo"
-
-#: kml2mkr/kml2mkrForm.cs:75
+#: kml2label/kml2labelForm.cs:62
 msgid "Text file (*.txt)|*.txt|All files|*.*"
 msgstr "File di testo (*.txt)|*.txt|Tutti i file|*.*"
