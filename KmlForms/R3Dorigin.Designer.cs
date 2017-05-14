@@ -48,12 +48,6 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbKml = new System.Windows.Forms.ComboBox();
-            this.lblKml = new System.Windows.Forms.Label();
-            this.txtLat = new System.Windows.Forms.TextBox();
-            this.lblLat = new System.Windows.Forms.Label();
-            this.lblLon = new System.Windows.Forms.Label();
-            this.txtLon = new System.Windows.Forms.TextBox();
             this.lblZone = new System.Windows.Forms.Label();
             this.txtZone = new System.Windows.Forms.TextBox();
             this.lblX = new System.Windows.Forms.Label();
@@ -61,61 +55,6 @@ namespace CasaSoft.vrt.forms
             this.lblY = new System.Windows.Forms.Label();
             this.txtY = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // cmbKml
-            // 
-            this.cmbKml.Enabled = false;
-            this.cmbKml.FormattingEnabled = true;
-            this.cmbKml.Location = new System.Drawing.Point(3, 19);
-            this.cmbKml.Name = "cmbKml";
-            this.cmbKml.Size = new System.Drawing.Size(303, 21);
-            this.cmbKml.TabIndex = 0;
-            this.cmbKml.Validated += new System.EventHandler(this.cmbKml_Validated);
-            // 
-            // lblKml
-            // 
-            this.lblKml.AutoSize = true;
-            this.lblKml.Location = new System.Drawing.Point(4, 3);
-            this.lblKml.Name = "lblKml";
-            this.lblKml.Size = new System.Drawing.Size(79, 13);
-            this.lblKml.TabIndex = 1;
-            this.lblKml.Text = "Select from kml";
-            // 
-            // txtLat
-            // 
-            this.txtLat.Location = new System.Drawing.Point(123, 66);
-            this.txtLat.Name = "txtLat";
-            this.txtLat.Size = new System.Drawing.Size(113, 20);
-            this.txtLat.TabIndex = 2;
-            this.txtLat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtLat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
-            // 
-            // lblLat
-            // 
-            this.lblLat.AutoSize = true;
-            this.lblLat.Location = new System.Drawing.Point(124, 50);
-            this.lblLat.Name = "lblLat";
-            this.lblLat.Size = new System.Drawing.Size(45, 13);
-            this.lblLat.TabIndex = 3;
-            this.lblLat.Text = "Latitude";
-            // 
-            // lblLon
-            // 
-            this.lblLon.AutoSize = true;
-            this.lblLon.Location = new System.Drawing.Point(4, 50);
-            this.lblLon.Name = "lblLon";
-            this.lblLon.Size = new System.Drawing.Size(54, 13);
-            this.lblLon.TabIndex = 5;
-            this.lblLon.Text = "Longitude";
-            // 
-            // txtLon
-            // 
-            this.txtLon.Location = new System.Drawing.Point(3, 66);
-            this.txtLon.Name = "txtLon";
-            this.txtLon.Size = new System.Drawing.Size(113, 20);
-            this.txtLon.TabIndex = 1;
-            this.txtLon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtLon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblZone
             // 
@@ -146,7 +85,7 @@ namespace CasaSoft.vrt.forms
             // 
             // txtX
             // 
-            this.txtX.Location = new System.Drawing.Point(3, 114);
+            this.txtX.Location = new System.Drawing.Point(0, 114);
             this.txtX.Name = "txtX";
             this.txtX.Size = new System.Drawing.Size(113, 20);
             this.txtX.TabIndex = 4;
@@ -183,27 +122,20 @@ namespace CasaSoft.vrt.forms
             this.Controls.Add(this.txtY);
             this.Controls.Add(this.lblZone);
             this.Controls.Add(this.txtZone);
-            this.Controls.Add(this.lblLon);
-            this.Controls.Add(this.txtLon);
-            this.Controls.Add(this.lblLat);
-            this.Controls.Add(this.txtLat);
-            this.Controls.Add(this.lblKml);
-            this.Controls.Add(this.cmbKml);
             this.Name = "R3Dorigin";
             this.Size = new System.Drawing.Size(310, 139);
+            this.Controls.SetChildIndex(this.txtZone, 0);
+            this.Controls.SetChildIndex(this.lblZone, 0);
+            this.Controls.SetChildIndex(this.txtY, 0);
+            this.Controls.SetChildIndex(this.lblY, 0);
+            this.Controls.SetChildIndex(this.txtX, 0);
+            this.Controls.SetChildIndex(this.lblX, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbKml;
-        private System.Windows.Forms.Label lblKml;
-        private System.Windows.Forms.TextBox txtLat;
-        private System.Windows.Forms.Label lblLat;
-        private System.Windows.Forms.Label lblLon;
-        private System.Windows.Forms.TextBox txtLon;
         private System.Windows.Forms.Label lblZone;
         private System.Windows.Forms.TextBox txtZone;
         private System.Windows.Forms.Label lblX;

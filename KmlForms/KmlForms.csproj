@@ -52,6 +52,12 @@
     <Compile Include="kmlContentSelector.Designer.cs">
       <DependentUpon>kmlContentSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="KmlPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KmlPoint.Designer.cs">
+      <DependentUpon>KmlPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="KmlUtilForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="kmlContentSelector.resx">
       <DependentUpon>kmlContentSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KmlPoint.resx">
+      <DependentUpon>KmlPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KmlUtilForm.resx">
       <DependentUpon>KmlUtilForm.cs</DependentUpon>
