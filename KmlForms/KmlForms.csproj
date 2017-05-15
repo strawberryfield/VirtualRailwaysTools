@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KmlBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KmlBaseForm.Designer.cs">
+      <DependentUpon>KmlBaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="kmlContentSelector.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="KmlBaseForm.resx">
+      <DependentUpon>KmlBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="kmlContentSelector.resx">
       <DependentUpon>kmlContentSelector.cs</DependentUpon>
     </EmbeddedResource>

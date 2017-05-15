@@ -20,7 +20,7 @@
 
 namespace CasaSoft.vrt.forms
 {
-    partial class KmlUtilForm
+    partial class KmlBaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -48,32 +48,41 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.ContentSelector = new CasaSoft.vrt.forms.kmlContentSelector();
+            this.fileOpener = new CasaSoft.vrt.forms.FileOpener();
             this.SuspendLayout();
             // 
-            // ContentSelector
+            // fileOpener
             // 
-            this.ContentSelector.Location = new System.Drawing.Point(12, 57);
-            this.ContentSelector.Name = "ContentSelector";
-            this.ContentSelector.Size = new System.Drawing.Size(147, 67);
-            this.ContentSelector.TabIndex = 8;
+            this.fileOpener.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fileOpener.ButtonText = "Open";
+            this.fileOpener.FileDialogFilter = "";
+            this.fileOpener.FileDialogTitle = "";
+            this.fileOpener.FileName = "";
+            this.fileOpener.LabelText = "File name";
+            this.fileOpener.Location = new System.Drawing.Point(12, 13);
+            this.fileOpener.Name = "fileOpener";
+            this.fileOpener.Size = new System.Drawing.Size(567, 38);
+            this.fileOpener.TabIndex = 9;
+            this.fileOpener.FileTextChanged += new System.EventHandler(this.fileOpener_FileTextChanged);
             // 
-            // KmlUtilForm
+            // KmlBaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 271);
-            this.Controls.Add(this.ContentSelector);
-            this.Name = "KmlUtilForm";
-            this.Text = "KmlUtilForm";
+            this.Controls.Add(this.fileOpener);
+            this.Name = "KmlBaseForm";
+            this.Text = "KmlBaseForm";
             this.Shown += new System.EventHandler(this.KmlUtilForm_Shown);
-            this.Controls.SetChildIndex(this.ContentSelector, 0);
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        protected kmlContentSelector ContentSelector;
+        protected FileOpener fileOpener;
     }
 }

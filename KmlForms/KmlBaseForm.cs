@@ -26,38 +26,76 @@ using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
-    public partial class KmlUtilForm : KmlBaseForm
+    public partial class KmlBaseForm : FormBase
     {
+        protected KmlLib kml;
+
         #region constructors and init
-        public KmlUtilForm() : base()
-        {
-            InitializeComponent();
-        }
-        
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public KmlUtilForm(Assembly program, CultureInfo locale) : base(program, locale)
+        public KmlBaseForm() : base()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public KmlBaseForm(Assembly program, CultureInfo locale) : base(program, locale)
+        {
+            InitializeComponent();
+        }
+
+        /// <summary>
+        /// Controls bas init
+        /// </summary>
+        private void InitControls()
+        {
+            kml = null;
+
+            this.fileOpener.LabelText = catalog.GetString("kml / kmz file");
+            this.fileOpener.ButtonText = catalog.GetString("Open");
+            this.fileOpener.FileDialogFilter = catalog.GetString("Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*");
+            this.fileOpener.FileDialogTitle = catalog.GetString("Select placemarks file");
+        }
+
         private void KmlUtilForm_Shown(object sender, EventArgs e)
         {
-            if(!this.DesignMode)
+            if (!this.DesignMode)
             {
-                ContentSelector.setLocale(catalog);
+                InitControls();
             }
         }
         #endregion
 
         #region open kml
+        private void fileOpener_FileTextChanged(object sender, EventArgs e)
+        {
+            string file = fileOpener.FileName;
+            InitControls();
+            if (!string.IsNullOrWhiteSpace(file))
+            {
+                try
+                {
+                    kml = new KmlLib(file);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(catalog.GetString("Error processing file '{0}':\n{1}", file, ex.Message));
+                }
+
+                if (kml != null)
+                {
+                    AfterFileOpenerChanged();
+                }
+            }
+
+        }
+
         /// <summary>
         /// Virtual method for extra inits
         /// </summary>
-        protected override void AfterFileOpenerChanged()
+        protected virtual void AfterFileOpenerChanged()
         {
-            ContentSelector.initFromKml(kml);
+            // virtual;
         }
         #endregion
 
