@@ -101,7 +101,7 @@ namespace CasaSoft.vrt.forms
         #endregion
 
         #region events handling
-        private void cmbKml_Validated(object sender, EventArgs e)
+        private void cmbKml_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Object selectedPm = cmbKml.SelectedItem;
             placemark p = Kml.GetPlacemarkByName(selectedPm.ToString());
@@ -110,6 +110,7 @@ namespace CasaSoft.vrt.forms
                 txtLat.Text = Convert.ToString(p.lat, CultureInfo.InvariantCulture);
                 txtLon.Text = Convert.ToString(p.lon, CultureInfo.InvariantCulture);
             }
+
         }
 
         private void txtNumeric_KeyPress(object sender, KeyPressEventArgs e)
@@ -117,5 +118,6 @@ namespace CasaSoft.vrt.forms
             e.Handled = !char.IsDigit(e.KeyChar) & e.KeyChar != (char)Keys.Back & e.KeyChar != '.' & e.KeyChar != '-';
         }
         #endregion
+
     }
 }

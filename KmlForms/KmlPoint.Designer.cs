@@ -64,7 +64,7 @@ namespace CasaSoft.vrt.forms
             this.cmbKml.Name = "cmbKml";
             this.cmbKml.Size = new System.Drawing.Size(236, 21);
             this.cmbKml.TabIndex = 0;
-            this.cmbKml.Validated += new System.EventHandler(this.cmbKml_Validated);
+            this.cmbKml.SelectionChangeCommitted += new System.EventHandler(this.cmbKml_SelectionChangeCommitted);
             // 
             // lblKml
             // 
