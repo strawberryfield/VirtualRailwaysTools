@@ -25,12 +25,12 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("CasaSoft kmlLib")]
-[assembly: AssemblyDescription("kml / kmz files manager")]
+[assembly: AssemblyTitle("CasaSoft KmlLib Base Module")]
+[assembly: AssemblyDescription("kml / kmz files manager base module")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CasaSoft")]
 [assembly: AssemblyProduct("CasaSoft Virtual Railways Tools")]
-[assembly: AssemblyCopyright("Copyright © 2017 Roberto Ceccarelli - CasaSoft")]
+[assembly: AssemblyCopyright("Copyright ©  2017 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -40,7 +40,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("8e618b05-4e4b-4b9a-b66a-05d9776b9c37")]
+[assembly: Guid("a7e8d82a-d1f4-4e45-9d6a-56bfb7a47311")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //
