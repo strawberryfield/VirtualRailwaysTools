@@ -73,17 +73,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
-      <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
-      <Name>KmlLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KmlLibBase\KmlLibBase.csproj">
+      <Project>{a7e8d82a-d1f4-4e45-9d6a-56bfb7a47311}</Project>
+      <Name>KmlLibBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KmlLibMSTS\KmlLibMSTS.csproj">
+      <Project>{0034a523-fe85-4d06-9649-a07cb3614092}</Project>
+      <Name>KmlLibMSTS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

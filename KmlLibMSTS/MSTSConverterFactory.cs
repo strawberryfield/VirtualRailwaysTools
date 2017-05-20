@@ -23,7 +23,7 @@ namespace CasaSoft.vrt.KmlLib
     /// <summary>
     /// Creates classes for kml converters to MSTS/OR formats
     /// </summary>
-    class MSTSConverterFactory : ConverterFactory
+    public class MSTSConverterFactory : ConverterFactory
     {
         /// <summary>
         /// Returns the text converter of the specified type

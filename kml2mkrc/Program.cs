@@ -27,6 +27,7 @@ using System.Globalization;
 using System.Text;
 using Gnu.Getopt;
 using NGettext;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt
 {
@@ -55,7 +56,7 @@ namespace CasaSoft.vrt
 
             // status vars
             string outputfile = String.Empty;
-            outMode mode = outMode.Text;
+            string mode = "";
             nobanner = false;
 
             // GNU Getopt options
@@ -98,15 +99,15 @@ namespace CasaSoft.vrt
                         break;
 
                     case 1001:
-                        mode = outMode.Text;
+                        mode = "";
                         break;
 
                     case 1002:
-                        mode = outMode.Markers;
+                        mode = "MKR";
                         break;
 
                     case 1003:
-                        mode = outMode.Flyto;
+                        mode = "FLYTO";
                         break;
                 }
             }
@@ -120,16 +121,21 @@ namespace CasaSoft.vrt
 
             PrintBanner();
 
-            // Scan for input files
-            Converter conv = new Converter(mode);
-            string ret = conv.fileHead();            
+            // Converter init
+            MSTSConverterFactory factory = new MSTSConverterFactory();
+            IConverter conv = factory.GetConverter(mode);
+            string ret = conv.FileHeader();            
 
+            // scan for files
             for (int i = options.Optind; i < options.Argv.Length; i++)
             {
                 string inputfile = options.Argv[i];
                 if(File.Exists(inputfile))
                 {
-                    ret += conv.fileBody(inputfile);
+                    conv.SetKml(inputfile);
+                    ret += conv.PlacemarkBody();
+                    ret += conv.PathBody();
+                    ret += conv.PolyBody();
                 }
                 else
                 {
@@ -137,7 +143,7 @@ namespace CasaSoft.vrt
                 }
             }
 
-            conv.fileOut(ret, outputfile);
+            conv.FileOut(ret, outputfile);
         }
 
         /// <summary>

@@ -18,8 +18,11 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.Text;
 
 namespace CasaSoft.vrt.KmlLib
 {
@@ -176,6 +179,47 @@ namespace CasaSoft.vrt.KmlLib
         public virtual string PolyBody()
         {
             return MultiPointBody(kml.PolyList);
+        }
+        #endregion
+
+        #region output to file
+        /// <summary>
+        /// Prints data to output file
+        /// </summary>
+        /// <param name="content">Data to include in file</param>
+        /// <param name="outputfile">Filename for output. If null or empty outs on stdout</param>
+        public virtual void FileOut(string content, string outputfile)
+        {
+            if (string.IsNullOrEmpty(outputfile))
+            {
+                FileOut(content);
+            }
+            else
+            {
+                StreamWrite(content, outputfile);
+            }
+        }
+
+        /// <summary>
+        /// Prints data to the console
+        /// </summary>
+        /// <param name="content">Data to include in output</param>
+        public virtual void FileOut(string content)
+        {
+            Console.WriteLine(content);
+        }
+
+        /// <summary>
+        /// Prints data to output file
+        /// </summary>
+        /// <param name="content">Data to include in file</param>
+        /// <param name="outputfile">Filename for output.</param>
+        protected virtual void StreamWrite(string content, string outputfile)
+        {
+            using (StreamWriter file = new StreamWriter(outputfile))
+            {
+                file.WriteLine(content);
+            }
         }
         #endregion
     }

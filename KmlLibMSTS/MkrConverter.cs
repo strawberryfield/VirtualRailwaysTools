@@ -19,6 +19,8 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System.Globalization;
+using System.IO;
+using System.Text;
 
 namespace CasaSoft.vrt.KmlLib
 {
@@ -45,5 +47,17 @@ namespace CasaSoft.vrt.KmlLib
                 new object[] { text.Replace(' ', '_'), pm.Lon, pm.Lat });
         }
 
+        /// <summary>
+        /// Prints data to output file using 16 bit unicode encoding
+        /// </summary>
+        /// <param name="content">Data to include in file</param>
+        /// <param name="outputfile">Filename for output.</param>
+        protected override void StreamWrite(string content, string outputfile)
+        {
+            using (StreamWriter file = new StreamWriter(outputfile, false, Encoding.Unicode))
+            {
+                file.WriteLine(content);
+            }
+        }
     }
 }

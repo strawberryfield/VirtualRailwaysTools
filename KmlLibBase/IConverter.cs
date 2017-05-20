@@ -34,5 +34,7 @@ namespace CasaSoft.vrt.KmlLib
         string PolyBody();
         void SetKml(KmlLib kmlLib);
         void SetKml(string filename);
+        void FileOut(string content, string outputfile);
+        void FileOut(string content);
     }
 }
