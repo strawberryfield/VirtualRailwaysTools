@@ -20,23 +20,8 @@
 
 namespace CasaSoft.vrt.KmlLib
 {
-    public class R3DConverterFactory : ConverterFactory
+    public interface IR3DConverter : IConverter
     {
-        /// <summary>
-        /// Returns the text converter of the specified type
-        /// </summary>
-        /// <param name="type">available codes are: 'LABEL'</param>
-        /// <returns>Instance of class with <see cref="T:CasaSoft.vrt.KmlLib.IR3DConverter"/> interface</returns>
-        public IR3DConverter GetConverter(string type)
-        {
-            type = type.ToUpper();
-
-            if (string.IsNullOrWhiteSpace(type))
-                return null;
-            else if ("LABEL" == type)
-                return new LabelsConverter();
-            else
-                return null;
-        }
+        R3dCoordsConverter R3dConverter { set; }
     }
 }

@@ -76,12 +76,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="R3Dorigin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="R3Dorigin.Designer.cs">
-      <DependentUpon>R3Dorigin.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="KmlBaseForm.resx">
@@ -100,22 +94,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="R3Dorigin.resx">
-      <DependentUpon>R3Dorigin.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseForms\BaseForms.csproj">
       <Project>{ffdbc7fb-f2a2-49c7-9718-9f29706a7a91}</Project>
       <Name>BaseForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
-      <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
-      <Name>KmlLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\R3DCoords\R3DCoords.csproj">
-      <Project>{da2258d3-71b7-494e-b651-4f86e239db21}</Project>
-      <Name>R3DCoords</Name>
+    <ProjectReference Include="..\KmlLibBase\KmlLibBase.csproj">
+      <Project>{a7e8d82a-d1f4-4e45-9d6a-56bfb7a47311}</Project>
+      <Name>KmlLibBase</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

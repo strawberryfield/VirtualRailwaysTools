@@ -22,13 +22,12 @@ using System;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
-using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
     public partial class KmlBaseForm : FormBase
     {
-        protected KmlLib kml;
+        protected KmlLib.KmlLib kml;
 
         #region constructors and init
         public KmlBaseForm() : base()
@@ -75,7 +74,7 @@ namespace CasaSoft.vrt.forms
             {
                 try
                 {
-                    kml = new KmlLib(file);
+                    kml = new KmlLib.KmlLib(file);
                 }
                 catch (Exception ex)
                 {

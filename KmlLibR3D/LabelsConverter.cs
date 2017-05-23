@@ -25,7 +25,7 @@ namespace CasaSoft.vrt.KmlLib
     /// <summary>
     /// Converter for Rail3D labels
     /// </summary>
-    public class LabelsConverter : Converter
+    public class LabelsConverter : Converter, IR3DConverter
     {
         /// <summary>
         /// Base point for UTM transforms

@@ -23,12 +23,13 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Forms;
 using NGettext;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
     public partial class KmlPoint : UserControl
     {
-        protected KmlLib Kml;
+        protected KmlLib.KmlLib Kml;
 
         #region constructor
         /// <summary>
@@ -82,8 +83,8 @@ namespace CasaSoft.vrt.forms
         /// <summary>
         /// Initializes the combobox
         /// </summary>
-        /// <param name="kml">instance of <see cref="T:CasaSoft.vrt.KmlLib"/></param>
-        public void SetKml(KmlLib kml)
+        /// <param name="kml">instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/></param>
+        public void SetKml(KmlLib.KmlLib kml)
         {
             this.Kml = kml;
             if (cmbKml.Items.Count > 0)
@@ -104,11 +105,11 @@ namespace CasaSoft.vrt.forms
         private void cmbKml_SelectionChangeCommitted(object sender, EventArgs e)
         {
             Object selectedPm = cmbKml.SelectedItem;
-            placemark p = Kml.GetPlacemarkByName(selectedPm.ToString());
+            IPlacemark p = Kml.GetPlacemarkByName(selectedPm.ToString());
             if (p != null)
             {
-                txtLat.Text = Convert.ToString(p.lat, CultureInfo.InvariantCulture);
-                txtLon.Text = Convert.ToString(p.lon, CultureInfo.InvariantCulture);
+                txtLat.Text = Convert.ToString(p.Lat, CultureInfo.InvariantCulture);
+                txtLon.Text = Convert.ToString(p.Lon, CultureInfo.InvariantCulture);
             }
 
         }

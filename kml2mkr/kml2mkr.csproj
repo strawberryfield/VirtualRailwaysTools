@@ -116,9 +116,13 @@
       <Project>{f6f5b4c7-8ce0-4150-b5a0-a3d39e2c31f4}</Project>
       <Name>KmlForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
-      <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
-      <Name>KmlLib</Name>
+    <ProjectReference Include="..\KmlLibBase\KmlLibBase.csproj">
+      <Project>{a7e8d82a-d1f4-4e45-9d6a-56bfb7a47311}</Project>
+      <Name>KmlLibBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KmlLibMSTS\KmlLibMSTS.csproj">
+      <Project>{0034a523-fe85-4d06-9649-a07cb3614092}</Project>
+      <Name>KmlLibMSTS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

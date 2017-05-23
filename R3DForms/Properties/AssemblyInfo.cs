@@ -25,8 +25,8 @@ using System.Runtime.InteropServices;
 // Le informazioni generali relative a un assembly sono controllate dal seguente 
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
-[assembly: AssemblyTitle("CasaSoft KmlForms")]
-[assembly: AssemblyDescription("kml utils forms library")]
+[assembly: AssemblyTitle("CasaSoft R3DForms")]
+[assembly: AssemblyDescription("Rail3D utils forms library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CasaSoft")]
 [assembly: AssemblyProduct("Virtual Railways Tools")]
@@ -40,7 +40,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Se il progetto viene esposto a COM, il GUID seguente verrà utilizzato come ID della libreria dei tipi
-[assembly: Guid("f6f5b4c7-8ce0-4150-b5a0-a3d39e2c31f4")]
+[assembly: Guid("c325f07a-98e5-4eea-94b0-525fe36f5589")]
 
 // Le informazioni sulla versione di un assembly sono costituite dai seguenti quattro valori:
 //

@@ -20,6 +20,7 @@
 
 using System.Reflection;
 using System.Globalization;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
@@ -74,11 +75,14 @@ namespace CasaSoft.vrt.forms
             if(R3Dconv != null)
             {
                 base.doSave(filename);
-                Converter conv = new Converter(outMode.R3Dlabels, R3Dconv);
-
-                string ret = conv.fileHead();
-                ret += conv.fileBody(kml);
-                conv.fileOut(ret, filename);
+                R3DConverterFactory factory = new R3DConverterFactory();
+                IR3DConverter conv = factory.GetConverter("LABEL");
+                conv.SetKml(kml);
+                conv.R3dConverter = R3Dconv;
+                
+                string ret = conv.FileHeader();
+                ret += conv.PlacemarkBody();
+                conv.FileOut(ret, filename);
             }
         }
         #endregion

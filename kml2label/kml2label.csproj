@@ -91,13 +91,21 @@
       <Project>{f6f5b4c7-8ce0-4150-b5a0-a3d39e2c31f4}</Project>
       <Name>KmlForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\kmlLib\KmlLib.csproj">
-      <Project>{8e618b05-4e4b-4b9a-b66a-05d9776b9c37}</Project>
-      <Name>KmlLib</Name>
+    <ProjectReference Include="..\KmlLibBase\KmlLibBase.csproj">
+      <Project>{a7e8d82a-d1f4-4e45-9d6a-56bfb7a47311}</Project>
+      <Name>KmlLibBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KmlLibR3D\KmlLibR3D.csproj">
+      <Project>{26ba0943-fbe3-4249-9f12-14eed31c1e50}</Project>
+      <Name>KmlLibR3D</Name>
     </ProjectReference>
     <ProjectReference Include="..\R3DCoords\R3DCoords.csproj">
       <Project>{da2258d3-71b7-494e-b651-4f86e239db21}</Project>
       <Name>R3DCoords</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\R3DForms\R3DForms.csproj">
+      <Project>{c325f07a-98e5-4eea-94b0-525fe36f5589}</Project>
+      <Name>R3DForms</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -18,9 +18,7 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
-using System;
 using System.ComponentModel;
-using System.Globalization;
 using System.Windows.Forms;
 using NGettext;
 

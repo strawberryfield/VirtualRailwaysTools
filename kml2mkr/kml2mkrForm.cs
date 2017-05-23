@@ -20,6 +20,7 @@
 
 using System.Reflection;
 using System.Globalization;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
@@ -83,25 +84,26 @@ namespace CasaSoft.vrt.forms
         /// <param name="filename">File to save on</param>
         protected override void doSave(string filename)
         {
-            Converter conv;
             base.doSave(filename);
-
+            string mode = "";
             if (rdMkr.Checked)
             {
-                conv = new Converter(outMode.Markers);
+                mode = "MKR";
             }
             else if (rdFlyTo.Checked)
             {
-                conv = new Converter(outMode.Flyto);
-            }
-            else
-            {
-                conv = new Converter(outMode.Text);
+                mode = "FLYTO";
             }
 
-            string ret = conv.fileHead();
-            ret += conv.fileBody(kml);
-            conv.fileOut(ret, filename);
+            MSTSConverterFactory factory = new MSTSConverterFactory();
+            IConverter conv = factory.GetConverter(mode);
+
+            string ret = conv.FileHeader();
+            conv.SetKml(kml);
+            ret += conv.PlacemarkBody();
+            ret += conv.PathBody();
+            ret += conv.PolyBody();
+            conv.FileOut(ret, filename);
         }
 
     }

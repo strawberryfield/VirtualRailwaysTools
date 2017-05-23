@@ -89,7 +89,7 @@ namespace CasaSoft.vrt.forms
         /// set controls status form kml data
         /// </summary>
         /// <param name="kml">kml data objects</param>
-        public void initFromKml(KmlLib kml)
+        public void initFromKml(KmlLib.KmlLib kml)
         {
             chkPlacemarks.Text = string.Format("{0} ({1})", chkPlacemarks.Tag, kml.CountPlacemarks());
             if (kml.CountPlacemarks() > 0)
