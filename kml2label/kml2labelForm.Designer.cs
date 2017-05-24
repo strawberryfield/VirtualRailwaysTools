@@ -49,6 +49,7 @@ namespace CasaSoft.vrt.forms
         private void InitializeComponent()
         {
             this.R3Dorigin = new CasaSoft.vrt.forms.R3Dorigin();
+            this.btnClip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSave
@@ -66,19 +67,33 @@ namespace CasaSoft.vrt.forms
             this.R3Dorigin.Size = new System.Drawing.Size(312, 152);
             this.R3Dorigin.TabIndex = 10;
             // 
+            // btnClip
+            // 
+            this.btnClip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClip.Location = new System.Drawing.Point(403, 291);
+            this.btnClip.Name = "btnClip";
+            this.btnClip.Size = new System.Drawing.Size(85, 20);
+            this.btnClip.TabIndex = 11;
+            this.btnClip.Text = "Clipboard";
+            this.btnClip.UseVisualStyleBackColor = true;
+            this.btnClip.Click += new System.EventHandler(this.btnClip_Click);
+            // 
             // kml2labelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 323);
+            this.Controls.Add(this.btnClip);
             this.Controls.Add(this.R3Dorigin);
             this.Name = "kml2labelForm";
             this.Text = "kml2labelForm";
             this.Shown += new System.EventHandler(this.kml2labelForm_Shown);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.Controls.SetChildIndex(this.btnSave, 0);
             this.Controls.SetChildIndex(this.btnAbout, 0);
             this.Controls.SetChildIndex(this.ContentSelector, 0);
             this.Controls.SetChildIndex(this.R3Dorigin, 0);
+            this.Controls.SetChildIndex(this.btnClip, 0);
             this.ResumeLayout(false);
 
         }
@@ -86,5 +101,6 @@ namespace CasaSoft.vrt.forms
         #endregion
 
         private R3Dorigin R3Dorigin;
+        private System.Windows.Forms.Button btnClip;
     }
 }

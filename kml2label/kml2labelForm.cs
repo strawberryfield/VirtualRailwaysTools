@@ -21,6 +21,7 @@
 using System.Reflection;
 using System.Globalization;
 using CasaSoft.vrt.KmlLib;
+using System.Windows.Forms;
 
 namespace CasaSoft.vrt.forms
 {
@@ -75,15 +76,27 @@ namespace CasaSoft.vrt.forms
             if(R3Dconv != null)
             {
                 base.doSave(filename);
-                R3DConverterFactory factory = new R3DConverterFactory();
-                IR3DConverter conv = factory.GetConverter("LABEL");
-                conv.SetKml(kml);
-                conv.R3dConverter = R3Dconv;
-                
-                string ret = conv.FileHeader();
-                ret += conv.PlacemarkBody();
-                conv.FileOut(ret, filename);
+                IR3DConverter conv = getConv(R3Dconv);
+                conv.FileOut(GetResult(conv), filename);
             }
+        }
+
+        private void btnClip_Click(object sender, System.EventArgs e)
+        {
+            R3dCoordsConverter R3Dconv = R3Dorigin.CoordsConverter();
+            if (R3Dconv != null)
+            {
+                Clipboard.SetDataObject(GetResult(getConv(R3Dconv)));
+            }
+        }
+
+        private IR3DConverter getConv(R3dCoordsConverter R3Dconv)
+        {
+            R3DConverterFactory factory = new R3DConverterFactory();
+            IR3DConverter conv = factory.GetConverter("LABEL");
+            conv.SetKml(kml);
+            conv.R3dConverter = R3Dconv;
+            return conv;
         }
         #endregion
     }

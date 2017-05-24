@@ -22,7 +22,7 @@ using System;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
-using NGettext;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
@@ -61,5 +61,24 @@ namespace CasaSoft.vrt.forms
         }
         #endregion
 
+        #region save utils
+        /// <summary>
+        /// Result of kml processing
+        /// </summary>
+        /// <param name="conv">Instance of class with <see cref="T:CasaSoft.vrt.KmlLib.IConverter"/> interface</param>
+        /// <returns></returns>
+        protected virtual string GetResult(IConverter conv)
+        {
+            string ret = conv.FileHeader();
+            conv.SetKml(kml);
+            if (ContentSelector.PlacemarksSelected)
+                ret += conv.PlacemarkBody();
+            if (ContentSelector.PathsSelected)
+                ret += conv.PathBody();
+            if (ContentSelector.PolysSelected)
+                ret += conv.PolyBody();
+            return ret;
+        }
+        #endregion
     }
 }

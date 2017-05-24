@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlForms", "KmlForms\KmlForms.csproj", "{F6F5B4C7-8CE0-4150-B5A0-A3D39E2C31F4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0034A523-FE85-4D06-9649-A07CB3614092} = {0034A523-FE85-4D06-9649-A07CB3614092}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkr", "kml2mkr\kml2mkr.csproj", "{AB082F4A-DB68-4C58-8DF9-D325A495EF60}"
 EndProject

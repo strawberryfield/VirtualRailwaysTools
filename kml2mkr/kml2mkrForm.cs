@@ -98,12 +98,7 @@ namespace CasaSoft.vrt.forms
             MSTSConverterFactory factory = new MSTSConverterFactory();
             IConverter conv = factory.GetConverter(mode);
 
-            string ret = conv.FileHeader();
-            conv.SetKml(kml);
-            ret += conv.PlacemarkBody();
-            ret += conv.PathBody();
-            ret += conv.PolyBody();
-            conv.FileOut(ret, filename);
+            conv.FileOut(GetResult(conv), filename);
         }
 
     }
