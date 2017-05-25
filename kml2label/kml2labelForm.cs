@@ -36,6 +36,7 @@ namespace CasaSoft.vrt.forms
         {
             InitializeComponent();
             Text = getProgramTitle();
+            btnClip.Text = catalog.GetString("Clipboard");
         }
 
         protected override void AfterFileOpenerChanged()
