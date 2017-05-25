@@ -88,6 +88,7 @@ namespace CasaSoft.vrt.forms
             if (R3Dconv != null)
             {
                 Clipboard.SetDataObject(GetResult(getConv(R3Dconv)));
+                Balloon(catalog.GetString("Data copied to Clipboard."));
             }
         }
 

@@ -24,6 +24,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Diagnostics;
 using NGettext;
+using System.Threading;
 
 namespace CasaSoft.vrt.forms
 {
@@ -114,6 +115,26 @@ namespace CasaSoft.vrt.forms
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             return string.Format("{0} v.{1}.{2}",
                 versionInfo.FileDescription, versionInfo.ProductMajorPart, versionInfo.ProductMinorPart);
+        }
+        #endregion
+
+        #region balloons
+        public void Balloon(string body)
+        {
+            NotifyIcon notification = new NotifyIcon()
+            {
+                Visible = true,
+                Icon = System.Drawing.SystemIcons.Information,
+                BalloonTipIcon = ToolTipIcon.Info,
+                BalloonTipTitle = prgName,
+                BalloonTipText = body,
+            };
+
+            // Display for 5 seconds.
+            notification.ShowBalloonTip(5);
+
+            Thread.Sleep(10000);
+            notification.Dispose();
         }
         #endregion
     }

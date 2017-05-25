@@ -78,7 +78,7 @@ namespace CasaSoft.vrt.forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(catalog.GetString("Error processing file '{0}':\n{1}", file, ex.Message));
+                    Balloon(catalog.GetString("Error processing file '{0}':\n{1}", file, ex.Message));
                 }
 
                 if (kml != null)

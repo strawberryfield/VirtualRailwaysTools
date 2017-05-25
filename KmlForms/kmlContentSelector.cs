@@ -83,6 +83,10 @@ namespace CasaSoft.vrt.forms
             chkPlacemarks.Enabled = false;
             chkPaths.Enabled = false;
             chkPolys.Enabled = false;
+
+            chkPlacemarks.Checked = false;
+            chkPaths.Checked = false;
+            chkPolys.Checked = false;
         }
 
         /// <summary>
@@ -95,16 +99,19 @@ namespace CasaSoft.vrt.forms
             if (kml.CountPlacemarks() > 0)
             {
                 chkPlacemarks.Enabled = true;
+                chkPlacemarks.Checked = true;
             }
             chkPaths.Text = string.Format("{0} ({1})", chkPaths.Tag, kml.CountPaths());
             if (kml.CountPaths() > 0)
             {
                 chkPaths.Enabled = true;
+                chkPaths.Checked = true;
             }
             chkPolys.Text = string.Format("{0} ({1})", chkPolys.Tag, kml.CountPolys());
             if (kml.CountPolys() > 0)
             {
                 chkPolys.Enabled = true;
+                chkPolys.Checked = true;
             }
         }
         #endregion

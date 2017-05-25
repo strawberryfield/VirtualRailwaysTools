@@ -19,7 +19,6 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
 using CasaSoft.vrt.KmlLib;
