@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kml2mkrc\n"
-"POT-Creation-Date: 2017-04-15 15:32+0200\n"
-"PO-Revision-Date: 2017-04-15 15:32+0200\n"
+"POT-Creation-Date: 2017-05-25 21:54+0200\n"
+"PO-Revision-Date: 2017-05-25 21:54+0200\n"
 "Last-Translator: Roberto Ceccarelli (The Strawberry Field) <strawberry."
 "field@libero.it>\n"
 "Language-Team: Roberto Ceccarelli\n"
@@ -11,31 +11,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ../../../../kml2mkrc\n"
+"X-Poedit-Basepath: ../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: Program.cs:52
+#: Program.cs:84
 #, csharp-format
 msgid "Doh! You need an argument for option '{0}'"
 msgstr "E' necessario un argomento per l'opzione  '{0}'"
 
-#: Program.cs:57
+#: Program.cs:89
 #, csharp-format
 msgid "The option '{0}' is not valid"
 msgstr "L'opzione '{0}' non è valida."
 
-#: Program.cs:86
+#: Program.cs:118
 msgid "No input file specified."
 msgstr "File di ingresso non specificato."
 
-#: Program.cs:137
+#: Program.cs:142
 #, csharp-format
 msgid "File '{0}' not found: ignoring."
 msgstr "File '{0}' non trovato: ignorato."
 
-#: Program.cs:183
+#: Program.cs:168
 msgid ""
 "\n"
 "Usage:"
@@ -43,12 +43,12 @@ msgstr ""
 "\n"
 "Utilizzo:"
 
-#: Program.cs:184
+#: Program.cs:169
 #, csharp-format
 msgid "{0} [options] inputfile [-o | --output_file outputfile]"
 msgstr "{0} [opzioni] inputfile [-o | --output_file outputfile]"
 
-#: Program.cs:185
+#: Program.cs:170
 msgid ""
 "\n"
 "If outputfile is omitted data are written to stdout"
@@ -56,7 +56,7 @@ msgstr ""
 "\n"
 "Se outputfile è omesso i dati sono scritti sullo stdout"
 
-#: Program.cs:186
+#: Program.cs:171
 msgid ""
 "\n"
 "Options:"
@@ -64,19 +64,19 @@ msgstr ""
 "\n"
 "Opzioni:"
 
-#: Program.cs:187
+#: Program.cs:172
 msgid "--text      Prints tabular data (default)"
 msgstr "--text      Stampa una tabella con i dati (default)"
 
-#: Program.cs:188
+#: Program.cs:173
 msgid "--markers   Write a MSTS .mkr file"
 msgstr "--markers   Scrive un file .mkr per l'editor di MSTS"
 
-#: Program.cs:189
+#: Program.cs:174
 msgid "--flyto     Write data for FlyTo program"
 msgstr "--flyto     Scrive un file per il programma FlyTo"
 
-#: Program.cs:190
+#: Program.cs:175
 msgid ""
 "\n"
 "--nobanner  Suppress banner"
@@ -84,14 +84,13 @@ msgstr ""
 "\n"
 "--nobanner  Sopprime il banner"
 
-#: Program.cs:191
+#: Program.cs:176
 #, csharp-format
 msgid ""
 "\n"
 "{0} -h | --help"
 msgstr ""
 
-#: Program.cs:192
+#: Program.cs:177
 msgid "Prints this help."
 msgstr "Stampa questo aiuto."
-

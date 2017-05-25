@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kml2mkr\n"
-"POT-Creation-Date: 2017-05-13 21:40+0200\n"
-"PO-Revision-Date: 2017-05-13 21:43+0200\n"
+"POT-Creation-Date: 2017-05-25 21:51+0200\n"
+"PO-Revision-Date: 2017-05-25 21:52+0200\n"
 "Last-Translator: Roberto Ceccarelli (The Strawberry Field) <strawberry."
 "field@libero.it>\n"
 "Language-Team: Roberto Ceccarelli\n"
@@ -11,12 +11,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ../../../..\n"
+"X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: kml2mkr\n"
-"X-Poedit-SearchPath-1: KmlForms\n"
-"X-Poedit-SearchPath-2: BaseForms\n"
+"X-Poedit-SearchPath-1: BaseForms\n"
+"X-Poedit-SearchPath-2: KmlForms\n"
 
 #: BaseForms/AboutBox.cs:41
 #, csharp-format
@@ -32,7 +32,7 @@ msgstr ""
 msgid "License info"
 msgstr "Licenza d'uso"
 
-#: BaseForms/FormBase.cs:65
+#: BaseForms/FormBase.cs:66
 msgid "Save"
 msgstr "Salva"
 
@@ -40,23 +40,23 @@ msgstr "Salva"
 msgid "LICENSE"
 msgstr ""
 
-#: KmlForms/KmlUtilForm.cs:54
+#: KmlForms/KmlBaseForm.cs:53
 msgid "kml / kmz file"
 msgstr "File kml / kmz"
 
-#: KmlForms/KmlUtilForm.cs:55
+#: KmlForms/KmlBaseForm.cs:54
 msgid "Open"
 msgstr "Apri"
 
-#: KmlForms/KmlUtilForm.cs:56
+#: KmlForms/KmlBaseForm.cs:55
 msgid "Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*"
 msgstr "File dei marcatori (*.kml,*.kmz)|*.kml;*.kmz|Tutti i file|*.*"
 
-#: KmlForms/KmlUtilForm.cs:57
+#: KmlForms/KmlBaseForm.cs:56
 msgid "Select placemarks file"
 msgstr "Seleziona il file dei marcatori"
 
-#: KmlForms/KmlUtilForm.cs:83
+#: KmlForms/KmlBaseForm.cs:81
 #, csharp-format
 msgid ""
 "Error processing file '{0}':\n"
@@ -65,29 +65,17 @@ msgstr ""
 "Errore elaborando il file '{0}':\n"
 "{1}"
 
-#: KmlForms/R3Dorigin.cs:139
+#: KmlForms/KmlPoint.cs:78
 msgid "Select from kml"
 msgstr "Seleziona da kml"
 
-#: KmlForms/R3Dorigin.cs:140
+#: KmlForms/KmlPoint.cs:79
 msgid "Latitude"
 msgstr "Latitudine"
 
-#: KmlForms/R3Dorigin.cs:141
+#: KmlForms/KmlPoint.cs:80
 msgid "Longitude"
 msgstr "Longitudine"
-
-#: KmlForms/R3Dorigin.cs:142
-msgid "UTM Zone"
-msgstr "Zona UTM"
-
-#: KmlForms/R3Dorigin.cs:143
-msgid "Rail3D X start"
-msgstr "Origine Rail3D X"
-
-#: KmlForms/R3Dorigin.cs:144
-msgid "Rail3D Y start"
-msgstr "Origine Rail3D Y"
 
 #: KmlForms/kmlContentSelector.cs:67
 msgid "Placemarks"
@@ -101,38 +89,47 @@ msgstr "Percorsi"
 msgid "Polygons"
 msgstr "Poligoni"
 
-#: kml2mkr/kml2mkrForm.cs:49
+#: kml2mkr/kml2mkrForm.cs:50
 msgid "Markers (MSTS *.mkr)"
 msgstr ""
 
-#: kml2mkr/kml2mkrForm.cs:50
+#: kml2mkr/kml2mkrForm.cs:51
 msgid "FlyTo targets list (*.spt)"
 msgstr "Lista destinazioni per FlyTo (*.spt)"
 
-#: kml2mkr/kml2mkrForm.cs:51
+#: kml2mkr/kml2mkrForm.cs:52
 msgid "Text list"
 msgstr "Lista in formato testo"
 
-#: kml2mkr/kml2mkrForm.cs:62
+#: kml2mkr/kml2mkrForm.cs:63
 msgid "Create MSTS markes file"
 msgstr "Creazione marker file per MSTS"
 
-#: kml2mkr/kml2mkrForm.cs:63
+#: kml2mkr/kml2mkrForm.cs:64
 msgid "Markers file (*.mkr)|*.mkr|All files|*.*"
 msgstr "File dei Markers (*.mkr)|*.mkr|Tutti i file|*.*"
 
-#: kml2mkr/kml2mkrForm.cs:68
+#: kml2mkr/kml2mkrForm.cs:69
 msgid "Create FlyTo targets list"
 msgstr "Creazione lista destinazioni per FlyTo"
 
-#: kml2mkr/kml2mkrForm.cs:69
+#: kml2mkr/kml2mkrForm.cs:70
 msgid "FlyTo targets list (*.spt)|*.spt|All files|*.*"
 msgstr "Lista FlyTo (*.spt)|*.spt|Tutti i file|*.*"
 
-#: kml2mkr/kml2mkrForm.cs:74
+#: kml2mkr/kml2mkrForm.cs:75
 msgid "Create text list"
 msgstr "Crea lista formato testo"
 
-#: kml2mkr/kml2mkrForm.cs:75
+#: kml2mkr/kml2mkrForm.cs:76
 msgid "Text file (*.txt)|*.txt|All files|*.*"
 msgstr "File di testo (*.txt)|*.txt|Tutti i file|*.*"
+
+#~ msgid "UTM Zone"
+#~ msgstr "Zona UTM"
+
+#~ msgid "Rail3D X start"
+#~ msgstr "Origine Rail3D X"
+
+#~ msgid "Rail3D Y start"
+#~ msgstr "Origine Rail3D Y"

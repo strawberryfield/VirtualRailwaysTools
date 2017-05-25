@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kml2label\n"
-"POT-Creation-Date: 2017-05-13 21:48+0200\n"
-"PO-Revision-Date: 2017-05-13 21:51+0200\n"
+"POT-Creation-Date: 2017-05-25 21:48+0200\n"
+"PO-Revision-Date: 2017-05-25 21:48+0200\n"
 "Last-Translator: Roberto Ceccarelli (The Strawberry Field) <strawberry."
 "field@libero.it>\n"
 "Language-Team: \n"
@@ -11,12 +11,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: ../../../..\n"
+"X-Poedit-Basepath: ../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: kml2label\n"
-"X-Poedit-SearchPath-1: BaseForms\n"
-"X-Poedit-SearchPath-2: KmlForms\n"
+"X-Poedit-SearchPath-0: R3DForms\n"
+"X-Poedit-SearchPath-1: kml2label\n"
+"X-Poedit-SearchPath-2: BaseForms\n"
+"X-Poedit-SearchPath-3: KmlForms\n"
 
 #: BaseForms/AboutBox.cs:41
 #, csharp-format
@@ -32,7 +33,7 @@ msgstr ""
 msgid "License info"
 msgstr "Licenza d'uso"
 
-#: BaseForms/FormBase.cs:65
+#: BaseForms/FormBase.cs:66
 msgid "Save"
 msgstr "Salva"
 
@@ -40,23 +41,23 @@ msgstr "Salva"
 msgid "LICENSE"
 msgstr ""
 
-#: KmlForms/KmlUtilForm.cs:54
+#: KmlForms/KmlBaseForm.cs:53
 msgid "kml / kmz file"
 msgstr "File kml / kmz"
 
-#: KmlForms/KmlUtilForm.cs:55
+#: KmlForms/KmlBaseForm.cs:54
 msgid "Open"
 msgstr "Apri"
 
-#: KmlForms/KmlUtilForm.cs:56
+#: KmlForms/KmlBaseForm.cs:55
 msgid "Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*"
 msgstr "File dei marcatori (*.kml,*.kmz)|*.kml;*.kmz|Tutti i file|*.*"
 
-#: KmlForms/KmlUtilForm.cs:57
+#: KmlForms/KmlBaseForm.cs:56
 msgid "Select placemarks file"
 msgstr "Seleziona il file dei marcatori"
 
-#: KmlForms/KmlUtilForm.cs:83
+#: KmlForms/KmlBaseForm.cs:81
 #, csharp-format
 msgid ""
 "Error processing file '{0}':\n"
@@ -65,29 +66,17 @@ msgstr ""
 "Errore elaborando il file '{0}':\n"
 "{1}"
 
-#: KmlForms/R3Dorigin.cs:139
+#: KmlForms/KmlPoint.cs:78
 msgid "Select from kml"
 msgstr "Seleziona da kml"
 
-#: KmlForms/R3Dorigin.cs:140
+#: KmlForms/KmlPoint.cs:79
 msgid "Latitude"
 msgstr "Latitudine"
 
-#: KmlForms/R3Dorigin.cs:141
+#: KmlForms/KmlPoint.cs:80
 msgid "Longitude"
 msgstr "Longitudine"
-
-#: KmlForms/R3Dorigin.cs:142
-msgid "UTM Zone"
-msgstr "Zona UTM"
-
-#: KmlForms/R3Dorigin.cs:143
-msgid "Rail3D X start"
-msgstr "Origine Rail3D X"
-
-#: KmlForms/R3Dorigin.cs:144
-msgid "Rail3D Y start"
-msgstr "Origine Rail3D Y"
 
 #: KmlForms/kmlContentSelector.cs:67
 msgid "Placemarks"
@@ -101,10 +90,30 @@ msgstr "Percorsi"
 msgid "Polygons"
 msgstr "Poligoni"
 
-#: kml2label/kml2labelForm.cs:61
+#: R3DForms/R3Dorigin.cs:109
+msgid "UTM Zone"
+msgstr "Zona UTM"
+
+#: R3DForms/R3Dorigin.cs:110
+msgid "Rail3D X start"
+msgstr "Origine Rail3D X"
+
+#: R3DForms/R3Dorigin.cs:111
+msgid "Rail3D Y start"
+msgstr "Origine Rail3D Y"
+
+#: kml2label/kml2labelForm.cs:39
+msgid "Clipboard"
+msgstr "Appunti"
+
+#: kml2label/kml2labelForm.cs:64
 msgid "Create Rail3D labels file"
 msgstr "Creazione label per Rail3D"
 
-#: kml2label/kml2labelForm.cs:62
+#: kml2label/kml2labelForm.cs:65
 msgid "Text file (*.txt)|*.txt|All files|*.*"
 msgstr "File di testo (*.txt)|*.txt|Tutti i file|*.*"
+
+#: kml2label/kml2labelForm.cs:91
+msgid "Data copied to Clipboard."
+msgstr "Dati copiati in appunti"
