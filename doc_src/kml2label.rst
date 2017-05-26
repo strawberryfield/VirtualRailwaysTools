@@ -18,11 +18,11 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-.. _kml2mkr:
+.. _kml2label:
 
-kml2mkr
-*******
+kml2label
+*********
 
-.. image:: images/kml2mkr.jpg
+.. image:: images/kml2label.jpg
 
 Todo.
