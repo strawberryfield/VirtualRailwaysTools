@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc_src", "doc_src", "{B27F
 		doc_src\final.rst = doc_src\final.rst
 		doc_src\generic.rst = doc_src\generic.rst
 		doc_src\index.rst = doc_src\index.rst
+		doc_src\kml2label.rst = doc_src\kml2label.rst
 		doc_src\kml2mkr.rst = doc_src\kml2mkr.rst
 		doc_src\kml2mkrc.rst = doc_src\kml2mkrc.rst
 		doc_src\legal.rst = doc_src\legal.rst

@@ -26,16 +26,30 @@ using System.Text;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Generic placemark converter to another format
+    /// </summary>
     public class Converter : IConverter
     {
+        /// <summary>
+        /// Instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/> with data to convert
+        /// </summary>
         protected KmlLib kml;
 
         #region inits
+        /// <summary>
+        /// Build class by kml/kml file name
+        /// </summary>
+        /// <param name="filename"></param>
         public void SetKml(string filename)
         {
             SetKml(new KmlLib(filename));
         }
 
+        /// <summary>
+        /// Build class by instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/>
+        /// </summary>
+        /// <param name="kmlLib"></param>
         public void SetKml(KmlLib kmlLib)
         {
             kml = kmlLib;

@@ -26,11 +26,11 @@ using System.Runtime.InteropServices;
 // set di attributi. Modificare i valori di questi attributi per modificare le informazioni
 // associate a un assembly.
 [assembly: AssemblyTitle("BaseForms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Base forms for GUIs")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BaseForms")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("CasaSoft")]
+[assembly: AssemblyProduct("CasaSoft Virtual Railways Tools")]
+[assembly: AssemblyCopyright("Copyright ©  2017 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
