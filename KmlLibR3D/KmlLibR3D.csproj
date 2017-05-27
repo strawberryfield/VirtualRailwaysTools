@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CasaSoft.vrt.KmlLib</RootNamespace>
-    <AssemblyName>CasaSoft.KmlLib.MSTS</AssemblyName>
+    <AssemblyName>CasaSoft.KmlLib.R3D</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\CasaSoft.KmlLib.MSTS.xml</DocumentationFile>
+    <DocumentationFile>..\bin\CasaSoft.KmlLib.R3D.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
