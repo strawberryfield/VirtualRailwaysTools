@@ -29,6 +29,7 @@ Assemblies reference
 
    CasaSoft.KmlLib.Base.xml
    CasaSoft.KmlLib.MSTS.xml
+   CasaSoft.KmlLib.R3D.xml
    CasaSoft.R3D.Coords.xml
    CasaSoft.vrt.BaseForms.xml
    CasaSoft.KmlForms.xml
