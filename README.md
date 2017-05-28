@@ -5,6 +5,11 @@
 
 You can read online documentation here: https://strawberryfield.github.io/VirtualRailwaysTools/
 
+Binary snapshots are available here:
+
+MSTS / OR Tools: https://github.com/strawberryfield/VirtualRailwaysTools/blob/master/docs/dist/MSTStools.rar?raw=true
+Rail3D Tools: https://github.com/strawberryfield/VirtualRailwaysTools/blob/master/docs/dist/R3Dtools.rar?raw=true
+
 ### Build binaries and documentation
 
 #### Programs
