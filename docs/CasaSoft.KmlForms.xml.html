@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1.6. Assembly: CasaSoft.KmlForms &mdash; Virtual Railways Tools 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Virtual Railways Tools 0.1 documentation" href="index.html"/>
+        <link rel="up" title="2.1. Assemblies reference" href="assemblies.html"/>
+        <link rel="next" title="2.1.7. Assembly: CasaSoft.R3DForms" href="CasaSoft.R3DForms.xml.html"/>
+        <link rel="prev" title="2.1.5. Assembly: CasaSoft.vrt.BaseForms" href="CasaSoft.vrt.BaseForms.xml.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Virtual Railways Tools
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="userguides.html">1. User guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">2. Developers&#8217; documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="assemblies.html">2.1. Assemblies reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.Base.xml.html">2.1.1. Assembly: CasaSoft.KmlLib.Base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.MSTS.xml.html">2.1.2. Assembly: CasaSoft.KmlLib.MSTS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.R3D.xml.html">2.1.3. Assembly: CasaSoft.KmlLib.R3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.R3D.Coords.xml.html">2.1.4. Assembly: CasaSoft.R3D.Coords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.vrt.BaseForms.xml.html">2.1.5. Assembly: CasaSoft.vrt.BaseForms</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.6. Assembly: CasaSoft.KmlForms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-forms-kmlbaseform">2.1.6.1. Type: CasaSoft.vrt.forms.KmlBaseForm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-forms-kmlcontentselector">2.1.6.2. Type: CasaSoft.vrt.forms.kmlContentSelector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-forms-kmlpoint">2.1.6.3. Type: CasaSoft.vrt.forms.KmlPoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-forms-kmlutilform">2.1.6.4. Type: CasaSoft.vrt.forms.KmlUtilForm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-forms-properties-resources">2.1.6.5. Type: CasaSoft.vrt.forms.Properties.Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.R3DForms.xml.html">2.1.7. Assembly: CasaSoft.R3DForms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="final.html">3. Final notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Virtual Railways Tools</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="developers.html">2. Developers&#8217; documentation</a> &raquo;</li>
+      
+          <li><a href="assemblies.html">2.1. Assemblies reference</a> &raquo;</li>
+      
+    <li>2.1.6. Assembly: CasaSoft.KmlForms</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assembly-casasoft-kmlforms">
+<h1>2.1.6. Assembly: CasaSoft.KmlForms<a class="headerlink" href="#assembly-casasoft-kmlforms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="type-casasoft-vrt-forms-kmlbaseform">
+<h2>2.1.6.1. Type: CasaSoft.vrt.forms.KmlBaseForm<a class="headerlink" href="#type-casasoft-vrt-forms-kmlbaseform" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Base form for kml utilities</div></blockquote>
+<div class="section" id="field-casasoft-vrt-forms-kmlbaseform-kml">
+<h3>2.1.6.1.1. Field: CasaSoft.vrt.forms.KmlBaseForm.kml<a class="headerlink" href="#field-casasoft-vrt-forms-kmlbaseform-kml" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Instance of <a href="#id1"><span class="problematic" id="id2">`Type: CasaSoft.vrt.KmlLib.KmlLib`_</span></a></div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-ctor">
+<h3>2.1.6.1.2. Method: CasaSoft.vrt.forms.KmlBaseForm.#ctor<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-ctor" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Constructor (needed only for inheritance)</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-ctor-system-reflection-assembly-system-globalization-cultureinfo">
+<h3>2.1.6.1.3. Method: CasaSoft.vrt.forms.KmlBaseForm.#ctor(System.Reflection.Assembly,System.Globalization.CultureInfo)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-ctor-system-reflection-assembly-system-globalization-cultureinfo" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Constructor</div></blockquote>
+<p>Parameter <strong>program</strong>: Reference to main program assembly</p>
+<p>Parameter <strong>locale</strong>: loacle for translations</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-initcontrols">
+<h3>2.1.6.1.4. Method: CasaSoft.vrt.forms.KmlBaseForm.InitControls<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-initcontrols" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Controls bas init</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-afterfileopenerchanged">
+<h3>2.1.6.1.5. Method: CasaSoft.vrt.forms.KmlBaseForm.AfterFileOpenerChanged<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-afterfileopenerchanged" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Virtual method for extra inits</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlbaseform-components">
+<h3>2.1.6.1.6. Field: CasaSoft.vrt.forms.KmlBaseForm.components<a class="headerlink" href="#field-casasoft-vrt-forms-kmlbaseform-components" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Required designer variable.</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-dispose-system-boolean">
+<h3>2.1.6.1.7. Method: CasaSoft.vrt.forms.KmlBaseForm.Dispose(System.Boolean)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-dispose-system-boolean" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Clean up any resources being used.</div></blockquote>
+<p>Parameter <strong>disposing</strong>: true if managed resources should be disposed; otherwise, false.</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlbaseform-initializecomponent">
+<h3>2.1.6.1.8. Method: CasaSoft.vrt.forms.KmlBaseForm.InitializeComponent<a class="headerlink" href="#method-casasoft-vrt-forms-kmlbaseform-initializecomponent" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Required method for Designer support - do not modify the contents of this method with the code editor.</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlbaseform-fileopener">
+<h3>2.1.6.1.9. Field: CasaSoft.vrt.forms.KmlBaseForm.fileOpener<a class="headerlink" href="#field-casasoft-vrt-forms-kmlbaseform-fileopener" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>File opener component</div></blockquote>
+</div>
+</div>
+<div class="section" id="type-casasoft-vrt-forms-kmlcontentselector">
+<h2>2.1.6.2. Type: CasaSoft.vrt.forms.kmlContentSelector<a class="headerlink" href="#type-casasoft-vrt-forms-kmlcontentselector" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>User control for kml content selection</div></blockquote>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-ctor">
+<h3>2.1.6.2.1. Method: CasaSoft.vrt.forms.kmlContentSelector.#ctor<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-ctor" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Base constructor</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-kmlcontentselector-placemarksselected">
+<h3>2.1.6.2.2. Property: CasaSoft.vrt.forms.kmlContentSelector.PlacemarksSelected<a class="headerlink" href="#property-casasoft-vrt-forms-kmlcontentselector-placemarksselected" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Return status of Placemarks chechbox</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-kmlcontentselector-pathsselected">
+<h3>2.1.6.2.3. Property: CasaSoft.vrt.forms.kmlContentSelector.PathsSelected<a class="headerlink" href="#property-casasoft-vrt-forms-kmlcontentselector-pathsselected" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Return status of Paths chechbox</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-kmlcontentselector-polysselected">
+<h3>2.1.6.2.4. Property: CasaSoft.vrt.forms.kmlContentSelector.PolysSelected<a class="headerlink" href="#property-casasoft-vrt-forms-kmlcontentselector-polysselected" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Return status of Polys chechbox</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-setlocale-ngettext-icatalog">
+<h3>2.1.6.2.5. Method: CasaSoft.vrt.forms.kmlContentSelector.setLocale(NGettext.ICatalog)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-setlocale-ngettext-icatalog" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Sets localizable strings</div></blockquote>
+<p>Parameter <strong>catalog</strong>:</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-resetcontrols">
+<h3>2.1.6.2.6. Method: CasaSoft.vrt.forms.kmlContentSelector.resetControls<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-resetcontrols" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Reset checkboxes to defualt values</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-initfromkml-casasoft-vrt-kmllib-kmllib">
+<h3>2.1.6.2.7. Method: CasaSoft.vrt.forms.kmlContentSelector.initFromKml(CasaSoft.vrt.KmlLib.KmlLib)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-initfromkml-casasoft-vrt-kmllib-kmllib" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>set controls status form kml data</div></blockquote>
+<p>Parameter <strong>kml</strong>: kml data objects</p>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlcontentselector-components">
+<h3>2.1.6.2.8. Field: CasaSoft.vrt.forms.kmlContentSelector.components<a class="headerlink" href="#field-casasoft-vrt-forms-kmlcontentselector-components" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Variabile di progettazione necessaria.</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-dispose-system-boolean">
+<h3>2.1.6.2.9. Method: CasaSoft.vrt.forms.kmlContentSelector.Dispose(System.Boolean)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-dispose-system-boolean" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Pulire le risorse in uso.</div></blockquote>
+<p>Parameter <strong>disposing</strong>: ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlcontentselector-initializecomponent">
+<h3>2.1.6.2.10. Method: CasaSoft.vrt.forms.kmlContentSelector.InitializeComponent<a class="headerlink" href="#method-casasoft-vrt-forms-kmlcontentselector-initializecomponent" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Metodo necessario per il supporto della finestra di progettazione. Non modificare il contenuto del metodo con l&#8217;editor di codice.</div></blockquote>
+</div>
+</div>
+<div class="section" id="type-casasoft-vrt-forms-kmlpoint">
+<h2>2.1.6.3. Type: CasaSoft.vrt.forms.KmlPoint<a class="headerlink" href="#type-casasoft-vrt-forms-kmlpoint" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>User control for select and edit a single point</div></blockquote>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-kml">
+<h3>2.1.6.3.1. Field: CasaSoft.vrt.forms.KmlPoint.Kml<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-kml" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Instance of</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-ctor">
+<h3>2.1.6.3.2. Method: CasaSoft.vrt.forms.KmlPoint.#ctor<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-ctor" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Constructor</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-parse4double-system-string">
+<h3>2.1.6.3.3. Method: CasaSoft.vrt.forms.KmlPoint.parse4double(System.String)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-parse4double-system-string" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Converts textbox input to double</div></blockquote>
+<p>Parameter <strong>s</strong>: string to parse</p>
+<p><strong>Returns</strong>:</p>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-kmlpoint-lat">
+<h3>2.1.6.3.4. Property: CasaSoft.vrt.forms.KmlPoint.Lat<a class="headerlink" href="#property-casasoft-vrt-forms-kmlpoint-lat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Return Latitude</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-kmlpoint-lon">
+<h3>2.1.6.3.5. Property: CasaSoft.vrt.forms.KmlPoint.Lon<a class="headerlink" href="#property-casasoft-vrt-forms-kmlpoint-lon" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Return Longitude</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-setlocale-ngettext-icatalog">
+<h3>2.1.6.3.6. Method: CasaSoft.vrt.forms.KmlPoint.setLocale(NGettext.ICatalog)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-setlocale-ngettext-icatalog" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Sets localizable strings</div></blockquote>
+<p>Parameter <strong>catalog</strong>:</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-setkml-casasoft-vrt-kmllib-kmllib">
+<h3>2.1.6.3.7. Method: CasaSoft.vrt.forms.KmlPoint.SetKml(CasaSoft.vrt.KmlLib.KmlLib)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-setkml-casasoft-vrt-kmllib-kmllib" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Initializes the combobox</div></blockquote>
+<p>Parameter <strong>kml</strong>: instance of <a href="#id3"><span class="problematic" id="id4">`Type: CasaSoft.vrt.KmlLib.KmlLib`_</span></a></p>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-components">
+<h3>2.1.6.3.8. Field: CasaSoft.vrt.forms.KmlPoint.components<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-components" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Variabile di progettazione necessaria.</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-dispose-system-boolean">
+<h3>2.1.6.3.9. Method: CasaSoft.vrt.forms.KmlPoint.Dispose(System.Boolean)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-dispose-system-boolean" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Pulire le risorse in uso.</div></blockquote>
+<p>Parameter <strong>disposing</strong>: ha valore true se le risorse gestite devono essere eliminate, false in caso contrario.</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlpoint-initializecomponent">
+<h3>2.1.6.3.10. Method: CasaSoft.vrt.forms.KmlPoint.InitializeComponent<a class="headerlink" href="#method-casasoft-vrt-forms-kmlpoint-initializecomponent" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Metodo necessario per il supporto della finestra di progettazione. Non modificare il contenuto del metodo con l&#8217;editor di codice.</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-cmbkml">
+<h3>2.1.6.3.11. Field: CasaSoft.vrt.forms.KmlPoint.cmbKml<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-cmbkml" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>combo with placemarks</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-txtlat">
+<h3>2.1.6.3.12. Field: CasaSoft.vrt.forms.KmlPoint.txtLat<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-txtlat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>textbox for latitude</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-txtlon">
+<h3>2.1.6.3.13. Field: CasaSoft.vrt.forms.KmlPoint.txtLon<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-txtlon" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>textbox for longitude</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-lblkml">
+<h3>2.1.6.3.14. Field: CasaSoft.vrt.forms.KmlPoint.lblKml<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-lblkml" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>label for combobox</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-lbllat">
+<h3>2.1.6.3.15. Field: CasaSoft.vrt.forms.KmlPoint.lblLat<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-lbllat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>label for latitude textbox</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlpoint-lbllon">
+<h3>2.1.6.3.16. Field: CasaSoft.vrt.forms.KmlPoint.lblLon<a class="headerlink" href="#field-casasoft-vrt-forms-kmlpoint-lbllon" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>label for longitude textbox</div></blockquote>
+</div>
+</div>
+<div class="section" id="type-casasoft-vrt-forms-kmlutilform">
+<h2>2.1.6.4. Type: CasaSoft.vrt.forms.KmlUtilForm<a class="headerlink" href="#type-casasoft-vrt-forms-kmlutilform" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>specialized <a class="reference internal" href="#type-casasoft-vrt-forms-kmlbaseform">Type: CasaSoft.vrt.forms.KmlBaseForm</a></div></blockquote>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-ctor">
+<h3>2.1.6.4.1. Method: CasaSoft.vrt.forms.KmlUtilForm.#ctor<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-ctor" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Constructor (needed only for inheritance)</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-ctor-system-reflection-assembly-system-globalization-cultureinfo">
+<h3>2.1.6.4.2. Method: CasaSoft.vrt.forms.KmlUtilForm.#ctor(System.Reflection.Assembly,System.Globalization.CultureInfo)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-ctor-system-reflection-assembly-system-globalization-cultureinfo" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Constructor</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-afterfileopenerchanged">
+<h3>2.1.6.4.3. Method: CasaSoft.vrt.forms.KmlUtilForm.AfterFileOpenerChanged<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-afterfileopenerchanged" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Virtual method for extra inits</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-getresult-casasoft-vrt-kmllib-iconverter">
+<h3>2.1.6.4.4. Method: CasaSoft.vrt.forms.KmlUtilForm.GetResult(CasaSoft.vrt.KmlLib.IConverter)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-getresult-casasoft-vrt-kmllib-iconverter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Result of kml processing</div></blockquote>
+<p>Parameter <strong>conv</strong>: Instance of class with <a href="#id5"><span class="problematic" id="id6">`Type: CasaSoft.vrt.KmlLib.IConverter`_</span></a> interface</p>
+<p><strong>Returns</strong>:</p>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlutilform-components">
+<h3>2.1.6.4.5. Field: CasaSoft.vrt.forms.KmlUtilForm.components<a class="headerlink" href="#field-casasoft-vrt-forms-kmlutilform-components" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Required designer variable.</div></blockquote>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-dispose-system-boolean">
+<h3>2.1.6.4.6. Method: CasaSoft.vrt.forms.KmlUtilForm.Dispose(System.Boolean)<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-dispose-system-boolean" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Clean up any resources being used.</div></blockquote>
+<p>Parameter <strong>disposing</strong>: true if managed resources should be disposed; otherwise, false.</p>
+</div>
+<div class="section" id="method-casasoft-vrt-forms-kmlutilform-initializecomponent">
+<h3>2.1.6.4.7. Method: CasaSoft.vrt.forms.KmlUtilForm.InitializeComponent<a class="headerlink" href="#method-casasoft-vrt-forms-kmlutilform-initializecomponent" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Required method for Designer support - do not modify the contents of this method with the code editor.</div></blockquote>
+</div>
+<div class="section" id="field-casasoft-vrt-forms-kmlutilform-contentselector">
+<h3>2.1.6.4.8. Field: CasaSoft.vrt.forms.KmlUtilForm.ContentSelector<a class="headerlink" href="#field-casasoft-vrt-forms-kmlutilform-contentselector" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>kml content selector component</div></blockquote>
+</div>
+</div>
+<div class="section" id="type-casasoft-vrt-forms-properties-resources">
+<h2>2.1.6.5. Type: CasaSoft.vrt.forms.Properties.Resources<a class="headerlink" href="#type-casasoft-vrt-forms-properties-resources" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e cos? via.</div></blockquote>
+<div class="section" id="property-casasoft-vrt-forms-properties-resources-resourcemanager">
+<h3>2.1.6.5.1. Property: CasaSoft.vrt.forms.Properties.Resources.ResourceManager<a class="headerlink" href="#property-casasoft-vrt-forms-properties-resources-resourcemanager" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Restituisce l&#8217;istanza di ResourceManager nella cache utilizzata da questa classe.</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-forms-properties-resources-culture">
+<h3>2.1.6.5.2. Property: CasaSoft.vrt.forms.Properties.Resources.Culture<a class="headerlink" href="#property-casasoft-vrt-forms-properties-resources-culture" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Esegue l&#8217;override della propriet? CurrentUICulture del thread corrente per tutte le ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CasaSoft.R3DForms.xml.html" class="btn btn-neutral float-right" title="2.1.7. Assembly: CasaSoft.R3DForms" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CasaSoft.vrt.BaseForms.xml.html" class="btn btn-neutral" title="2.1.5. Assembly: CasaSoft.vrt.BaseForms" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Roberto Ceccarelli - CasaSoft.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

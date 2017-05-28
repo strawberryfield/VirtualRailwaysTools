@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.1.2. Assembly: CasaSoft.KmlLib.MSTS &mdash; Virtual Railways Tools 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Virtual Railways Tools 0.1 documentation" href="index.html"/>
+        <link rel="up" title="2.1. Assemblies reference" href="assemblies.html"/>
+        <link rel="next" title="2.1.3. Assembly: CasaSoft.KmlLib.R3D" href="CasaSoft.KmlLib.R3D.xml.html"/>
+        <link rel="prev" title="2.1.1. Assembly: CasaSoft.KmlLib.Base" href="CasaSoft.KmlLib.Base.xml.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Virtual Railways Tools
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="userguides.html">1. User guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">2. Developers&#8217; documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="assemblies.html">2.1. Assemblies reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.Base.xml.html">2.1.1. Assembly: CasaSoft.KmlLib.Base</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.2. Assembly: CasaSoft.KmlLib.MSTS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-flytoconverter-fileheader">2.1.2.1. Method: CasaSoft.vrt.KmlLib.FlyToConverter.FileHeader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-flytoconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string">2.1.2.2. Method: CasaSoft.vrt.KmlLib.FlyToConverter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark,System.String)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-mkrconverter-fileheader">2.1.2.3. Method: CasaSoft.vrt.KmlLib.MkrConverter.FileHeader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-mkrconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string">2.1.2.4. Method: CasaSoft.vrt.KmlLib.MkrConverter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark,System.String)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-mkrconverter-streamwrite-system-string-system-string">2.1.2.5. Method: CasaSoft.vrt.KmlLib.MkrConverter.StreamWrite(System.String,System.String)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-casasoft-vrt-kmllib-mstsconverterfactory-getconverter-system-string">2.1.2.6. Method: CasaSoft.vrt.KmlLib.MSTSConverterFactory.GetConverter(System.String)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.R3D.xml.html">2.1.3. Assembly: CasaSoft.KmlLib.R3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.R3D.Coords.xml.html">2.1.4. Assembly: CasaSoft.R3D.Coords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.vrt.BaseForms.xml.html">2.1.5. Assembly: CasaSoft.vrt.BaseForms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlForms.xml.html">2.1.6. Assembly: CasaSoft.KmlForms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CasaSoft.R3DForms.xml.html">2.1.7. Assembly: CasaSoft.R3DForms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="final.html">3. Final notes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Virtual Railways Tools</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="developers.html">2. Developers&#8217; documentation</a> &raquo;</li>
+      
+          <li><a href="assemblies.html">2.1. Assemblies reference</a> &raquo;</li>
+      
+    <li>2.1.2. Assembly: CasaSoft.KmlLib.MSTS</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="assembly-casasoft-kmllib-msts">
+<h1>2.1.2. Assembly: CasaSoft.KmlLib.MSTS<a class="headerlink" href="#assembly-casasoft-kmllib-msts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="method-casasoft-vrt-kmllib-flytoconverter-fileheader">
+<h2>2.1.2.1. Method: CasaSoft.vrt.KmlLib.FlyToConverter.FileHeader<a class="headerlink" href="#method-casasoft-vrt-kmllib-flytoconverter-fileheader" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Returns the file header</div></blockquote>
+<p><strong>Returns</strong>:</p>
+</div>
+<div class="section" id="method-casasoft-vrt-kmllib-flytoconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string">
+<h2>2.1.2.2. Method: CasaSoft.vrt.KmlLib.FlyToConverter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-flytoconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Converts the specified placemark to text using the given title</div></blockquote>
+<p>Parameter <strong>pm</strong>: <a href="#id1"><span class="problematic" id="id2">`Type: CasaSoft.vrt.KmlLib.Placemark`_</span></a> to convert</p>
+<p>Parameter <strong>text</strong>: Title to use</p>
+<p><strong>Returns</strong>:</p>
+<div class="section" id="type-casasoft-vrt-kmllib-mkrconverter">
+<h3>2.1.2.2.1. Type: CasaSoft.vrt.KmlLib.MkrConverter<a class="headerlink" href="#type-casasoft-vrt-kmllib-mkrconverter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Specialized <a href="#id3"><span class="problematic" id="id4">`Type: CasaSoft.vrt.KmlLib.Converter`_</span></a> class for conversion to markers</div></blockquote>
+</div>
+</div>
+<div class="section" id="method-casasoft-vrt-kmllib-mkrconverter-fileheader">
+<h2>2.1.2.3. Method: CasaSoft.vrt.KmlLib.MkrConverter.FileHeader<a class="headerlink" href="#method-casasoft-vrt-kmllib-mkrconverter-fileheader" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Returns the file header</div></blockquote>
+<p><strong>Returns</strong>:</p>
+</div>
+<div class="section" id="method-casasoft-vrt-kmllib-mkrconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string">
+<h2>2.1.2.4. Method: CasaSoft.vrt.KmlLib.MkrConverter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-mkrconverter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Converts the specified placemark to text using the given title</div></blockquote>
+<p>Parameter <strong>pm</strong>: <a href="#id5"><span class="problematic" id="id6">`Type: CasaSoft.vrt.KmlLib.Placemark`_</span></a> to convert</p>
+<p>Parameter <strong>text</strong>: Title to use</p>
+<p><strong>Returns</strong>:</p>
+</div>
+<div class="section" id="method-casasoft-vrt-kmllib-mkrconverter-streamwrite-system-string-system-string">
+<h2>2.1.2.5. Method: CasaSoft.vrt.KmlLib.MkrConverter.StreamWrite(System.String,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-mkrconverter-streamwrite-system-string-system-string" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Prints data to output file using 16 bit unicode encoding</div></blockquote>
+<p>Parameter <strong>content</strong>: Data to include in file</p>
+<p>Parameter <strong>outputfile</strong>: Filename for output.</p>
+<div class="section" id="type-casasoft-vrt-kmllib-mstsconverterfactory">
+<h3>2.1.2.5.1. Type: CasaSoft.vrt.KmlLib.MSTSConverterFactory<a class="headerlink" href="#type-casasoft-vrt-kmllib-mstsconverterfactory" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Creates classes for kml converters to MSTS/OR formats</div></blockquote>
+</div>
+</div>
+<div class="section" id="method-casasoft-vrt-kmllib-mstsconverterfactory-getconverter-system-string">
+<h2>2.1.2.6. Method: CasaSoft.vrt.KmlLib.MSTSConverterFactory.GetConverter(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-mstsconverterfactory-getconverter-system-string" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Returns the text converter of the specified type</div></blockquote>
+<p>Parameter <strong>type</strong>: available codes are: (Empty string)-&gt;Text &#8216;MKR&#8217;, &#8216;FLYTO&#8217;</p>
+<p><strong>Returns</strong>: Instance of class with <a href="#id7"><span class="problematic" id="id8">`Type: CasaSoft.vrt.KmlLib.IConverter`_</span></a> interface</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CasaSoft.KmlLib.R3D.xml.html" class="btn btn-neutral float-right" title="2.1.3. Assembly: CasaSoft.KmlLib.R3D" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CasaSoft.KmlLib.Base.xml.html" class="btn btn-neutral" title="2.1.1. Assembly: CasaSoft.KmlLib.Base" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Roberto Ceccarelli - CasaSoft.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

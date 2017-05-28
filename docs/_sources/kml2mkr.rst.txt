@@ -23,4 +23,6 @@
 kml2mkr
 *******
 
+.. image:: images/kml2mkr.jpg
+
 Todo.
