@@ -25,9 +25,15 @@ using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// specialized <see cref="T:CasaSoft.vrt.forms.KmlBaseForm"/>
+    /// </summary>
     public partial class KmlUtilForm : KmlBaseForm
     {
         #region constructors and init
+        /// <summary>
+        /// Constructor (needed only for inheritance)
+        /// </summary>
         public KmlUtilForm() : base()
         {
             InitializeComponent();

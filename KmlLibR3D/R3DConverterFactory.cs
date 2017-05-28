@@ -20,6 +20,9 @@
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// specialized <see cref="T:CasaSoft.vrt.KmlLib.ConverterFactory"/> for Rail3D
+    /// </summary>
     public class R3DConverterFactory : ConverterFactory
     {
         /// <summary>

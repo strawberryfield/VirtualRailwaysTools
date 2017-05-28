@@ -22,6 +22,9 @@ using System.Xml;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Placemark interface inherited form <see cref="T:CasaSoft.vrt.KmlLib.IKmlItem"/>
+    /// </summary>
     public interface IPlacemark : IKmlItem
     {
         /// <summary>
@@ -49,7 +52,7 @@ namespace CasaSoft.vrt.KmlLib
         /// <summary>
         /// Set coords data from a triple lon,lat,height
         /// </summary>
-        /// <param name="triple"></param>
+        /// <param name="triple">string containing lon,lat,height</param>
         void SetCoord(string triple);
     }
 }

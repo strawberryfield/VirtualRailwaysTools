@@ -83,6 +83,9 @@ namespace CasaSoft.vrt.forms
         }
 
         #endregion
+        /// <summary>
+        /// File opener component
+        /// </summary>
         protected FileOpener fileOpener;
     }
 }

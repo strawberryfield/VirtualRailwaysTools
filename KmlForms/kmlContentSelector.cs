@@ -24,6 +24,9 @@ using System.ComponentModel;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// User control for kml content selection
+    /// </summary>
     public partial class kmlContentSelector : UserControl
     {
         #region constructors

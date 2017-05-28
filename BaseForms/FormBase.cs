@@ -28,14 +28,35 @@ using System.Threading;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// Base class for all forms
+    /// </summary>
     public partial class FormBase : Form
     {
+        /// <summary>
+        /// catalog of translations
+        /// </summary>
         protected ICatalog catalog;
+
+        /// <summary>
+        /// Reference to main program assembly
+        /// </summary>
         protected Assembly assembly;
+
+        /// <summary>
+        /// Locale to use for translations
+        /// </summary>
         protected CultureInfo locale;
+
+        /// <summary>
+        /// name of the calling program
+        /// </summary>
         protected string prgName;
 
         #region constructors and init
+        /// <summary>
+        /// Constructor (needed only for inheritance)
+        /// </summary>
         public FormBase() : base()
         {
             InitializeComponent();
@@ -110,6 +131,10 @@ namespace CasaSoft.vrt.forms
             box.ShowDialog();
         }
 
+        /// <summary>
+        /// Returns the main program description
+        /// </summary>
+        /// <returns></returns>
         public string getProgramTitle()
         {
             FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
@@ -119,6 +144,10 @@ namespace CasaSoft.vrt.forms
         #endregion
 
         #region balloons
+        /// <summary>
+        /// displays a notification in a popup balloon
+        /// </summary>
+        /// <param name="body"></param>
         public void Balloon(string body)
         {
             NotifyIcon notification = new NotifyIcon()

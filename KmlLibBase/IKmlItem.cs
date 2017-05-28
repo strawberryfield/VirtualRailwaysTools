@@ -20,6 +20,9 @@
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Root interface for kml items
+    /// </summary>
     public interface IKmlItem
     {
         /// <summary>

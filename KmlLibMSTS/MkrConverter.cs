@@ -24,6 +24,9 @@ using System.Text;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Specialized <see cref="T:CasaSoft.vrt.KmlLib.Converter"/> class for conversion to markers
+    /// </summary>
     public class MkrConverter : Converter
     {
         /// <summary>

@@ -23,6 +23,9 @@ using System.Xml;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Inteface for multi-point elements like paths and polygons
+    /// </summary>
     public interface IMultiPoint : IKmlItem
     {
         /// <summary>

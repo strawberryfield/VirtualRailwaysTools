@@ -28,8 +28,16 @@ using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// About box dialog
+    /// </summary>
     public partial class AboutBox : Form
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="program"></param>
+        /// <param name="locale"></param>
         public AboutBox(Assembly program, CultureInfo locale)
         {
             InitializeComponent();

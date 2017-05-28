@@ -24,6 +24,9 @@ using System.Windows.Forms;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// User control with textbox and button for file selection
+    /// </summary>
     public partial class FileOpener : UserControl
     {
         /// <summary>

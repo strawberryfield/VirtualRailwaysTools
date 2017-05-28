@@ -24,6 +24,9 @@ using NGettext;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// Component to manage Rail3D origin point of layouts
+    /// </summary>
     public partial class R3Dorigin : KmlPoint
     {
 

@@ -28,7 +28,14 @@ namespace CasaSoft.vrt
     /// </summary>
     public struct LatLon
     {
+        /// <summary>
+        /// latitude
+        /// </summary>
         public double Lat;
+
+        /// <summary>
+        /// longitude
+        /// </summary>
         public double Lon;
     }
 
@@ -37,7 +44,14 @@ namespace CasaSoft.vrt
     /// </summary>
     public struct XY
     {
+        /// <summary>
+        /// x coord
+        /// </summary>
         public int X;
+
+        /// <summary>
+        /// y coord
+        /// </summary>
         public int Y;
     }
 
@@ -48,12 +62,34 @@ namespace CasaSoft.vrt
     public class R3dCoordsConverter
     {
         #region properties
+        /// <summary>
+        /// <see cref="T:CasaSoft.vrt.KmlLib.LatLon"/> structure with geo coords
+        /// </summary>
         protected LatLon GeoCenter;
+
+        /// <summary>
+        /// <see cref="T:CasaSoft.vrt.KmlLib.XY"/> structure with geo coords converted to UTM
+        /// </summary>
         protected XY UTMcenter;
+
+        /// <summary>
+        /// UTM zone for conversion
+        /// </summary>
         protected int UTMfuse;
+
+        /// <summary>
+        /// Rail3D coords of origin point
+        /// </summary>
         protected XY R3Dcenter;
 
+        /// <summary>
+        /// id of original coordinate projection
+        /// </summary>
         protected ProjectionInfo pOrigin;
+
+        /// <summary>
+        /// id of coordinate project to convert into
+        /// </summary>
         protected ProjectionInfo pTarget;
         #endregion
 

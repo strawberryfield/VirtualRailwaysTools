@@ -25,6 +25,9 @@ using ICSharpCode.SharpZipLib.Zip;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Base class to handle .kml/.kmz files from Google Earth
+    /// </summary>
     public class KmlLib
     {
         #region properties
@@ -194,6 +197,7 @@ namespace CasaSoft.vrt.KmlLib
         /// Return placemark by its name
         /// </summary>
         /// <param name="name">name of the placemark</param>
+        /// <param name="list">list of placemarks where to search</param>
         /// <returns><see cref="T:CasaSoft.vrt.placemark"/> object or null if none found</returns>
         protected IKmlItem GetItemByName(string name, List<IKmlItem> list)
         {

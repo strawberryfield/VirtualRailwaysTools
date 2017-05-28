@@ -25,11 +25,20 @@ using System.Globalization;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// Base form for kml utilities
+    /// </summary>
     public partial class KmlBaseForm : FormBase
     {
+        /// <summary>
+        /// Instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/>
+        /// </summary>
         protected KmlLib.KmlLib kml;
 
         #region constructors and init
+        /// <summary>
+        /// Constructor (needed only for inheritance)
+        /// </summary>
         public KmlBaseForm() : base()
         {
             InitializeComponent();
@@ -38,6 +47,8 @@ namespace CasaSoft.vrt.forms
         /// <summary>
         /// Constructor
         /// </summary>
+        /// <param name="program">Reference to main program assembly</param>
+        /// <param name="locale">loacle for translations</param>
         public KmlBaseForm(Assembly program, CultureInfo locale) : base(program, locale)
         {
             InitializeComponent();

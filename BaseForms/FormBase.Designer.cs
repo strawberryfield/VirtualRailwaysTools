@@ -93,8 +93,20 @@ namespace CasaSoft.vrt.forms
         }
 
         #endregion
+
+        /// <summary>
+        /// Save file dialog component
+        /// </summary>
         protected System.Windows.Forms.SaveFileDialog saveFileDialog;
+
+        /// <summary>
+        /// save button component
+        /// </summary>
         protected System.Windows.Forms.Button btnSave;
+
+        /// <summary>
+        /// about button component
+        /// </summary>
         protected System.Windows.Forms.Button btnAbout;
     }
 }

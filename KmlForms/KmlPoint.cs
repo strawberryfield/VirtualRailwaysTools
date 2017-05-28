@@ -27,8 +27,14 @@ using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// User control for select and edit a single point
+    /// </summary>
     public partial class KmlPoint : UserControl
     {
+        /// <summary>
+        /// Instance of 
+        /// </summary>
         protected KmlLib.KmlLib Kml;
 
         #region constructor

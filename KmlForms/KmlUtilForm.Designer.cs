@@ -74,6 +74,9 @@ namespace CasaSoft.vrt.forms
 
         #endregion
 
+        /// <summary>
+        /// kml content selector component
+        /// </summary>
         protected kmlContentSelector ContentSelector;
     }
 }

@@ -129,11 +129,34 @@ namespace CasaSoft.vrt.forms
         }
 
         #endregion
+        /// <summary>
+        /// combo with placemarks
+        /// </summary>
         protected System.Windows.Forms.ComboBox cmbKml;
+
+        /// <summary>
+        /// textbox for latitude
+        /// </summary>
         protected System.Windows.Forms.TextBox txtLat;
+
+        /// <summary>
+        /// textbox for longitude
+        /// </summary>
         protected System.Windows.Forms.TextBox txtLon;
+
+        /// <summary>
+        /// label for combobox
+        /// </summary>
         protected System.Windows.Forms.Label lblKml;
+
+        /// <summary>
+        /// label for latitude textbox
+        /// </summary>
         protected System.Windows.Forms.Label lblLat;
+
+        /// <summary>
+        /// label for longitude textbox
+        /// </summary>
         protected System.Windows.Forms.Label lblLon;
     }
 }

@@ -20,8 +20,14 @@
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// specialized cref="T:CasaSoft.vrt.KmlLib.IConverter"/> for Rail3D
+    /// </summary>
     public interface IR3DConverter : IConverter
     {
+        /// <summary>
+        /// Instance of cref="T:CasaSoft.vrt.R3dCoordsConverter"/>
+        /// </summary>
         R3dCoordsConverter R3dConverter { set; }
     }
 }
