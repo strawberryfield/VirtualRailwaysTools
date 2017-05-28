@@ -1,0 +1,13 @@
+kml2label.exe
+kml2label.exe.config
+CasaSoft.KmlForms.dll
+CasaSoft.KmlLib.Base.dll
+CasaSoft.KmlLib.R3D.dll
+CasaSoft.R3D.Coords.dll
+CasaSoft.R3DForms.dll
+CasaSoft.vrt.BaseForms.dll
+DotSpatial.Projections.dll
+Gnu.Getopt.dll
+ICSharpCode.SharpZipLib.dll
+NGettext.dll
+locale\it\LC_MESSAGES\kml2label.mo

@@ -1,0 +1,13 @@
+kml2mkr.exe
+kml2mkrc.exe
+kml2mkr.exe.config
+kml2mkrc.exe.config
+CasaSoft.KmlForms.dll
+CasaSoft.KmlLib.Base.dll
+CasaSoft.KmlLib.MSTS.dll
+CasaSoft.vrt.BaseForms.dll
+Gnu.Getopt.dll
+ICSharpCode.SharpZipLib.dll
+NGettext.dll
+locale\it\LC_MESSAGES\kml2mkr.mo
+locale\it\LC_MESSAGES\kml2mkrc.mo
