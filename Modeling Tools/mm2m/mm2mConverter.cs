@@ -46,19 +46,27 @@ namespace CasaSoft.vrt.Modeling
             string[] readText = File.ReadAllLines(filename);
             foreach (string s in readText)
             {
-                Regex re = new Regex("Millimetric");
+                Regex re = new Regex("Millimetric", RegexOptions.IgnoreCase);
                 string ret = re.Replace(s, "Metric");
 
                 re = new Regex(@"^\s*Length\s*(\d+)", RegexOptions.IgnoreCase);
                 ret = re.Replace(ret, delegate (Match match)
                 {
-                    decimal v = Convert.ToDecimal(match.Groups[1].ToString());
-                    return string.Format("Length {0}", Math.Floor(v / 10));
+                    decimal v = Math.Floor(Convert.ToDecimal(match.Groups[1].ToString()) / 10);
+                    return string.Format("Length {0}", v);
                 });
 
                 if(!isVertexSection)
                 {
                     isVertexSection = ret.Contains("<VertexBuffer>");
+                    re = new Regex(@"^\s*INCLUDE\s*(-?\d+)\/(-?\d+)\/(-?\d+)(.*)", RegexOptions.IgnoreCase);
+                    ret = re.Replace(ret, delegate (Match match)
+                    {
+                        decimal v1 = Math.Floor(Convert.ToDecimal(match.Groups[1].ToString()) / 10);
+                        decimal v2 = Math.Floor(Convert.ToDecimal(match.Groups[2].ToString()) / 10);
+                        decimal v3 = Math.Floor(Convert.ToDecimal(match.Groups[3].ToString()) / 10);
+                        return string.Format("\tINCLUDE {0}/{1}/{2}{3}", new object[] { v1, v2, v3, match.Groups[4].ToString() });
+                    });
                 }
                 else
                 {
@@ -68,7 +76,14 @@ namespace CasaSoft.vrt.Modeling
                     }
                     else
                     {
-
+                        re = new Regex(@"^\s*(-?\d+)\/(-?\d+)\/(-?\d+)(.*)", RegexOptions.IgnoreCase);
+                        ret = re.Replace(ret, delegate (Match match)
+                        {
+                            decimal v1 = Math.Floor(Convert.ToDecimal(match.Groups[1].ToString()) / 10);
+                            decimal v2 = Math.Floor(Convert.ToDecimal(match.Groups[2].ToString()) / 10);
+                            decimal v3 = Math.Floor(Convert.ToDecimal(match.Groups[3].ToString()) / 10);
+                            return string.Format("{0}/{1}/{2}{3}", new object[] { v1, v2, v3, match.Groups[4].ToString() });
+                        });
                     }
                 }
 
