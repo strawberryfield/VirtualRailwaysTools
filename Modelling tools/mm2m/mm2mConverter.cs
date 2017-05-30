@@ -20,7 +20,7 @@
 
 using System.IO;
 
-namespace CasaSoft.vrt.Modelling
+namespace CasaSoft.vrt.Modeling
 {
     public class mm2mConverter
     {

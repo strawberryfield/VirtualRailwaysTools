@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{073D1C79-AF73-49BA-9FD0-3D855688B00C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CasaSoft.vrt.Modelling</RootNamespace>
+    <RootNamespace>CasaSoft.vrt.Modeling</RootNamespace>
     <AssemblyName>mm2m</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

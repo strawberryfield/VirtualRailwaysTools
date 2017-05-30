@@ -25,7 +25,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using CasaSoft.vrt.forms;
 
-namespace CasaSoft.vrt.Modelling 
+namespace CasaSoft.vrt.Modeling 
 {
     static class Program
     {
