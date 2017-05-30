@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("millimetric to metric converter for Rail3D models")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CasaSoft")]
-[assembly: AssemblyProduct("Vitual Railways Tools")]
+[assembly: AssemblyProduct("CasaSoft Virtual Railways Tools")]
 [assembly: AssemblyCopyright("Copyright © 2017 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -75,6 +75,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileOpener.resx">
       <DependentUpon>FileOpener.cs</DependentUpon>
     </EmbeddedResource>

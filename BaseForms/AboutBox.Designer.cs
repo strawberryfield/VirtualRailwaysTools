@@ -54,13 +54,15 @@ namespace CasaSoft.vrt.forms
             this.btnOK = new System.Windows.Forms.Button();
             this.txtLicense = new System.Windows.Forms.TextBox();
             this.labelLicense = new System.Windows.Forms.Label();
+            this.labelDesc = new System.Windows.Forms.Label();
+            this.labelProduct = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelProgramName
             // 
             this.labelProgramName.AutoSize = true;
             this.labelProgramName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProgramName.Location = new System.Drawing.Point(12, 25);
+            this.labelProgramName.Location = new System.Drawing.Point(12, 9);
             this.labelProgramName.Name = "labelProgramName";
             this.labelProgramName.Size = new System.Drawing.Size(112, 16);
             this.labelProgramName.TabIndex = 0;
@@ -70,7 +72,7 @@ namespace CasaSoft.vrt.forms
             // 
             this.labelVersion.AutoSize = true;
             this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersion.Location = new System.Drawing.Point(12, 41);
+            this.labelVersion.Location = new System.Drawing.Point(12, 25);
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(46, 15);
             this.labelVersion.TabIndex = 1;
@@ -79,7 +81,7 @@ namespace CasaSoft.vrt.forms
             // labelCopyright
             // 
             this.labelCopyright.AutoSize = true;
-            this.labelCopyright.Location = new System.Drawing.Point(12, 78);
+            this.labelCopyright.Location = new System.Drawing.Point(12, 97);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(82, 13);
             this.labelCopyright.TabIndex = 2;
@@ -88,7 +90,7 @@ namespace CasaSoft.vrt.forms
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(302, 233);
+            this.btnOK.Location = new System.Drawing.Point(302, 256);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(49, 27);
             this.btnOK.TabIndex = 3;
@@ -101,28 +103,50 @@ namespace CasaSoft.vrt.forms
             this.txtLicense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLicense.Location = new System.Drawing.Point(15, 126);
+            this.txtLicense.Location = new System.Drawing.Point(15, 135);
             this.txtLicense.Multiline = true;
             this.txtLicense.Name = "txtLicense";
             this.txtLicense.ReadOnly = true;
             this.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtLicense.Size = new System.Drawing.Size(336, 101);
+            this.txtLicense.Size = new System.Drawing.Size(336, 115);
             this.txtLicense.TabIndex = 4;
             // 
             // labelLicense
             // 
             this.labelLicense.AutoSize = true;
-            this.labelLicense.Location = new System.Drawing.Point(12, 110);
+            this.labelLicense.Location = new System.Drawing.Point(12, 119);
             this.labelLicense.Name = "labelLicense";
             this.labelLicense.Size = new System.Drawing.Size(64, 13);
             this.labelLicense.TabIndex = 5;
             this.labelLicense.Text = "License info";
             // 
+            // labelDesc
+            // 
+            this.labelDesc.AutoSize = true;
+            this.labelDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDesc.Location = new System.Drawing.Point(12, 71);
+            this.labelDesc.Name = "labelDesc";
+            this.labelDesc.Size = new System.Drawing.Size(33, 15);
+            this.labelDesc.TabIndex = 6;
+            this.labelDesc.Text = "desc";
+            // 
+            // labelProduct
+            // 
+            this.labelProduct.AutoSize = true;
+            this.labelProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProduct.Location = new System.Drawing.Point(12, 52);
+            this.labelProduct.Name = "labelProduct";
+            this.labelProduct.Size = new System.Drawing.Size(55, 15);
+            this.labelProduct.TabIndex = 7;
+            this.labelProduct.Text = "product";
+            // 
             // AboutBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 272);
+            this.ClientSize = new System.Drawing.Size(363, 286);
+            this.Controls.Add(this.labelProduct);
+            this.Controls.Add(this.labelDesc);
             this.Controls.Add(this.labelLicense);
             this.Controls.Add(this.txtLicense);
             this.Controls.Add(this.btnOK);
@@ -144,5 +168,7 @@ namespace CasaSoft.vrt.forms
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.TextBox txtLicense;
         private System.Windows.Forms.Label labelLicense;
+        private System.Windows.Forms.Label labelDesc;
+        private System.Windows.Forms.Label labelProduct;
     }
 }

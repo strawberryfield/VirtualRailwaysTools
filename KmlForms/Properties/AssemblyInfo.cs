@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("kml utils forms library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CasaSoft")]
-[assembly: AssemblyProduct("Virtual Railways Tools")]
+[assembly: AssemblyProduct("CasaSoft Virtual Railways Tools")]
 [assembly: AssemblyCopyright("Copyright © 2017 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

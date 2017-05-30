@@ -51,6 +51,8 @@ namespace CasaSoft.vrt.forms
             labelCopyright.Text = versionInfo.LegalCopyright;
             labelVersion.Text = catalog.GetString("version {0}.{1}", versionInfo.ProductMajorPart, versionInfo.ProductMinorPart);
             labelLicense.Text = catalog.GetString("License info");
+            labelDesc.Text = versionInfo.Comments;
+            labelProduct.Text = versionInfo.ProductName;
 
             // get license text
             var assembly = Assembly.GetExecutingAssembly();
