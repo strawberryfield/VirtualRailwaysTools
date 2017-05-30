@@ -68,7 +68,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3DForms", "R3DForms\R3DFor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modeling tools", "Modeling tools", "{FAA20F92-278D-4B69-A177-B914E8DE4354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mm2m", "Modelling tools\mm2m\mm2m.csproj", "{073D1C79-AF73-49BA-9FD0-3D855688B00C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mm2m", "Modeling Tools\mm2m\mm2m.csproj", "{073D1C79-AF73-49BA-9FD0-3D855688B00C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
