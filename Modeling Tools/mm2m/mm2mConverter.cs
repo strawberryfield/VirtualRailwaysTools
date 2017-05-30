@@ -24,8 +24,14 @@ using System.Text.RegularExpressions;
 
 namespace CasaSoft.vrt.Modeling
 {
+    /// <summary>
+    /// Converts a Rail3D object from millimetric measure unit to metric
+    /// </summary>
     public class mm2mConverter
     {
+        /// <summary>
+        /// Converted data in string
+        /// </summary>
         public string Converted { get; protected set; }
 
         private static string banner = @"## Converted to 'Metric' using CasaSoft mm2m v 2.0
@@ -33,11 +39,18 @@ namespace CasaSoft.vrt.Modeling
 ## see https://github.com/strawberryfield/VirtualRailwaysTools
 ";
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public mm2mConverter()
         {
             Converted = banner;
         }
 
+        /// <summary>
+        /// reads and converts a file
+        /// </summary>
+        /// <param name="filename">file to read</param>
         public void ReadFile(string filename)
         {
             Converted = banner;
@@ -91,6 +104,10 @@ namespace CasaSoft.vrt.Modeling
             }
         }
 
+        /// <summary>
+        /// writes converted data to file
+        /// </summary>
+        /// <param name="filename">file to write</param>
         public void WriteFile(string filename)
         {
             using (StreamWriter file = new StreamWriter(filename))

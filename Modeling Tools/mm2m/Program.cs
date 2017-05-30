@@ -23,9 +23,9 @@ using System.Reflection;
 using System.Configuration;
 using System.Globalization;
 using System.Windows.Forms;
-using CasaSoft.vrt.forms;
+using System.IO;
 
-namespace CasaSoft.vrt.Modeling 
+namespace CasaSoft.vrt.Modeling
 {
     static class Program
     {
@@ -33,8 +33,19 @@ namespace CasaSoft.vrt.Modeling
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
+            // If file name is present, convert quiet and exit
+            if (args.Length > 0)
+            {
+                string filename = args[0];
+                mm2mConverter conv = new mm2mConverter();
+                conv.ReadFile(filename);
+                conv.WriteFile(Path.GetFileNameWithoutExtension(filename) + "_metric.stc");
+                Environment.Exit(0);
+            }
+
+            // starts windows form application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
