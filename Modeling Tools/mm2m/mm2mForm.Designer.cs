@@ -18,7 +18,7 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
-namespace CasaSoft.vrt.Modelling
+namespace CasaSoft.vrt.Modeling
 {
     partial class mm2mForm
     {

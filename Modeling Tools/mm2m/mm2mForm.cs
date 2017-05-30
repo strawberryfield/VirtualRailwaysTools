@@ -24,7 +24,7 @@ using System.Globalization;
 using System.Reflection;
 using System.IO;
 
-namespace CasaSoft.vrt.Modelling
+namespace CasaSoft.vrt.Modeling
 {
     public partial class mm2mForm : FormBase
     {

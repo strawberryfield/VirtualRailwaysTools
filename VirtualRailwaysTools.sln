@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject
@@ -66,9 +66,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KmlLibR3D", "KmlLibR3D\KmlL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3DForms", "R3DForms\R3DForms.csproj", "{C325F07A-98E5-4EEA-94B0-525FE36F5589}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelling tools", "Modelling tools", "{FAA20F92-278D-4B69-A177-B914E8DE4354}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modeling tools", "Modeling tools", "{FAA20F92-278D-4B69-A177-B914E8DE4354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mm2m", "Modelling tools\mm2m\mm2m.csproj", "{073D1C79-AF73-49BA-9FD0-3D855688B00C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mm2m", "Modeling Tools\mm2m\mm2m.csproj", "{073D1C79-AF73-49BA-9FD0-3D855688B00C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

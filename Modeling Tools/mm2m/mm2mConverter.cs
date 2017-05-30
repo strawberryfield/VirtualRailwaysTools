@@ -22,7 +22,7 @@ using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace CasaSoft.vrt.Modelling
+namespace CasaSoft.vrt.Modeling
 {
     public class mm2mConverter
     {
