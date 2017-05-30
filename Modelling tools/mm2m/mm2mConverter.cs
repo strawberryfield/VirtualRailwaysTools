@@ -18,21 +18,70 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
+using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace CasaSoft.vrt.Modelling
 {
     public class mm2mConverter
     {
-        public string Metric(string filename)
+        public string Converted { get; protected set; }
+
+        private static string banner = @"## Converted to 'Metric' using CasaSoft mm2m v 2.0
+## copyright (c) 2011,2017 Roberto Ceccarelli - CasaSoft
+## see https://github.com/strawberryfield/VirtualRailwaysTools
+";
+
+        public mm2mConverter()
         {
-            string ret = "";
+            Converted = banner;
+        }
+
+        public void ReadFile(string filename)
+        {
+            Converted = banner;
+            bool isVertexSection = false;
+
             string[] readText = File.ReadAllLines(filename);
             foreach (string s in readText)
             {
-                ret += s;
+                Regex re = new Regex("Millimetric");
+                string ret = re.Replace(s, "Metric");
+
+                re = new Regex(@"^\s*Length\s*(\d+)", RegexOptions.IgnoreCase);
+                ret = re.Replace(ret, delegate (Match match)
+                {
+                    decimal v = Convert.ToDecimal(match.Groups[1].ToString());
+                    return string.Format("Length {0}", Math.Floor(v / 10));
+                });
+
+                if(!isVertexSection)
+                {
+                    isVertexSection = ret.Contains("<VertexBuffer>");
+                }
+                else
+                {
+                    if(ret.Contains("<VertexBuffer>"))
+                    {
+                        isVertexSection = false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+
+                Converted += ret + "\n";
             }
-            return ret;
+        }
+
+        public void WriteFile(string filename)
+        {
+            using (StreamWriter file = new StreamWriter(filename))
+            {
+                file.WriteLine(Converted);
+            }
         }
     }
 }

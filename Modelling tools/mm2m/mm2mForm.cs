@@ -28,7 +28,7 @@ namespace CasaSoft.vrt.Modelling
 {
     public partial class mm2mForm : FormBase
     {
-        private string converted;
+        private mm2mConverter conv;
 
         #region constructors and init
         public mm2mForm()
@@ -72,7 +72,6 @@ namespace CasaSoft.vrt.Modelling
             saveFileDialog.Title = catalog.GetString("Save converted model");
             saveFileDialog.Filter = catalog.GetString("Rail3D Model (*.stc)|*.stc|All files|*.*");
             saveFileDialog.DefaultExt = ".stc";
-
         }
 
         /// <summary>
@@ -81,18 +80,18 @@ namespace CasaSoft.vrt.Modelling
         /// <param name="filename">File to save on</param>
         protected override void doSave(string filename)
         {
-            base.doSave(filename);
-            using (StreamWriter file = new StreamWriter(filename))
+            if(conv != null)
             {
-                file.WriteLine(converted);
+                base.doSave(filename);
+                conv.WriteFile(filename);
             }
         }
         #endregion
 
         private void fileOpener_FileTextChanged(object sender, EventArgs e)
         {
-            mm2mConverter conv = new mm2mConverter();
-            converted = conv.Metric(fileOpener.FileName);
+            conv = new mm2mConverter();
+            conv.ReadFile(fileOpener.FileName);
         }
     }
 }
