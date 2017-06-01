@@ -55,12 +55,10 @@ namespace CasaSoft.vrt.forms
         }
 
         /// <summary>
-        /// Controls bas init
+        /// Controls basic init
         /// </summary>
         private void InitControls()
         {
-            kml = null;
-
             this.fileOpener.LabelText = catalog.GetString("kml / kmz file");
             this.fileOpener.ButtonText = catalog.GetString("Open");
             this.fileOpener.FileDialogFilter = catalog.GetString("Placemarks file (*.kml,*.kmz)|*.kml;*.kmz|All files|*.*");
@@ -71,15 +69,31 @@ namespace CasaSoft.vrt.forms
         {
             if (!this.DesignMode)
             {
-                InitControls();
+                    InitControls();
             }
         }
         #endregion
 
         #region open kml
+        /// <summary>
+        /// Programmatically sets the filename to load
+        /// </summary>
+        /// <param name="filename">file to load</param>
+        public void SetFile(string filename)
+        {
+            fileOpener.FileName = filename;
+            doOpenFile();
+        }
+
         private void fileOpener_FileTextChanged(object sender, EventArgs e)
         {
+            doOpenFile();
+        }
+
+        private void doOpenFile()
+        {
             string file = fileOpener.FileName;
+            kml = null;
             InitControls();
             if (!string.IsNullOrWhiteSpace(file))
             {

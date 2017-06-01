@@ -52,6 +52,8 @@ namespace CasaSoft.vrt.forms
             if(!this.DesignMode)
             {
                 ContentSelector.setLocale(catalog);
+                if(kml != null)
+                    ContentSelector.initFromKml(kml);
             }
         }
         #endregion

@@ -33,7 +33,7 @@ namespace CasaSoft.vrt
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] argv)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -47,7 +47,12 @@ namespace CasaSoft.vrt
             else
                 locale = new CultureInfo(localeName);
 
-            Application.Run(new kml2labelForm(Assembly.GetExecutingAssembly(), locale));
+            var form = new forms.kml2labelForm(Assembly.GetExecutingAssembly(), locale);
+            if (argv.Length > 0)
+            {
+                form.SetFile(argv[0]);
+            }
+            Application.Run(form);
         }
     }
 }
