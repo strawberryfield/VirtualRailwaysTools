@@ -9,5 +9,7 @@ CasaSoft.vrt.BaseForms.dll
 Gnu.Getopt.dll
 ICSharpCode.SharpZipLib.dll
 NGettext.dll
+Orts.Formats.Msts.dll
+Orts.Parsers.Msts.dll
 locale\it\LC_MESSAGES\kml2mkr.mo
 locale\it\LC_MESSAGES\kml2mkrc.mo

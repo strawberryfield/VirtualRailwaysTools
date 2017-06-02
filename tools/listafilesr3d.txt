@@ -1,5 +1,7 @@
 kml2label.exe
 kml2label.exe.config
+mm2m.exe
+mm2m.exe.config
 CasaSoft.KmlForms.dll
 CasaSoft.KmlLib.Base.dll
 CasaSoft.KmlLib.R3D.dll
@@ -11,3 +13,4 @@ Gnu.Getopt.dll
 ICSharpCode.SharpZipLib.dll
 NGettext.dll
 locale\it\LC_MESSAGES\kml2label.mo
+locale\it\LC_MESSAGES\mm2m.mo
