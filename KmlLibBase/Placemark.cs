@@ -25,11 +25,29 @@ using System.Xml;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Implements the <see cref="T:CasaSoft.vrt.KmlLib.IPlacemark"/> interface
+    /// </summary>
     class Placemark : IPlacemark
     {
+        /// <summary>
+        /// Name of the placemark
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Latitude
+        /// </summary>
         public double Lat { get; set; }
+
+        /// <summary>
+        /// Longitude
+        /// </summary>
         public double Lon { get; set; }
+
+        /// <summary>
+        /// Height
+        /// </summary>
         public double Height { get; set; }
 
         private NumberFormatInfo provider;
@@ -41,11 +59,12 @@ namespace CasaSoft.vrt.KmlLib
         public void SetCoord(string triple)
         {
             // Create a NumberFormatInfo object
-            provider = new NumberFormatInfo();
-            provider.NumberDecimalSeparator = ".";
-            provider.NumberGroupSeparator = ",";
-
-            String re = @"\,";
+            provider = new NumberFormatInfo()
+            {
+                NumberDecimalSeparator = ".",
+                NumberGroupSeparator = ","
+            };
+            string re = @"\,";
             string[] result = Regex.Split(triple, re);
             Lon = Convert.ToDouble(result[0], provider);
             Lat = Convert.ToDouble(result[1], provider);

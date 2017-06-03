@@ -25,7 +25,7 @@ Assemblies reference
 
 .. toctree::
    :maxdepth: 3
-   :caption: The available tools are:
+   :caption: The available assemblies are:
 
    CasaSoft.KmlLib.Base.xml
    CasaSoft.KmlLib.MSTS.xml

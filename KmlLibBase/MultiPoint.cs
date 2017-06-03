@@ -25,9 +25,20 @@ using System.Xml;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Implements the <see cref="T:CasaSoft.vrt.KmlLib.IMultiPoint"/> interface
+    /// </summary>
     class MultiPoint : IMultiPoint
     {
+        /// <summary>
+        /// name of the multipoint placemark
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// List of <see cref="T:CasaSoft.vrt.KmlLib.IKmlItem"/> 
+        /// to contains the coords of the points
+        /// </summary>
         public List<IKmlItem> Nodes { get; set; }
 
         /// <summary>
@@ -43,11 +54,11 @@ namespace CasaSoft.vrt.KmlLib
         {
             Nodes = new List<IKmlItem>();
             Name = pmdata.SelectSingleNode("ns:name", ns).InnerText;
-            String re = @" ";
+            string re = @" ";
             string[] result = Regex.Split(coords, re);
-            foreach (String item in result)
+            foreach (string item in result)
             {
-                String triple = item.Trim();
+                string triple = item.Trim();
                 if (triple != "")
                 {
                     Placemark node = new Placemark();

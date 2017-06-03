@@ -22,6 +22,10 @@ using System.Xml;
 
 namespace CasaSoft.vrt.KmlLib
 {
+    /// <summary>
+    /// Implements a <see cref="T:CasaSoft.vrt.KmlLib.MultiPoint"/>
+    /// to contain Polygon data
+    /// </summary>
     class Polygon : MultiPoint
     {
         /// <summary>

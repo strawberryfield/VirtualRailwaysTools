@@ -10,7 +10,7 @@ cd ..
 %rar% a %mstsfile% LICENSE.txt README.md
 cd tools
 
-%rar% a ..\%mstsfile% SOURCE_README.txt
+%rar% a ..\%r3dfile% SOURCE_README.txt
 cd ..\bin
 %rar% a ..\%r3dfile% @..\tools\listafilesr3d.txt
 cd ..

@@ -33,7 +33,7 @@ namespace CasaSoft.vrt.forms
     public partial class KmlPoint : UserControl
     {
         /// <summary>
-        /// Instance of 
+        /// Instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/>
         /// </summary>
         protected KmlLib.KmlLib Kml;
 
