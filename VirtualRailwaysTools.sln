@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject
@@ -41,6 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc_src", "doc_src", "{B27F
 		doc_src\make.bat = doc_src\make.bat
 		doc_src\Makefile = doc_src\Makefile
 		doc_src\makesite.bat = doc_src\makesite.bat
+		doc_src\mm2m.rst = doc_src\mm2m.rst
 		doc_src\msts.rst = doc_src\msts.rst
 		doc_src\rail3d.rst = doc_src\rail3d.rst
 		doc_src\userguides.rst = doc_src\userguides.rst
@@ -71,6 +72,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mm2m", "Modeling Tools\mm2m\mm2m.csproj", "{073D1C79-AF73-49BA-9FD0-3D855688B00C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ORTS Libs", "ORTS Libs", "{6667A0A9-D25B-4444-ACB5-471A12E46685}"
+	ProjectSection(SolutionItems) = preProject
+		ORTS Libs\README.md = ORTS Libs\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orts.Parsers.Msts", "ORTS Libs\Orts.Parsers.Msts\Orts.Parsers.Msts.csproj", "{CC8F071F-5DC7-4F95-B9AF-D6C3FEBFA442}"
 EndProject
