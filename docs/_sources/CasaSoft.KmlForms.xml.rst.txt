@@ -28,7 +28,14 @@ Parameter **locale**\: loacle for translations
 Method: CasaSoft.vrt.forms.KmlBaseForm.InitControls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Controls bas init 
+ Controls basic init 
+
+Method: CasaSoft.vrt.forms.KmlBaseForm.SetFile(System.String)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Programmatically sets the filename to load 
+
+Parameter **filename**\: file to load
 
 Method: CasaSoft.vrt.forms.KmlBaseForm.AfterFileOpenerChanged
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +133,7 @@ Type: CasaSoft.vrt.forms.KmlPoint
 Field: CasaSoft.vrt.forms.KmlPoint.Kml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Instance of 
+ Instance of `Type: CasaSoft.vrt.KmlLib.KmlLib`_
 
 Method: CasaSoft.vrt.forms.KmlPoint.#ctor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

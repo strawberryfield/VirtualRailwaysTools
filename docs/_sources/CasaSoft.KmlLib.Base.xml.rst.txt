@@ -435,6 +435,21 @@ Parameter **name**\: name of the polygon
 
 **Returns**\: `Type: CasaSoft.vrt.poly`_ object or null if none found
 
+Type: CasaSoft.vrt.KmlLib.MultiPoint
+------------------------------------
+
+ Implements the `Type: CasaSoft.vrt.KmlLib.IMultiPoint`_ interface 
+
+Property: CasaSoft.vrt.KmlLib.MultiPoint.Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ name of the multipoint placemark 
+
+Property: CasaSoft.vrt.KmlLib.MultiPoint.Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ List of `Type: CasaSoft.vrt.KmlLib.IKmlItem`_ to contains the coords of the points 
+
 Method: CasaSoft.vrt.KmlLib.MultiPoint.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager,System.String)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -450,6 +465,11 @@ Parameter **coords**\: String with coordinate list
 
 > This method is only used as base for inhertance 
 
+Type: CasaSoft.vrt.KmlLib.Path
+------------------------------
+
+ Implements a `Type: CasaSoft.vrt.KmlLib.MultiPoint`_ to contain Path data 
+
 Method: CasaSoft.vrt.KmlLib.Path.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -458,6 +478,31 @@ Method: CasaSoft.vrt.KmlLib.Path.SetData(System.Xml.XmlNode,System.Xml.XmlNamesp
 Parameter **pmdata**\: Placemark XML fragment
 
 Parameter **ns**\: XML namespace
+
+Type: CasaSoft.vrt.KmlLib.Placemark
+-----------------------------------
+
+ Implements the `Type: CasaSoft.vrt.KmlLib.IPlacemark`_ interface 
+
+Property: CasaSoft.vrt.KmlLib.Placemark.Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Name of the placemark 
+
+Property: CasaSoft.vrt.KmlLib.Placemark.Lat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Latitude 
+
+Property: CasaSoft.vrt.KmlLib.Placemark.Lon
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Longitude 
+
+Property: CasaSoft.vrt.KmlLib.Placemark.Height
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Height 
 
 Method: CasaSoft.vrt.KmlLib.Placemark.SetCoord(System.String)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -474,6 +519,11 @@ Method: CasaSoft.vrt.KmlLib.Placemark.SetData(System.Xml.XmlNode,System.Xml.XmlN
 Parameter **pmdata**\: Placemark XML fragment
 
 Parameter **ns**\: XML namespace
+
+Type: CasaSoft.vrt.KmlLib.Polygon
+---------------------------------
+
+ Implements a `Type: CasaSoft.vrt.KmlLib.MultiPoint`_ to contain Polygon data 
 
 Method: CasaSoft.vrt.KmlLib.Polygon.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

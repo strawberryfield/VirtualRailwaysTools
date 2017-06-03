@@ -101,6 +101,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-imultipoint">2.1.1.5. Type: CasaSoft.vrt.KmlLib.IMultiPoint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-iplacemark">2.1.1.6. Type: CasaSoft.vrt.KmlLib.IPlacemark</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-kmllib">2.1.1.7. Type: CasaSoft.vrt.KmlLib.KmlLib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-multipoint">2.1.1.8. Type: CasaSoft.vrt.KmlLib.MultiPoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-path">2.1.1.9. Type: CasaSoft.vrt.KmlLib.Path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-placemark">2.1.1.10. Type: CasaSoft.vrt.KmlLib.Placemark</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-casasoft-vrt-kmllib-polygon">2.1.1.11. Type: CasaSoft.vrt.KmlLib.Polygon</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="CasaSoft.KmlLib.MSTS.xml.html">2.1.2. Assembly: CasaSoft.KmlLib.MSTS</a></li>
@@ -199,7 +203,7 @@
 <h3>2.1.1.1.6. Method: CasaSoft.vrt.KmlLib.Converter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-converter-placemarkbody-casasoft-vrt-kmllib-iplacemark-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Converts the specified placemark to text using the given title</div></blockquote>
-<p>Parameter <strong>pm</strong>: <a href="#id1"><span class="problematic" id="id2">`Type: CasaSoft.vrt.KmlLib.Placemark`_</span></a> to convert</p>
+<p>Parameter <strong>pm</strong>: <a class="reference internal" href="#type-casasoft-vrt-kmllib-placemark">Type: CasaSoft.vrt.KmlLib.Placemark</a> to convert</p>
 <p>Parameter <strong>text</strong>: Title to use</p>
 <p><strong>Returns</strong>:</p>
 </div>
@@ -207,7 +211,7 @@
 <h3>2.1.1.1.7. Method: CasaSoft.vrt.KmlLib.Converter.PlacemarkBody(CasaSoft.vrt.KmlLib.IPlacemark)<a class="headerlink" href="#method-casasoft-vrt-kmllib-converter-placemarkbody-casasoft-vrt-kmllib-iplacemark" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Converts the specified placemark to text</div></blockquote>
-<p>Parameter <strong>pm</strong>: <a href="#id3"><span class="problematic" id="id4">`Type: CasaSoft.vrt.KmlLib.Placemark`_</span></a> to convert</p>
+<p>Parameter <strong>pm</strong>: <a class="reference internal" href="#type-casasoft-vrt-kmllib-placemark">Type: CasaSoft.vrt.KmlLib.Placemark</a> to convert</p>
 <p><strong>Returns</strong>:</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-converter-placemarkbody-system-collections-generic-list-casasoft-vrt-kmllib-ikmlitem">
@@ -234,15 +238,15 @@
 <div class="section" id="method-casasoft-vrt-kmllib-converter-multipointbody-casasoft-vrt-kmllib-imultipoint">
 <h3>2.1.1.1.11. Method: CasaSoft.vrt.KmlLib.Converter.MultiPointBody(CasaSoft.vrt.KmlLib.IMultiPoint)<a class="headerlink" href="#method-casasoft-vrt-kmllib-converter-multipointbody-casasoft-vrt-kmllib-imultipoint" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Decodes a multi-point item (<a href="#id5"><span class="problematic" id="id6">`Type: CasaSoft.vrt.KmlLib.Path`_</span></a> or <a href="#id7"><span class="problematic" id="id8">`Type: CasaSoft.vrt.KmlLib.Polygon`_</span></a>) to text</div></blockquote>
-<p>Parameter <strong>mp</strong>: multipoint (<a href="#id9"><span class="problematic" id="id10">`Type: CasaSoft.vrt.KmlLib.Path`_</span></a> or <a href="#id11"><span class="problematic" id="id12">`Type: CasaSoft.vrt.KmlLib.Polygon`_</span></a>) to decode</p>
+<div>Decodes a multi-point item (<a class="reference internal" href="#type-casasoft-vrt-kmllib-path">Type: CasaSoft.vrt.KmlLib.Path</a> or <a class="reference internal" href="#type-casasoft-vrt-kmllib-polygon">Type: CasaSoft.vrt.KmlLib.Polygon</a>) to text</div></blockquote>
+<p>Parameter <strong>mp</strong>: multipoint (<a class="reference internal" href="#type-casasoft-vrt-kmllib-path">Type: CasaSoft.vrt.KmlLib.Path</a> or <a class="reference internal" href="#type-casasoft-vrt-kmllib-polygon">Type: CasaSoft.vrt.KmlLib.Polygon</a>) to decode</p>
 <p><strong>Returns</strong>:</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-converter-multipointbody-system-collections-generic-list-casasoft-vrt-kmllib-ikmlitem">
 <h3>2.1.1.1.12. Method: CasaSoft.vrt.KmlLib.Converter.MultiPointBody(System.Collections.Generic.List{CasaSoft.vrt.KmlLib.IKmlItem})<a class="headerlink" href="#method-casasoft-vrt-kmllib-converter-multipointbody-system-collections-generic-list-casasoft-vrt-kmllib-ikmlitem" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div>Decodes a list of multi-point items (<a href="#id13"><span class="problematic" id="id14">`Type: CasaSoft.vrt.KmlLib.Path`_</span></a> or <a href="#id15"><span class="problematic" id="id16">`Type: CasaSoft.vrt.KmlLib.Polygon`_</span></a>) to text</div></blockquote>
-<p>Parameter <strong>list</strong>: multipoint items list (<a href="#id17"><span class="problematic" id="id18">`Type: CasaSoft.vrt.KmlLib.Path`_</span></a> or <a href="#id19"><span class="problematic" id="id20">`Type: CasaSoft.vrt.KmlLib.Polygon`_</span></a>) to decode</p>
+<div>Decodes a list of multi-point items (<a class="reference internal" href="#type-casasoft-vrt-kmllib-path">Type: CasaSoft.vrt.KmlLib.Path</a> or <a class="reference internal" href="#type-casasoft-vrt-kmllib-polygon">Type: CasaSoft.vrt.KmlLib.Polygon</a>) to text</div></blockquote>
+<p>Parameter <strong>list</strong>: multipoint items list (<a class="reference internal" href="#type-casasoft-vrt-kmllib-path">Type: CasaSoft.vrt.KmlLib.Path</a> or <a class="reference internal" href="#type-casasoft-vrt-kmllib-polygon">Type: CasaSoft.vrt.KmlLib.Polygon</a>) to decode</p>
 <p><strong>Returns</strong>:</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-converter-pathbody">
@@ -505,31 +509,46 @@
 <div>Return placemark by its name</div></blockquote>
 <p>Parameter <strong>name</strong>: name of the placemark</p>
 <p>Parameter <strong>list</strong>: list of placemarks where to search</p>
-<p><strong>Returns</strong>: <a href="#id21"><span class="problematic" id="id22">`Type: CasaSoft.vrt.placemark`_</span></a> object or null if none found</p>
+<p><strong>Returns</strong>: <a href="#id1"><span class="problematic" id="id2">`Type: CasaSoft.vrt.placemark`_</span></a> object or null if none found</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-kmllib-getplacemarkbyname-system-string">
 <h3>2.1.1.7.13. Method: CasaSoft.vrt.KmlLib.KmlLib.GetPlacemarkByName(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-kmllib-getplacemarkbyname-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Return placemark by its name</div></blockquote>
 <p>Parameter <strong>name</strong>: name of the placemark</p>
-<p><strong>Returns</strong>: <a href="#id23"><span class="problematic" id="id24">`Type: CasaSoft.vrt.placemark`_</span></a> object or null if none found</p>
+<p><strong>Returns</strong>: <a href="#id3"><span class="problematic" id="id4">`Type: CasaSoft.vrt.placemark`_</span></a> object or null if none found</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-kmllib-getpathbyname-system-string">
 <h3>2.1.1.7.14. Method: CasaSoft.vrt.KmlLib.KmlLib.GetPathByName(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-kmllib-getpathbyname-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Return path by its name</div></blockquote>
 <p>Parameter <strong>name</strong>: name of the path</p>
-<p><strong>Returns</strong>: <a href="#id25"><span class="problematic" id="id26">`Type: CasaSoft.vrt.path`_</span></a> object or null if none found</p>
+<p><strong>Returns</strong>: <a href="#id5"><span class="problematic" id="id6">`Type: CasaSoft.vrt.path`_</span></a> object or null if none found</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-kmllib-getpolybyname-system-string">
 <h3>2.1.1.7.15. Method: CasaSoft.vrt.KmlLib.KmlLib.GetPolyByName(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-kmllib-getpolybyname-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Return polygon by its name</div></blockquote>
 <p>Parameter <strong>name</strong>: name of the polygon</p>
-<p><strong>Returns</strong>: <a href="#id27"><span class="problematic" id="id28">`Type: CasaSoft.vrt.poly`_</span></a> object or null if none found</p>
+<p><strong>Returns</strong>: <a href="#id7"><span class="problematic" id="id8">`Type: CasaSoft.vrt.poly`_</span></a> object or null if none found</p>
+</div>
+</div>
+<div class="section" id="type-casasoft-vrt-kmllib-multipoint">
+<h2>2.1.1.8. Type: CasaSoft.vrt.KmlLib.MultiPoint<a class="headerlink" href="#type-casasoft-vrt-kmllib-multipoint" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Implements the <a class="reference internal" href="#type-casasoft-vrt-kmllib-imultipoint">Type: CasaSoft.vrt.KmlLib.IMultiPoint</a> interface</div></blockquote>
+<div class="section" id="property-casasoft-vrt-kmllib-multipoint-name">
+<h3>2.1.1.8.1. Property: CasaSoft.vrt.KmlLib.MultiPoint.Name<a class="headerlink" href="#property-casasoft-vrt-kmllib-multipoint-name" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>name of the multipoint placemark</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-kmllib-multipoint-nodes">
+<h3>2.1.1.8.2. Property: CasaSoft.vrt.KmlLib.MultiPoint.Nodes<a class="headerlink" href="#property-casasoft-vrt-kmllib-multipoint-nodes" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>List of <a class="reference internal" href="#type-casasoft-vrt-kmllib-ikmlitem">Type: CasaSoft.vrt.KmlLib.IKmlItem</a> to contains the coords of the points</div></blockquote>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-multipoint-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager-system-string">
-<h3>2.1.1.7.16. Method: CasaSoft.vrt.KmlLib.MultiPoint.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-multipoint-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager-system-string" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1.8.3. Method: CasaSoft.vrt.KmlLib.MultiPoint.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager,System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-multipoint-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Set data from XML fragment and list of coordinates</div></blockquote>
 <p>Parameter <strong>pmdata</strong>: Placemark XML fragment</p>
@@ -537,28 +556,63 @@
 <p>Parameter <strong>coords</strong>: String with coordinate list</p>
 <p>&gt; This method is only used as base for inhertance</p>
 </div>
+</div>
+<div class="section" id="type-casasoft-vrt-kmllib-path">
+<h2>2.1.1.9. Type: CasaSoft.vrt.KmlLib.Path<a class="headerlink" href="#type-casasoft-vrt-kmllib-path" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Implements a <a class="reference internal" href="#type-casasoft-vrt-kmllib-multipoint">Type: CasaSoft.vrt.KmlLib.MultiPoint</a> to contain Path data</div></blockquote>
 <div class="section" id="method-casasoft-vrt-kmllib-path-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager">
-<h3>2.1.1.7.17. Method: CasaSoft.vrt.KmlLib.Path.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-path-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1.9.1. Method: CasaSoft.vrt.KmlLib.Path.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-path-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Set data from XML fragment</div></blockquote>
 <p>Parameter <strong>pmdata</strong>: Placemark XML fragment</p>
 <p>Parameter <strong>ns</strong>: XML namespace</p>
 </div>
+</div>
+<div class="section" id="type-casasoft-vrt-kmllib-placemark">
+<h2>2.1.1.10. Type: CasaSoft.vrt.KmlLib.Placemark<a class="headerlink" href="#type-casasoft-vrt-kmllib-placemark" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Implements the <a class="reference internal" href="#type-casasoft-vrt-kmllib-iplacemark">Type: CasaSoft.vrt.KmlLib.IPlacemark</a> interface</div></blockquote>
+<div class="section" id="property-casasoft-vrt-kmllib-placemark-name">
+<h3>2.1.1.10.1. Property: CasaSoft.vrt.KmlLib.Placemark.Name<a class="headerlink" href="#property-casasoft-vrt-kmllib-placemark-name" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Name of the placemark</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-kmllib-placemark-lat">
+<h3>2.1.1.10.2. Property: CasaSoft.vrt.KmlLib.Placemark.Lat<a class="headerlink" href="#property-casasoft-vrt-kmllib-placemark-lat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Latitude</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-kmllib-placemark-lon">
+<h3>2.1.1.10.3. Property: CasaSoft.vrt.KmlLib.Placemark.Lon<a class="headerlink" href="#property-casasoft-vrt-kmllib-placemark-lon" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Longitude</div></blockquote>
+</div>
+<div class="section" id="property-casasoft-vrt-kmllib-placemark-height">
+<h3>2.1.1.10.4. Property: CasaSoft.vrt.KmlLib.Placemark.Height<a class="headerlink" href="#property-casasoft-vrt-kmllib-placemark-height" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Height</div></blockquote>
+</div>
 <div class="section" id="method-casasoft-vrt-kmllib-placemark-setcoord-system-string">
-<h3>2.1.1.7.18. Method: CasaSoft.vrt.KmlLib.Placemark.SetCoord(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-placemark-setcoord-system-string" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1.10.5. Method: CasaSoft.vrt.KmlLib.Placemark.SetCoord(System.String)<a class="headerlink" href="#method-casasoft-vrt-kmllib-placemark-setcoord-system-string" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Set coords data from a triple lon,lat,height</div></blockquote>
 <p>Parameter <strong>triple</strong>:</p>
 </div>
 <div class="section" id="method-casasoft-vrt-kmllib-placemark-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager">
-<h3>2.1.1.7.19. Method: CasaSoft.vrt.KmlLib.Placemark.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-placemark-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1.10.6. Method: CasaSoft.vrt.KmlLib.Placemark.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-placemark-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Set data from XML fragment</div></blockquote>
 <p>Parameter <strong>pmdata</strong>: Placemark XML fragment</p>
 <p>Parameter <strong>ns</strong>: XML namespace</p>
 </div>
+</div>
+<div class="section" id="type-casasoft-vrt-kmllib-polygon">
+<h2>2.1.1.11. Type: CasaSoft.vrt.KmlLib.Polygon<a class="headerlink" href="#type-casasoft-vrt-kmllib-polygon" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Implements a <a class="reference internal" href="#type-casasoft-vrt-kmllib-multipoint">Type: CasaSoft.vrt.KmlLib.MultiPoint</a> to contain Polygon data</div></blockquote>
 <div class="section" id="method-casasoft-vrt-kmllib-polygon-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager">
-<h3>2.1.1.7.20. Method: CasaSoft.vrt.KmlLib.Polygon.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-polygon-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1.11.1. Method: CasaSoft.vrt.KmlLib.Polygon.SetData(System.Xml.XmlNode,System.Xml.XmlNamespaceManager)<a class="headerlink" href="#method-casasoft-vrt-kmllib-polygon-setdata-system-xml-xmlnode-system-xml-xmlnamespacemanager" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Set data from XML fragment</div></blockquote>
 <p>Parameter <strong>pmdata</strong>: Placemark XML fragment</p>
