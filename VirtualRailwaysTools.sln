@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{EBA5D35A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc_src", "doc_src", "{B27FB787-6DFD-43EF-8053-DC74D384392B}"
 	ProjectSection(SolutionItems) = preProject
+		doc_src\acks.rst = doc_src\acks.rst
 		doc_src\assemblies.rst = doc_src\assemblies.rst
 		doc_src\CasaSoft.KmlForms.xml.rst = doc_src\CasaSoft.KmlForms.xml.rst
 		doc_src\CasaSoft.KmlLib.Base.xml.rst = doc_src\CasaSoft.KmlLib.Base.xml.rst

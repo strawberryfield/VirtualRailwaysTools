@@ -18,13 +18,30 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-###########   
-Final notes
-###########
+.. _acks:
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+Acknowledgments
+***************
 
-   acks
-   legal
+.. _3rdparties:
+
+Third parties libraries
+=======================
+
+In building this project several third parties libraries are used:
+
+- DotSpatial.Projections by DotSpatial Team
+  https://github.com/DotSpatial/DotSpatial
+  
+- Gnu.Getopt by kprueckl, seanfoy, Aaron M. Renn, Free Software Foundation
+  https://getopt.codeplex.com/
+  
+- NGettext by Vitaly Zilnik
+  https://github.com/neris/NGettext
+  
+- SharpZipLib by http://www.icsharpcode.net/
+  http://www.icsharpcode.net/OpenSource/SharpZipLib/Default.aspx
+  
+- Some code come from the Open Rails project 
+  http://openrails.org
+

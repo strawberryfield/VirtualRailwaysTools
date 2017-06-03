@@ -51,6 +51,25 @@ Or my guide (in italian language): https://strawberryfield.github.io/guide_guide
 
 ### Acknowledgments
 
+#### Third parties libraries
+
+In building this project several third parties libraries are used:
+
+- DotSpatial.Projections by DotSpatial Team
+  https://github.com/DotSpatial/DotSpatial
+  
+- Gnu.Getopt by kprueckl, seanfoy, Aaron M. Renn, Free Software Foundation
+  https://getopt.codeplex.com/
+  
+- NGettext by Vitaly Zilnik
+  https://github.com/neris/NGettext
+  
+- SharpZipLib by http://www.icsharpcode.net/
+  http://www.icsharpcode.net/OpenSource/SharpZipLib/Default.aspx
+  
+- Some code come from the Open Rails project 
+  http://openrails.org
+
 ### Legal
 
 #### Warranty
