@@ -58,6 +58,12 @@
     <Compile Include="FileOpener.Designer.cs">
       <DependentUpon>FileOpener.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileOpenerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileOpenerForm.Designer.cs">
+      <DependentUpon>FileOpenerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FileOpener.resx">
       <DependentUpon>FileOpener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileOpenerForm.resx">
+      <DependentUpon>FileOpenerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>

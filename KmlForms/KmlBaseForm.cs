@@ -19,7 +19,6 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
 
@@ -28,7 +27,7 @@ namespace CasaSoft.vrt.forms
     /// <summary>
     /// Base form for kml utilities
     /// </summary>
-    public partial class KmlBaseForm : FormBase
+    public partial class KmlBaseForm : FileOpenerForm
     {
         /// <summary>
         /// Instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/>
@@ -75,22 +74,8 @@ namespace CasaSoft.vrt.forms
         #endregion
 
         #region open kml
-        /// <summary>
-        /// Programmatically sets the filename to load
-        /// </summary>
-        /// <param name="filename">file to load</param>
-        public void SetFile(string filename)
-        {
-            fileOpener.FileName = filename;
-            doOpenFile();
-        }
 
-        private void fileOpener_FileTextChanged(object sender, EventArgs e)
-        {
-            doOpenFile();
-        }
-
-        private void doOpenFile()
+        protected override void doOpenFile()
         {
             string file = fileOpener.FileName;
             kml = null;
