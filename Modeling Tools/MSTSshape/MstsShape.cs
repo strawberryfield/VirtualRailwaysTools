@@ -19,40 +19,47 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Reflection;
-using System.Configuration;
-using System.Globalization;
-using System.Windows.Forms;
-using System.IO;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Orts.Parsers.Msts;
 
 namespace CasaSoft.vrt.Modeling
 {
-    static class Program
+    /// <summary>
+    /// Simple class to read shape from file
+    /// </summary>
+    public class MstsShapeFile
     {
         /// <summary>
-        /// Punto di ingresso principale dell'applicazione.
+        /// shape data
         /// </summary>
-        [STAThread]
-        static void Main(string[] argv)
+        public MstsShape shape;
+
+        /// <summary>
+        /// constructor
+        /// </summary>
+        /// <param name="filename">file to read and parse</param>
+        public MstsShapeFile(string filename)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            // locales management
-            string localeName = ConfigurationManager.AppSettings["locale"];
-            CultureInfo locale;
-
-            if (string.IsNullOrWhiteSpace(localeName))
-                locale = CultureInfo.CurrentCulture;
-            else
-                locale = new CultureInfo(localeName);
-
-            var form = new stForm(Assembly.GetExecutingAssembly(), locale);
-            if (argv.Length > 0)
-            {
-//                form.SetFile(argv[0]);
-            }
-            Application.Run(form);
+            var file = SBR.Open(filename);
+            shape = new MstsShape(file.ReadSubBlock());
+            file.VerifyEndOfBlock();
         }
+    }
+
+    /// <summary>
+    /// Extends ORTS class for MSTS shape 
+    /// </summary>
+    public class MstsShape : Orts.Formats.Msts.shape
+    {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="block"></param>
+        public MstsShape(SBR block) : base(block)
+        {
+        }
+
     }
 }

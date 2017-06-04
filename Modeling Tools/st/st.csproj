@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="NGettext, Version=0.6.1.0, Culture=neutral, PublicKeyToken=08d3d1c89dfd2985" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -80,13 +81,9 @@
       <Project>{ffdbc7fb-f2a2-49c7-9718-9f29706a7a91}</Project>
       <Name>BaseForms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ORTS Libs\Orts.Formats.Msts\Orts.Formats.Msts.csproj">
-      <Project>{570709fa-0c8a-4b1d-ba2d-d9455afd9b5c}</Project>
-      <Name>Orts.Formats.Msts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ORTS Libs\Orts.Parsers.Msts\Orts.Parsers.Msts.csproj">
-      <Project>{cc8f071f-5dc7-4f95-b9af-d6c3febfa442}</Project>
-      <Name>Orts.Parsers.Msts</Name>
+    <ProjectReference Include="..\MSTSshape\MSTSshape.csproj">
+      <Project>{12432253-3de8-433b-a7b4-b12b5d35b825}</Project>
+      <Name>MSTSshape</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

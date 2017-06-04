@@ -72,6 +72,7 @@ namespace CasaSoft.vrt.Modeling
             this.Controls.Add(this.fileOpener);
             this.Name = "stForm";
             this.Text = "stForm";
+            this.Shown += new System.EventHandler(this.stForm_Shown);
             this.Controls.SetChildIndex(this.btnSave, 0);
             this.Controls.SetChildIndex(this.btnAbout, 0);
             this.Controls.SetChildIndex(this.fileOpener, 0);

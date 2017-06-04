@@ -27,7 +27,7 @@ namespace CasaSoft.vrt.Modeling
 {
     public partial class stForm : FormBase
     {
-        private Orts.Formats.Msts.shape s;
+        private MstsShape s;
 
         #region constructor and inits
         public stForm()
@@ -52,7 +52,7 @@ namespace CasaSoft.vrt.Modeling
             this.fileOpener.FileDialogTitle = catalog.GetString("Select shape");
         }
 
-        private void mm2mForm_Shown(object sender, EventArgs e)
+        private void stForm_Shown(object sender, EventArgs e)
         {
             if (!this.DesignMode)
             {
@@ -64,7 +64,8 @@ namespace CasaSoft.vrt.Modeling
 
         private void fileOpener_FileTextChanged(object sender, EventArgs e)
         {
-            //
+            MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
+            s = sf.shape;
         }
     }
 }
