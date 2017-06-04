@@ -18,23 +18,53 @@
 // along with CasaSoft Virtual Railways Tools.  
 // If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using CasaSoft.vrt.forms;
+using System;
+using System.Globalization;
+using System.Reflection;
 
 namespace CasaSoft.vrt.Modeling
 {
     public partial class stForm : FormBase
     {
+        private Orts.Formats.Msts.shape s;
+
+        #region constructor and inits
         public stForm()
         {
             InitializeComponent();
+        }
+
+        public stForm(Assembly program, CultureInfo locale) : base(program, locale)
+        {
+            InitializeComponent();
+            Text = getProgramTitle();
+        }
+
+        /// <summary>
+        /// Controls bas init
+        /// </summary>
+        private void InitControls()
+        {
+            this.fileOpener.LabelText = catalog.GetString(".s file");
+            this.fileOpener.ButtonText = catalog.GetString("Open");
+            this.fileOpener.FileDialogFilter = catalog.GetString("MSTS shape file (*.s)|*.s|All files|*.*");
+            this.fileOpener.FileDialogTitle = catalog.GetString("Select shape");
+        }
+
+        private void mm2mForm_Shown(object sender, EventArgs e)
+        {
+            if (!this.DesignMode)
+            {
+                InitControls();
+            }
+        }
+
+        #endregion
+
+        private void fileOpener_FileTextChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

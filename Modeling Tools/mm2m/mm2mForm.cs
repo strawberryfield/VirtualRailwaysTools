@@ -22,7 +22,6 @@ using CasaSoft.vrt.forms;
 using System;
 using System.Globalization;
 using System.Reflection;
-using System.IO;
 
 namespace CasaSoft.vrt.Modeling
 {

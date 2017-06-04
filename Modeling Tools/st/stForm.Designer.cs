@@ -48,11 +48,39 @@ namespace CasaSoft.vrt.Modeling
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.fileOpener = new CasaSoft.vrt.forms.FileOpener();
+            this.SuspendLayout();
+            // 
+            // fileOpener
+            // 
+            this.fileOpener.ButtonText = "Open";
+            this.fileOpener.FileDialogFilter = "";
+            this.fileOpener.FileDialogTitle = "";
+            this.fileOpener.FileName = "";
+            this.fileOpener.LabelText = "File name";
+            this.fileOpener.Location = new System.Drawing.Point(12, 12);
+            this.fileOpener.Name = "fileOpener";
+            this.fileOpener.Size = new System.Drawing.Size(567, 38);
+            this.fileOpener.TabIndex = 8;
+            this.fileOpener.FileTextChanged += new System.EventHandler(this.fileOpener_FileTextChanged);
+            // 
+            // stForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(585, 261);
+            this.Controls.Add(this.fileOpener);
+            this.Name = "stForm";
             this.Text = "stForm";
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private forms.FileOpener fileOpener;
     }
 }
