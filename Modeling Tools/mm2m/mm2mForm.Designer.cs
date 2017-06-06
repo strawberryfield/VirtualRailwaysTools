@@ -48,7 +48,6 @@ namespace CasaSoft.vrt.Modeling
         /// </summary>
         private void InitializeComponent()
         {
-            this.fileOpener = new CasaSoft.vrt.forms.FileOpener();
             this.SuspendLayout();
             // 
             // btnSave
@@ -59,37 +58,18 @@ namespace CasaSoft.vrt.Modeling
             // 
             this.btnAbout.Location = new System.Drawing.Point(12, 70);
             // 
-            // fileOpener
-            // 
-            this.fileOpener.ButtonText = "Open";
-            this.fileOpener.FileDialogFilter = "";
-            this.fileOpener.FileDialogTitle = "";
-            this.fileOpener.FileName = "";
-            this.fileOpener.LabelText = "File name";
-            this.fileOpener.Location = new System.Drawing.Point(12, 12);
-            this.fileOpener.Name = "fileOpener";
-            this.fileOpener.Size = new System.Drawing.Size(561, 38);
-            this.fileOpener.TabIndex = 8;
-            this.fileOpener.FileTextChanged += new System.EventHandler(this.fileOpener_FileTextChanged);
-            // 
             // mm2mForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 102);
-            this.Controls.Add(this.fileOpener);
             this.Name = "mm2mForm";
             this.Text = "mm2mForm";
             this.Shown += new System.EventHandler(this.mm2mForm_Shown);
-            this.Controls.SetChildIndex(this.btnSave, 0);
-            this.Controls.SetChildIndex(this.btnAbout, 0);
-            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private forms.FileOpener fileOpener;
     }
 }

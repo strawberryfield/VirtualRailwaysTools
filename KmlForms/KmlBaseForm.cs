@@ -75,6 +75,9 @@ namespace CasaSoft.vrt.forms
 
         #region open kml
 
+        /// <summary>
+        /// open file dirty work
+        /// </summary>
         protected override void doOpenFile()
         {
             string file = fileOpener.FileName;

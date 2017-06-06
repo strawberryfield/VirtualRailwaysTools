@@ -25,7 +25,7 @@ using System.Reflection;
 
 namespace CasaSoft.vrt.Modeling
 {
-    public partial class mm2mForm : FormBase
+    public partial class mm2mForm : FileOpenerForm
     {
         private mm2mConverter conv;
 
@@ -87,7 +87,7 @@ namespace CasaSoft.vrt.Modeling
         }
         #endregion
 
-        private void fileOpener_FileTextChanged(object sender, EventArgs e)
+        protected override void doOpenFile()
         {
             conv = new mm2mConverter();
             conv.ReadFile(fileOpener.FileName);

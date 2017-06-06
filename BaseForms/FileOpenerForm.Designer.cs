@@ -81,6 +81,9 @@ namespace CasaSoft.vrt.forms
 
         #endregion
 
+        /// <summary>
+        /// <see cref="T:CasaSoft.vrt.forms.FileOpener"/> instance
+        /// </summary>
         protected FileOpener fileOpener;
     }
 }

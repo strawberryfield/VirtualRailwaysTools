@@ -24,6 +24,10 @@ using System.Reflection;
 
 namespace CasaSoft.vrt.forms
 {
+    /// <summary>
+    /// extends <see cref="T:CasaSoft.vrt.forms.FormBase"/>
+    /// with a <see cref="T:CasaSoft.vrt.forms.FileOpener"/>
+    /// </summary>
     public partial class FileOpenerForm : FormBase
     {
         #region constructors and init
@@ -59,6 +63,9 @@ namespace CasaSoft.vrt.forms
             doOpenFile();
         }
 
+        /// <summary>
+        /// virtual method for file opening dirty work
+        /// </summary>
         protected virtual void doOpenFile()
         {
             // virtual
