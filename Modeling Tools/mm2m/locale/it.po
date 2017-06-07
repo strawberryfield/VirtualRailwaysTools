@@ -49,7 +49,7 @@ msgstr "Apri"
 
 #: Modeling Tools/mm2m/mm2mForm.cs:52 Tools/mm2m/mm2mForm.cs:73
 msgid "Rail3D Model (*.stc)|*.stc|All files|*.*"
-msgstr "Modello Rail3D (*.stc) | *. stc | Tutti i file | *. *"
+msgstr "Modello Rail3D (*.stc) |*.stc|Tutti i file|*.*"
 
 #: Modeling Tools/mm2m/mm2mForm.cs:53
 msgid "Select model"
