@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Orts.Parsers.Msts;
+using Orts.Formats.Msts;
 
 namespace CasaSoft.vrt.Modeling
 {
@@ -51,7 +52,7 @@ namespace CasaSoft.vrt.Modeling
     /// <summary>
     /// Extends ORTS class for MSTS shape 
     /// </summary>
-    public class MstsShape : Orts.Formats.Msts.shape
+    public class MstsShape : shape
     {
         /// <summary>
         /// Constructor
@@ -61,5 +62,57 @@ namespace CasaSoft.vrt.Modeling
         {
         }
 
+        /// <summary>
+        /// Compute minimum of shape coords
+        /// </summary>
+        /// <returns></returns>
+        public point MinPoint()
+        {
+            point ret = new point() { X = float.MaxValue, Y = float.MaxValue, Z = float.MaxValue };
+            foreach(point p in points)
+            {
+                ret.X = (p.X < ret.X ? p.X : ret.X);
+                ret.Y = (p.Y < ret.Y ? p.Y : ret.Y);
+                ret.Z = (p.Z < ret.Z ? p.Z : ret.Z);
+            }
+            return ret;
+        }
+
+        protected int[] MatrixOfPoint;
+
+        protected void AssociateMatrix()
+        {
+            MatrixOfPoint = new int[points.Count];
+
+            // Find the minimum LOD
+            distance_level lod = null;
+            float max = 9999;
+            foreach(var l in lod_controls[0].distance_levels)
+            {
+                if (l.distance_level_header.dlevel_selection < max)
+                    lod = l;
+            }
+
+            // scan all subobjects
+            foreach(var s in lod.sub_objects)
+            {
+                for(int j = 0; j < s.vertex_sets.Count; j++)
+                {
+                    vertex_set vs = s.vertex_sets[j];
+                    for(int vj = 0; vj < vs.VtxCount; vj++)
+                    {
+                        vertex v = s.vertices[vs.StartVtxIdx + vj];
+                        MatrixOfPoint[v.ipoint] = vtx_states[j].imatrix;
+                    }
+                }
+            }
+        }
+
+        protected matrix[] PrecalculatedMatrices;
+
+        protected void PrecalculateMatrices()
+        {
+            // todo
+        }
     }
 }
