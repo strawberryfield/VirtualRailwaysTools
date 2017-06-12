@@ -60,6 +60,7 @@ namespace CasaSoft.vrt.Modeling
         /// <param name="block"></param>
         public MstsShape(SBR block) : base(block)
         {
+            AssociateMatrix();
         }
 
         /// <summary>
@@ -78,11 +79,33 @@ namespace CasaSoft.vrt.Modeling
             return ret;
         }
 
-        protected int[] MatrixOfPoint;
+        /// <summary>
+        /// Association of point with matrix
+        /// </summary>
+        protected class PointAndMatrix
+        {
+            /// <summary>
+            /// Index of Point
+            /// </summary>
+            public int iPoint;
 
+            /// <summary>
+            /// Index of matrix
+            /// </summary>
+            public int iMatrix;
+        }
+
+        /// <summary>
+        /// List of points with associated matrix
+        /// </summary>
+        protected List<PointAndMatrix> MatrixOfPoint;
+
+        /// <summary>
+        /// Populates <see cref="M:CasaSoft.vrt.Modeling.MstsShape.MatrixOfPoint"/>
+        /// </summary>
         protected void AssociateMatrix()
         {
-            MatrixOfPoint = new int[points.Count];
+            MatrixOfPoint = new List<PointAndMatrix>();
 
             // Find the minimum LOD
             distance_level lod = null;
@@ -102,14 +125,20 @@ namespace CasaSoft.vrt.Modeling
                     for(int vj = 0; vj < vs.VtxCount; vj++)
                     {
                         vertex v = s.vertices[vs.StartVtxIdx + vj];
-                        MatrixOfPoint[v.ipoint] = vtx_states[j].imatrix;
+                        MatrixOfPoint.Add(new PointAndMatrix() { iPoint = v.ipoint, iMatrix = vtx_states[vs.VtxStateIdx].imatrix });
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Precalculated matrices based on hierarchy
+        /// </summary>
         protected matrix[] PrecalculatedMatrices;
 
+        /// <summary>
+        /// Populates <see cref="M:CasaSoft.vrt.Modeling.MstsShape.PrecalculatedMatrices"/>
+        /// </summary>
         protected void PrecalculateMatrices()
         {
             // todo
