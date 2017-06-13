@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.2. Software for MS Train Simulator and OpenRails &mdash; Virtual Railways Tools 0.1 documentation</title>
+  <title>1.1. Common informations &mdash; Virtual Railways Tools 0.1 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Virtual Railways Tools 0.1 documentation" href="index.html"/>
         <link rel="up" title="1. User guides" href="userguides.html"/>
-        <link rel="next" title="1.2.1. kml2mkr" href="kml2mkr.html"/>
-        <link rel="prev" title="1.1. Common informations" href="commonug.html"/> 
+        <link rel="next" title="1.2. Software for MS Train Simulator and OpenRails" href="msts.html"/>
+        <link rel="prev" title="1. User guides" href="userguides.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,12 +91,13 @@
                 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="userguides.html">1. User guides</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="commonug.html">1.1. Common informations</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1.2. Software for MS Train Simulator and OpenRails</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kml2mkr.html">1.2.1. kml2mkr: converter for placemarks and path from Google Earth to .mkr and FlyTo utility</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kml2mkrc.html">1.2.2. kml2mkrc: command line version of kml2mkr</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Common informations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#software-prerequisites">1.1.1. Software prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup">1.1.2. Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#localization">1.1.3. Localization</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="msts.html">1.2. Software for MS Train Simulator and OpenRails</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rail3d.html">1.3. Software for Rail3D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generic.html">1.4. Generic tools</a></li>
 </ul>
@@ -135,7 +136,7 @@
       
           <li><a href="userguides.html">1. User guides</a> &raquo;</li>
       
-    <li>1.2. Software for MS Train Simulator and OpenRails</li>
+    <li>1.1. Common informations</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -147,14 +148,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="software-for-ms-train-simulator-and-openrails">
-<span id="msts"></span><h1>1.2. Software for MS Train Simulator and OpenRails<a class="headerlink" href="#software-for-ms-train-simulator-and-openrails" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">The available tools are:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="kml2mkr.html">1.2.1. kml2mkr: converter for placemarks and path from Google Earth to .mkr and FlyTo utility</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kml2mkrc.html">1.2.2. kml2mkrc: command line version of kml2mkr</a></li>
-</ul>
+  <div class="section" id="common-informations">
+<span id="commonug"></span><h1>1.1. Common informations<a class="headerlink" href="#common-informations" title="Permalink to this headline">¶</a></h1>
+<p>In this section are described common informations about setup and localization
+for all the included programs</p>
+<div class="section" id="software-prerequisites">
+<h2>1.1.1. Software prerequisites<a class="headerlink" href="#software-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Precompiled binaries are targeted .net 4.0 and can run on any 4.x version of
+.net environment.</p>
+<p>.net 4.0 is available for windows platforms from windows XP (and included in the base system starting from Windows 7).</p>
+<p>Command line tools can run on Mono also in linux environment (I have tested them on
+a RaspberryPi 2 with Raspbian). Actually there is no complete WinForms library for Mono
+and the guis cannot work on mono.</p>
+<p>All needed dlls are included in the binary distributions.</p>
+</div>
+<div class="section" id="setup">
+<h2>1.1.2. Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>These programs don’t need special setup procedure: simply unpack all the files in a folder
+of your choice (please maintain the subfolders hierarchy) and run.</p>
+</div>
+<div class="section" id="localization">
+<h2>1.1.3. Localization<a class="headerlink" href="#localization" title="Permalink to this headline">¶</a></h2>
+<p>The programs can be localized in any language.</p>
+<p>Currently only english and italian languages are available; the programs use the machine locale
+and if it is not available default to english.</p>
+<p>You can force any program to a specific locale modifying the <em>programname</em>.config file that appear like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;configuration&gt;
+  &lt;startup&gt;
+    &lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.0&quot;/&gt;
+  &lt;/startup&gt;
+  &lt;appSettings&gt;
+    &lt;add key=&quot;locale&quot; value=&quot;&quot;/&gt;
+  &lt;/appSettings&gt;
+&lt;/configuration&gt;
+</pre></div>
+</div>
+<p>The code of the requested locale can be specified in the value property of the line
+<code class="docutils literal"><span class="pre">&lt;add</span> <span class="pre">key=&quot;locale&quot;</span> <span class="pre">value=&quot;&quot;/&gt;</span></code>.</p>
+<p>For example to force using english the line must be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">appSettings</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">add</span> <span class="n">key</span><span class="o">=</span><span class="s2">&quot;locale&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">appSettings</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To create a new locale please refer to the section <a class="reference internal" href="#localization">localization</a> of the Developers’ guide</p>
 </div>
 </div>
 
@@ -165,10 +203,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="kml2mkr.html" class="btn btn-neutral float-right" title="1.2.1. kml2mkr" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="msts.html" class="btn btn-neutral float-right" title="1.2. Software for MS Train Simulator and OpenRails" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="commonug.html" class="btn btn-neutral" title="1.1. Common informations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="userguides.html" class="btn btn-neutral" title="1. User guides" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

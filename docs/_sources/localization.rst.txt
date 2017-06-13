@@ -18,20 +18,22 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-.. Virtual Railways Tools documentation master file, created by
-   sphinx-quickstart on Mon Apr 17 19:40:18 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. _localization:
 
-Welcome to Virtual Railways Tools' documentation!
-=================================================
+How to translate the programs
+*****************************
 
-.. toctree::
-   :maxdepth: 3
-   :numbered:
-   :caption: Contents:
+The localization of these programs is made with the `GNU GetText Library <https://www.gnu.org/software/gettext/>`_.
 
-   userguides
-   developers
-   final
+Sample italian locales are distribuited with the source code, in this chapter 
+I will explain how to modify them using Poedit
 
+Required tools
+==============
+
+The only required tool is Poedit available freely at https://poedit.net/
+
+How to translate
+================
+
+todo

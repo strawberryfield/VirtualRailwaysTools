@@ -89,6 +89,55 @@ Method: CasaSoft.vrt.forms.FileOpener.InitializeComponent
 
  Metodo necessario per il supporto della finestra di progettazione. Non modificare il contenuto del metodo con l'editor di codice. 
 
+Type: CasaSoft.vrt.forms.FileOpenerForm
+---------------------------------------
+
+ extends `Type: CasaSoft.vrt.forms.FormBase`_ with a `Type: CasaSoft.vrt.forms.FileOpener`_
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.#ctor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Constructor (needed only for inheritance) 
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.#ctor(System.Reflection.Assembly,System.Globalization.CultureInfo)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Constructor 
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.SetFile(System.String)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Programmatically sets the filename to load 
+
+Parameter **filename**\: file to load
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.doOpenFile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ virtual method for file opening dirty work 
+
+Field: CasaSoft.vrt.forms.FileOpenerForm.components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Required designer variable. 
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.Dispose(System.Boolean)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Clean up any resources being used. 
+
+Parameter **disposing**\: true if managed resources should be disposed; otherwise, false.
+
+Method: CasaSoft.vrt.forms.FileOpenerForm.InitializeComponent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ Required method for Designer support - do not modify the contents of this method with the code editor. 
+
+Field: CasaSoft.vrt.forms.FileOpenerForm.fileOpener
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`Type: CasaSoft.vrt.forms.FileOpener`_ instance 
+
 Type: CasaSoft.vrt.forms.FormBase
 ---------------------------------
 

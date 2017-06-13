@@ -30,12 +30,10 @@ Method: CasaSoft.vrt.forms.KmlBaseForm.InitControls
 
  Controls basic init 
 
-Method: CasaSoft.vrt.forms.KmlBaseForm.SetFile(System.String)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Method: CasaSoft.vrt.forms.KmlBaseForm.doOpenFile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Programmatically sets the filename to load 
-
-Parameter **filename**\: file to load
+ open file dirty work 
 
 Method: CasaSoft.vrt.forms.KmlBaseForm.AfterFileOpenerChanged
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,11 +56,6 @@ Method: CasaSoft.vrt.forms.KmlBaseForm.InitializeComponent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  Required method for Designer support - do not modify the contents of this method with the code editor. 
-
-Field: CasaSoft.vrt.forms.KmlBaseForm.fileOpener
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- File opener component 
 
 Type: CasaSoft.vrt.forms.kmlContentSelector
 -------------------------------------------

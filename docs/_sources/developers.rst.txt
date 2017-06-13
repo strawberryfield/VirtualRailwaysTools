@@ -18,6 +18,8 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
+.. _developers:
+
 #########################   
 Developers' documentation
 #########################
@@ -28,4 +30,5 @@ This section contains user oriented documentation.
    :maxdepth: 3
    :caption: Contents:
 
+   localization
    assemblies
