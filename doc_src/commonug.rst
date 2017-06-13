@@ -26,6 +26,20 @@ Common informations
 In this section are described common informations about setup and localization
 for all the included programs
 
+Software prerequisites
+======================
+
+Precompiled binaries are targeted .net 4.0 and can run on any 4.x version of 
+.net environment.
+
+.net 4.0 is available for windows platforms from windows XP (and included in the base system starting from Windows 7).
+
+Command line tools can run on Mono also in linux environment (I have tested them on 
+a RaspberryPi 2 with Raspbian). Actually there is no complete WinForms library for Mono 
+and the guis cannot work on mono.
+
+All needed dlls are included in the binary distributions.
+
 Setup
 =====
 
@@ -61,4 +75,4 @@ For example to force using english the line must be::
         <add key="locale" value="en"/>
       </appSettings>
 
-To create a new locale please refer to the developers' documentation.
+To create a new locale please refer to the section localization_ of the Developers' guide

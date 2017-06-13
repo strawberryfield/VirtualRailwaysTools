@@ -18,17 +18,22 @@
    along with CasaSoft Virtual Railways Tools.  
    If not, see <http://www.gnu.org/licenses/>.
 
-.. _developers:
+.. _localization:
 
-#########################   
-Developers' documentation
-#########################
+How to translate the programs
+*****************************
 
-This section contains user oriented documentation.
+The localization of these programs is made with the `GNU GetText Library <https://www.gnu.org/software/gettext/>`_.
 
-.. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+Sample italian locales are distribuited with the source code, in this chapter 
+I will explain how to modify them using Poedit
 
-   localization
-   assemblies
+Required tools
+==============
+
+The only required tool is Poedit available freely at https://poedit.net/
+
+How to translate
+================
+
+todo
