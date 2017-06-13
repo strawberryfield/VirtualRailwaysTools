@@ -21,6 +21,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using NGettext;
+using CasaSoft.vrt.KmlLib;
 
 namespace CasaSoft.vrt.forms
 {

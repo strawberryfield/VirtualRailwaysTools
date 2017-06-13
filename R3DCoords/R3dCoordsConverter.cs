@@ -21,7 +21,7 @@
 using System;
 using DotSpatial.Projections;
 
-namespace CasaSoft.vrt
+namespace CasaSoft.vrt.KmlLib
 {
     /// <summary>
     /// Contains a couple of longs

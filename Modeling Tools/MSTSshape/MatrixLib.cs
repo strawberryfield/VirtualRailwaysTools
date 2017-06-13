@@ -27,9 +27,9 @@ namespace CasaSoft.vrt.Modeling
     {
         protected point Point;
 
-        public float X { get => Point.X; set => Point.X = X; }
-        public float Y { get => Point.Y; set => Point.Y = Y; }
-        public float Z { get => Point.Z; set => Point.Z = Z; }
+        public float X { get { return Point.X; } set { Point.X = X; } }
+        public float Y { get { return Point.Y; } set { Point.Y = Y; } }
+        public float Z { get { return Point.Z; } set { Point.Z = Z; } }
 
         public PointEx()
         {

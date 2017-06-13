@@ -7,7 +7,7 @@
     <ProjectGuid>{DA2258D3-71B7-494E-B651-4F86E239DB21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CasaSoft.vrt</RootNamespace>
+    <RootNamespace>CasaSoft.vrt.KmlLib</RootNamespace>
     <AssemblyName>CasaSoft.R3D.Coords</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
