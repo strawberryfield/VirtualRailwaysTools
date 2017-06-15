@@ -29,6 +29,17 @@ namespace CasaSoft.vrt.Modeling
     {
         private MstsShape s;
 
+        private class ComboboxItem
+        {
+            public string Text { get; set; }
+            public object Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
+        }
+
         #region constructor and inits
         public stForm()
         {
@@ -46,10 +57,20 @@ namespace CasaSoft.vrt.Modeling
         /// </summary>
         private void InitControls()
         {
-            this.fileOpener.LabelText = catalog.GetString(".s file");
-            this.fileOpener.ButtonText = catalog.GetString("Open");
-            this.fileOpener.FileDialogFilter = catalog.GetString("MSTS shape file (*.s)|*.s|All files|*.*");
-            this.fileOpener.FileDialogTitle = catalog.GetString("Select shape");
+            fileOpener.LabelText = catalog.GetString(".s file");
+            fileOpener.ButtonText = catalog.GetString("Open");
+            fileOpener.FileDialogFilter = catalog.GetString("MSTS shape file (*.s)|*.s|All files|*.*");
+            fileOpener.FileDialogTitle = catalog.GetString("Select shape");
+
+            lblSdDetail.Text = catalog.GetString("Detail level");
+            lblSdTexture.Text = catalog.GetString("Alternative texture");
+
+            cmbSdTexture.Items.Add(new ComboboxItem { Value = 0, Text = catalog.GetString("Base only") });
+            cmbSdTexture.Items.Add(new ComboboxItem { Value = 1, Text = catalog.GetString("Base and snow") });
+            cmbSdTexture.Items.Add(new ComboboxItem { Value = 256, Text = catalog.GetString("Base and night") });
+            cmbSdTexture.Items.Add(new ComboboxItem { Value = 257, Text = catalog.GetString("Base, night and snow") });
+            cmbSdTexture.Items.Add(new ComboboxItem { Value = 252, Text = catalog.GetString("All seasons") });
+            cmbSdTexture.SelectedIndex = 0;
         }
 
         private void stForm_Shown(object sender, EventArgs e)
