@@ -76,6 +76,10 @@ namespace CasaSoft.vrt.Modeling
             cmbSdTexture.Items.Add(new ComboboxItem { Value = 252, Text = catalog.GetString("All seasons") });
             cmbSdTexture.SelectedIndex = 0;
 
+            lblRefClass.Text = catalog.GetString("Class");
+            lblRefDesc.Text = catalog.GetString("Description");
+            chkRefAppend.Text = catalog.GetString("Append to existing file");
+
             btnSave.Enabled = false;
         }
 
@@ -87,6 +91,10 @@ namespace CasaSoft.vrt.Modeling
             }
         }
 
+        private void txtNumeric_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) & e.KeyChar != (char)Keys.Back & e.KeyChar != '.' & e.KeyChar != '-';
+        }
         #endregion
 
         private void fileOpener_FileTextChanged(object sender, EventArgs e)
@@ -101,6 +109,8 @@ namespace CasaSoft.vrt.Modeling
             txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
             txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
             txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
+
+            txtRefDesc.Text = name;
 
             setSaveButton(tabControl.SelectedIndex);
         }
@@ -119,6 +129,8 @@ namespace CasaSoft.vrt.Modeling
                     saveFileDialog.Title = catalog.GetString("Create SD file");
                     saveFileDialog.Filter = catalog.GetString("SD file (*.sd)|*.sd|All files|*.*");
                     saveFileDialog.DefaultExt = ".sd";
+                    saveFileDialog.CheckFileExists = false;
+                    saveFileDialog.OverwritePrompt = true;
                     btnSave.Enabled = true;
                     break;
 
@@ -127,15 +139,32 @@ namespace CasaSoft.vrt.Modeling
                     break;
 
                 case 2:
-                    saveFileDialog.Title = catalog.GetString("Create REF snippet");
-                    saveFileDialog.Filter = catalog.GetString("REF snippet (*.ref)|*.ref|All files|*.*");
-                    saveFileDialog.DefaultExt = ".ref";
+                    setSaveDialog4ref();
                     btnSave.Enabled = true;
                     break;
 
                 default:
                     btnSave.Enabled = false;
                     break;
+            }
+        }
+
+        private void setSaveDialog4ref()
+        {
+            saveFileDialog.DefaultExt = ".ref";
+            if(chkRefAppend.Checked)
+            {
+                saveFileDialog.Title = catalog.GetString("Append to REF file");
+                saveFileDialog.Filter = catalog.GetString("REF file (*.ref)|*.ref|All files|*.*");
+                saveFileDialog.CheckFileExists = true;
+                saveFileDialog.OverwritePrompt = false;
+            }
+            else
+            {
+                saveFileDialog.Title = catalog.GetString("Create REF snippet");
+                saveFileDialog.Filter = catalog.GetString("REF snippet (*.ref)|*.ref|All files|*.*");
+                saveFileDialog.CheckFileExists = false;
+                saveFileDialog.OverwritePrompt = true;
             }
         }
 
@@ -156,7 +185,7 @@ namespace CasaSoft.vrt.Modeling
             switch (tabControl.SelectedIndex)
             {
                 case 0:
-                    SaveSd save = new SaveSd(string.Format("{0}.s", name), 
+                    SaveSd saveSd = new SaveSd(string.Format("{0}.s", name), 
                         Convert.ToInt16(numSdDetail.Value),
                         Convert.ToInt16(((ComboboxItem)cmbSdTexture.SelectedItem).Value),
                         new float[6] {
@@ -167,13 +196,22 @@ namespace CasaSoft.vrt.Modeling
                             parse4float(txtBB5.Text),
                             parse4float(txtBB6.Text)
                         });
-                    save.Write(filename);
+                    saveSd.Write(filename);
                     break;
 
                 case 1:
                     break;
 
                 case 2:
+                    SaveRef saveRef = new SaveRef(name, txtRefClass.Text, txtRefDesc.Text);
+                    if(chkRefAppend.Checked)
+                    {
+                        saveRef.Append(filename);
+                    }
+                    else
+                    {
+                        saveRef.Write(filename);
+                    }
                     break;
 
                 default:
@@ -181,5 +219,10 @@ namespace CasaSoft.vrt.Modeling
             }
         }
         #endregion
+
+        private void chkRefAppend_CheckedChanged(object sender, EventArgs e)
+        {
+            setSaveDialog4ref();
+        }
     }
 }

@@ -63,9 +63,15 @@ namespace CasaSoft.vrt.Modeling
             this.numSdDetail = new System.Windows.Forms.NumericUpDown();
             this.tabENG = new System.Windows.Forms.TabPage();
             this.tabRef = new System.Windows.Forms.TabPage();
+            this.txtRefClass = new System.Windows.Forms.TextBox();
+            this.txtRefDesc = new System.Windows.Forms.TextBox();
+            this.lblRefClass = new System.Windows.Forms.Label();
+            this.lblRefDesc = new System.Windows.Forms.Label();
+            this.chkRefAppend = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.tabSD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSdDetail)).BeginInit();
+            this.tabRef.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileOpener
@@ -124,6 +130,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB6.Size = new System.Drawing.Size(75, 20);
             this.txtBB6.TabIndex = 9;
             this.txtBB6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB5
             // 
@@ -132,6 +139,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB5.Size = new System.Drawing.Size(75, 20);
             this.txtBB5.TabIndex = 8;
             this.txtBB5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB4
             // 
@@ -140,6 +148,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB4.Size = new System.Drawing.Size(75, 20);
             this.txtBB4.TabIndex = 7;
             this.txtBB4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB3
             // 
@@ -148,6 +157,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB3.Size = new System.Drawing.Size(75, 20);
             this.txtBB3.TabIndex = 6;
             this.txtBB3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB2
             // 
@@ -156,6 +166,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB2.Size = new System.Drawing.Size(75, 20);
             this.txtBB2.TabIndex = 5;
             this.txtBB2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB1
             // 
@@ -164,6 +175,7 @@ namespace CasaSoft.vrt.Modeling
             this.txtBB1.Size = new System.Drawing.Size(75, 20);
             this.txtBB1.TabIndex = 4;
             this.txtBB1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBB1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // lblSdTexture
             // 
@@ -216,6 +228,11 @@ namespace CasaSoft.vrt.Modeling
             // 
             // tabRef
             // 
+            this.tabRef.Controls.Add(this.chkRefAppend);
+            this.tabRef.Controls.Add(this.lblRefDesc);
+            this.tabRef.Controls.Add(this.lblRefClass);
+            this.tabRef.Controls.Add(this.txtRefDesc);
+            this.tabRef.Controls.Add(this.txtRefClass);
             this.tabRef.Location = new System.Drawing.Point(4, 22);
             this.tabRef.Name = "tabRef";
             this.tabRef.Padding = new System.Windows.Forms.Padding(3);
@@ -223,6 +240,51 @@ namespace CasaSoft.vrt.Modeling
             this.tabRef.TabIndex = 2;
             this.tabRef.Text = "Ref";
             this.tabRef.UseVisualStyleBackColor = true;
+            // 
+            // txtRefClass
+            // 
+            this.txtRefClass.Location = new System.Drawing.Point(6, 24);
+            this.txtRefClass.Name = "txtRefClass";
+            this.txtRefClass.Size = new System.Drawing.Size(159, 20);
+            this.txtRefClass.TabIndex = 0;
+            // 
+            // txtRefDesc
+            // 
+            this.txtRefDesc.Location = new System.Drawing.Point(6, 73);
+            this.txtRefDesc.Name = "txtRefDesc";
+            this.txtRefDesc.Size = new System.Drawing.Size(392, 20);
+            this.txtRefDesc.TabIndex = 1;
+            // 
+            // lblRefClass
+            // 
+            this.lblRefClass.AutoSize = true;
+            this.lblRefClass.Location = new System.Drawing.Point(6, 8);
+            this.lblRefClass.Name = "lblRefClass";
+            this.lblRefClass.Size = new System.Drawing.Size(32, 13);
+            this.lblRefClass.TabIndex = 2;
+            this.lblRefClass.Text = "Class";
+            // 
+            // lblRefDesc
+            // 
+            this.lblRefDesc.AutoSize = true;
+            this.lblRefDesc.Location = new System.Drawing.Point(6, 57);
+            this.lblRefDesc.Name = "lblRefDesc";
+            this.lblRefDesc.Size = new System.Drawing.Size(60, 13);
+            this.lblRefDesc.TabIndex = 3;
+            this.lblRefDesc.Text = "Description";
+            // 
+            // chkRefAppend
+            // 
+            this.chkRefAppend.AutoSize = true;
+            this.chkRefAppend.Checked = true;
+            this.chkRefAppend.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRefAppend.Location = new System.Drawing.Point(6, 112);
+            this.chkRefAppend.Name = "chkRefAppend";
+            this.chkRefAppend.Size = new System.Drawing.Size(129, 17);
+            this.chkRefAppend.TabIndex = 4;
+            this.chkRefAppend.Text = "Append to existing file";
+            this.chkRefAppend.UseVisualStyleBackColor = true;
+            this.chkRefAppend.CheckedChanged += new System.EventHandler(this.chkRefAppend_CheckedChanged);
             // 
             // stForm
             // 
@@ -241,6 +303,8 @@ namespace CasaSoft.vrt.Modeling
             this.tabSD.ResumeLayout(false);
             this.tabSD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSdDetail)).EndInit();
+            this.tabRef.ResumeLayout(false);
+            this.tabRef.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +325,10 @@ namespace CasaSoft.vrt.Modeling
         private System.Windows.Forms.TextBox txtBB3;
         private System.Windows.Forms.TextBox txtBB2;
         private System.Windows.Forms.TextBox txtBB1;
+        private System.Windows.Forms.Label lblRefDesc;
+        private System.Windows.Forms.Label lblRefClass;
+        private System.Windows.Forms.TextBox txtRefDesc;
+        private System.Windows.Forms.TextBox txtRefClass;
+        private System.Windows.Forms.CheckBox chkRefAppend;
     }
 }
