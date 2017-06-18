@@ -50,7 +50,7 @@ namespace CasaSoft.vrt.Modeling
             var form = new stForm(Assembly.GetExecutingAssembly(), locale);
             if (argv.Length > 0)
             {
-//                form.SetFile(argv[0]);
+                form.SetFile(argv[0]);
             }
             Application.Run(form);
         }

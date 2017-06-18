@@ -43,6 +43,7 @@
     <Compile Include="MatrixLib.cs" />
     <Compile Include="MstsShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveSd.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ORTS Libs\Orts.Formats.Msts\Orts.Formats.Msts.csproj">

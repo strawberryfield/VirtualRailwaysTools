@@ -81,6 +81,10 @@
       <Project>{ffdbc7fb-f2a2-49c7-9718-9f29706a7a91}</Project>
       <Name>BaseForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ORTS Libs\Orts.Formats.Msts\Orts.Formats.Msts.csproj">
+      <Project>{570709FA-0C8A-4B1D-BA2D-D9455AFD9B5C}</Project>
+      <Name>Orts.Formats.Msts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MSTSshape\MSTSshape.csproj">
       <Project>{12432253-3de8-433b-a7b4-b12b5d35b825}</Project>
       <Name>MSTSshape</Name>

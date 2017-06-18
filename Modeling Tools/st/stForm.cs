@@ -21,13 +21,16 @@
 using CasaSoft.vrt.forms;
 using System;
 using System.Globalization;
+using System.IO;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace CasaSoft.vrt.Modeling
 {
-    public partial class stForm : FormBase
+    public partial class stForm : FileOpenerForm
     {
         private MstsShape s;
+        private string name;
 
         private class ComboboxItem
         {
@@ -64,6 +67,7 @@ namespace CasaSoft.vrt.Modeling
 
             lblSdDetail.Text = catalog.GetString("Detail level");
             lblSdTexture.Text = catalog.GetString("Alternative texture");
+            lblBB.Text = catalog.GetString("Bounding Box");
 
             cmbSdTexture.Items.Add(new ComboboxItem { Value = 0, Text = catalog.GetString("Base only") });
             cmbSdTexture.Items.Add(new ComboboxItem { Value = 1, Text = catalog.GetString("Base and snow") });
@@ -71,6 +75,8 @@ namespace CasaSoft.vrt.Modeling
             cmbSdTexture.Items.Add(new ComboboxItem { Value = 257, Text = catalog.GetString("Base, night and snow") });
             cmbSdTexture.Items.Add(new ComboboxItem { Value = 252, Text = catalog.GetString("All seasons") });
             cmbSdTexture.SelectedIndex = 0;
+
+            btnSave.Enabled = false;
         }
 
         private void stForm_Shown(object sender, EventArgs e)
@@ -87,6 +93,93 @@ namespace CasaSoft.vrt.Modeling
         {
             MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
             s = sf.shape;
+            name = Path.GetFileNameWithoutExtension(fileOpener.FileName);
+
+            txtBB1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.X);
+            txtBB2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Y);
+            txtBB3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Z);
+            txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
+            txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
+            txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
+
+            setSaveButton(tabControl.SelectedIndex);
         }
+
+        #region save
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            setSaveButton(((TabControl)sender).SelectedIndex);
+        }
+
+        private void setSaveButton(int mode)
+        {
+            switch (mode)
+            {
+                case 0:
+                    saveFileDialog.Title = catalog.GetString("Create SD file");
+                    saveFileDialog.Filter = catalog.GetString("SD file (*.sd)|*.sd|All files|*.*");
+                    saveFileDialog.DefaultExt = ".sd";
+                    btnSave.Enabled = true;
+                    break;
+
+                case 1:
+                    btnSave.Enabled = false;
+                    break;
+
+                case 2:
+                    saveFileDialog.Title = catalog.GetString("Create REF snippet");
+                    saveFileDialog.Filter = catalog.GetString("REF snippet (*.ref)|*.ref|All files|*.*");
+                    saveFileDialog.DefaultExt = ".ref";
+                    btnSave.Enabled = true;
+                    break;
+
+                default:
+                    btnSave.Enabled = false;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Converts textbox input to float
+        /// </summary>
+        /// <param name="s">string to parse</param>
+        /// <returns></returns>
+        private float parse4float(string s)
+        {
+            float ret = 0;
+            if (!float.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out ret)) ret = 0;
+            return ret;
+        }
+
+        protected override void doSave(string filename)
+        {
+            switch (tabControl.SelectedIndex)
+            {
+                case 0:
+                    SaveSd save = new SaveSd(string.Format("{0}.s", name), 
+                        Convert.ToInt16(numSdDetail.Value),
+                        Convert.ToInt16(((ComboboxItem)cmbSdTexture.SelectedItem).Value),
+                        new float[6] {
+                            parse4float(txtBB1.Text),
+                            parse4float(txtBB2.Text),
+                            parse4float(txtBB3.Text),
+                            parse4float(txtBB4.Text),
+                            parse4float(txtBB5.Text),
+                            parse4float(txtBB6.Text)
+                        });
+                    save.Write(filename);
+                    break;
+
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        #endregion
     }
 }

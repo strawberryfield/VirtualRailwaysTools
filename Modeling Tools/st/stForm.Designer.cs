@@ -48,14 +48,20 @@ namespace CasaSoft.vrt.Modeling
         /// </summary>
         private void InitializeComponent()
         {
-            this.fileOpener = new CasaSoft.vrt.forms.FileOpener();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabSD = new System.Windows.Forms.TabPage();
-            this.tabENG = new System.Windows.Forms.TabPage();
-            this.numSdDetail = new System.Windows.Forms.NumericUpDown();
-            this.lblSdDetail = new System.Windows.Forms.Label();
-            this.cmbSdTexture = new System.Windows.Forms.ComboBox();
+            this.lblBB = new System.Windows.Forms.Label();
+            this.txtBB6 = new System.Windows.Forms.TextBox();
+            this.txtBB5 = new System.Windows.Forms.TextBox();
+            this.txtBB4 = new System.Windows.Forms.TextBox();
+            this.txtBB3 = new System.Windows.Forms.TextBox();
+            this.txtBB2 = new System.Windows.Forms.TextBox();
+            this.txtBB1 = new System.Windows.Forms.TextBox();
             this.lblSdTexture = new System.Windows.Forms.Label();
+            this.cmbSdTexture = new System.Windows.Forms.ComboBox();
+            this.lblSdDetail = new System.Windows.Forms.Label();
+            this.numSdDetail = new System.Windows.Forms.NumericUpDown();
+            this.tabENG = new System.Windows.Forms.TabPage();
             this.tabRef = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabSD.SuspendLayout();
@@ -64,17 +70,6 @@ namespace CasaSoft.vrt.Modeling
             // 
             // fileOpener
             // 
-            this.fileOpener.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileOpener.ButtonText = "Open";
-            this.fileOpener.FileDialogFilter = "";
-            this.fileOpener.FileDialogTitle = "";
-            this.fileOpener.FileName = "";
-            this.fileOpener.LabelText = "File name";
-            this.fileOpener.Location = new System.Drawing.Point(12, 12);
-            this.fileOpener.Name = "fileOpener";
-            this.fileOpener.Size = new System.Drawing.Size(567, 38);
-            this.fileOpener.TabIndex = 8;
             this.fileOpener.FileTextChanged += new System.EventHandler(this.fileOpener_FileTextChanged);
             // 
             // tabControl
@@ -90,9 +85,17 @@ namespace CasaSoft.vrt.Modeling
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(567, 161);
             this.tabControl.TabIndex = 9;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabSD
             // 
+            this.tabSD.Controls.Add(this.lblBB);
+            this.tabSD.Controls.Add(this.txtBB6);
+            this.tabSD.Controls.Add(this.txtBB5);
+            this.tabSD.Controls.Add(this.txtBB4);
+            this.tabSD.Controls.Add(this.txtBB3);
+            this.tabSD.Controls.Add(this.txtBB2);
+            this.tabSD.Controls.Add(this.txtBB1);
             this.tabSD.Controls.Add(this.lblSdTexture);
             this.tabSD.Controls.Add(this.cmbSdTexture);
             this.tabSD.Controls.Add(this.lblSdDetail);
@@ -105,15 +108,88 @@ namespace CasaSoft.vrt.Modeling
             this.tabSD.Text = "SD";
             this.tabSD.UseVisualStyleBackColor = true;
             // 
-            // tabENG
+            // lblBB
             // 
-            this.tabENG.Location = new System.Drawing.Point(4, 22);
-            this.tabENG.Name = "tabENG";
-            this.tabENG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabENG.Size = new System.Drawing.Size(559, 135);
-            this.tabENG.TabIndex = 1;
-            this.tabENG.Text = "Eng / Wag";
-            this.tabENG.UseVisualStyleBackColor = true;
+            this.lblBB.AutoSize = true;
+            this.lblBB.Location = new System.Drawing.Point(6, 57);
+            this.lblBB.Name = "lblBB";
+            this.lblBB.Size = new System.Drawing.Size(73, 13);
+            this.lblBB.TabIndex = 10;
+            this.lblBB.Text = "Bounding Box";
+            // 
+            // txtBB6
+            // 
+            this.txtBB6.Location = new System.Drawing.Point(411, 73);
+            this.txtBB6.Name = "txtBB6";
+            this.txtBB6.Size = new System.Drawing.Size(75, 20);
+            this.txtBB6.TabIndex = 9;
+            this.txtBB6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBB5
+            // 
+            this.txtBB5.Location = new System.Drawing.Point(330, 73);
+            this.txtBB5.Name = "txtBB5";
+            this.txtBB5.Size = new System.Drawing.Size(75, 20);
+            this.txtBB5.TabIndex = 8;
+            this.txtBB5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBB4
+            // 
+            this.txtBB4.Location = new System.Drawing.Point(249, 73);
+            this.txtBB4.Name = "txtBB4";
+            this.txtBB4.Size = new System.Drawing.Size(75, 20);
+            this.txtBB4.TabIndex = 7;
+            this.txtBB4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBB3
+            // 
+            this.txtBB3.Location = new System.Drawing.Point(168, 73);
+            this.txtBB3.Name = "txtBB3";
+            this.txtBB3.Size = new System.Drawing.Size(75, 20);
+            this.txtBB3.TabIndex = 6;
+            this.txtBB3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBB2
+            // 
+            this.txtBB2.Location = new System.Drawing.Point(87, 73);
+            this.txtBB2.Name = "txtBB2";
+            this.txtBB2.Size = new System.Drawing.Size(75, 20);
+            this.txtBB2.TabIndex = 5;
+            this.txtBB2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtBB1
+            // 
+            this.txtBB1.Location = new System.Drawing.Point(6, 73);
+            this.txtBB1.Name = "txtBB1";
+            this.txtBB1.Size = new System.Drawing.Size(75, 20);
+            this.txtBB1.TabIndex = 4;
+            this.txtBB1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblSdTexture
+            // 
+            this.lblSdTexture.AutoSize = true;
+            this.lblSdTexture.Location = new System.Drawing.Point(88, 8);
+            this.lblSdTexture.Name = "lblSdTexture";
+            this.lblSdTexture.Size = new System.Drawing.Size(96, 13);
+            this.lblSdTexture.TabIndex = 3;
+            this.lblSdTexture.Text = "Alternative Texture";
+            // 
+            // cmbSdTexture
+            // 
+            this.cmbSdTexture.FormattingEnabled = true;
+            this.cmbSdTexture.Location = new System.Drawing.Point(91, 24);
+            this.cmbSdTexture.Name = "cmbSdTexture";
+            this.cmbSdTexture.Size = new System.Drawing.Size(175, 21);
+            this.cmbSdTexture.TabIndex = 2;
+            // 
+            // lblSdDetail
+            // 
+            this.lblSdDetail.AutoSize = true;
+            this.lblSdDetail.Location = new System.Drawing.Point(3, 8);
+            this.lblSdDetail.Name = "lblSdDetail";
+            this.lblSdDetail.Size = new System.Drawing.Size(63, 13);
+            this.lblSdDetail.TabIndex = 1;
+            this.lblSdDetail.Text = "Detail Level";
             // 
             // numSdDetail
             // 
@@ -128,31 +204,15 @@ namespace CasaSoft.vrt.Modeling
             this.numSdDetail.TabIndex = 0;
             this.numSdDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lblSdDetail
+            // tabENG
             // 
-            this.lblSdDetail.AutoSize = true;
-            this.lblSdDetail.Location = new System.Drawing.Point(3, 8);
-            this.lblSdDetail.Name = "lblSdDetail";
-            this.lblSdDetail.Size = new System.Drawing.Size(63, 13);
-            this.lblSdDetail.TabIndex = 1;
-            this.lblSdDetail.Text = "Detail Level";
-            // 
-            // cmbSdTexture
-            // 
-            this.cmbSdTexture.FormattingEnabled = true;
-            this.cmbSdTexture.Location = new System.Drawing.Point(91, 24);
-            this.cmbSdTexture.Name = "cmbSdTexture";
-            this.cmbSdTexture.Size = new System.Drawing.Size(175, 21);
-            this.cmbSdTexture.TabIndex = 2;
-            // 
-            // lblSdTexture
-            // 
-            this.lblSdTexture.AutoSize = true;
-            this.lblSdTexture.Location = new System.Drawing.Point(88, 8);
-            this.lblSdTexture.Name = "lblSdTexture";
-            this.lblSdTexture.Size = new System.Drawing.Size(96, 13);
-            this.lblSdTexture.TabIndex = 3;
-            this.lblSdTexture.Text = "Alternative Texture";
+            this.tabENG.Location = new System.Drawing.Point(4, 22);
+            this.tabENG.Name = "tabENG";
+            this.tabENG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabENG.Size = new System.Drawing.Size(559, 135);
+            this.tabENG.TabIndex = 1;
+            this.tabENG.Text = "Eng / Wag";
+            this.tabENG.UseVisualStyleBackColor = true;
             // 
             // tabRef
             // 
@@ -170,13 +230,12 @@ namespace CasaSoft.vrt.Modeling
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 261);
             this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.fileOpener);
             this.Name = "stForm";
             this.Text = "stForm";
             this.Shown += new System.EventHandler(this.stForm_Shown);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.Controls.SetChildIndex(this.btnSave, 0);
             this.Controls.SetChildIndex(this.btnAbout, 0);
-            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.Controls.SetChildIndex(this.tabControl, 0);
             this.tabControl.ResumeLayout(false);
             this.tabSD.ResumeLayout(false);
@@ -187,8 +246,6 @@ namespace CasaSoft.vrt.Modeling
         }
 
         #endregion
-
-        private forms.FileOpener fileOpener;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabSD;
         private System.Windows.Forms.TabPage tabENG;
@@ -197,5 +254,12 @@ namespace CasaSoft.vrt.Modeling
         private System.Windows.Forms.Label lblSdDetail;
         private System.Windows.Forms.NumericUpDown numSdDetail;
         private System.Windows.Forms.TabPage tabRef;
+        private System.Windows.Forms.Label lblBB;
+        private System.Windows.Forms.TextBox txtBB6;
+        private System.Windows.Forms.TextBox txtBB5;
+        private System.Windows.Forms.TextBox txtBB4;
+        private System.Windows.Forms.TextBox txtBB3;
+        private System.Windows.Forms.TextBox txtBB2;
+        private System.Windows.Forms.TextBox txtBB1;
     }
 }
