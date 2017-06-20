@@ -119,7 +119,7 @@ namespace CasaSoft.vrt.Modeling
             this.tabSD.Controls.Add(this.numSdDetail);
             this.tabSD.Location = new System.Drawing.Point(4, 22);
             this.tabSD.Name = "tabSD";
-            this.tabSD.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSD.Padding = new System.Windows.Forms.Padding(3);
             this.tabSD.Size = new System.Drawing.Size(559, 135);
             this.tabSD.TabIndex = 0;
             this.tabSD.Text = "SD";
@@ -238,9 +238,9 @@ namespace CasaSoft.vrt.Modeling
             this.tabENG.Controls.Add(this.txtEngSize2);
             this.tabENG.Controls.Add(this.txtEngSize3);
             this.tabENG.Location = new System.Drawing.Point(4, 22);
-            this.tabENG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabENG.Margin = new System.Windows.Forms.Padding(2);
             this.tabENG.Name = "tabENG";
-            this.tabENG.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabENG.Padding = new System.Windows.Forms.Padding(3);
             this.tabENG.Size = new System.Drawing.Size(559, 135);
             this.tabENG.TabIndex = 1;
             this.tabENG.Text = "Eng / Wag";
@@ -261,6 +261,7 @@ namespace CasaSoft.vrt.Modeling
             this.cmbWagType.Name = "cmbWagType";
             this.cmbWagType.Size = new System.Drawing.Size(131, 21);
             this.cmbWagType.TabIndex = 3;
+            this.cmbWagType.SelectedValueChanged += new System.EventHandler(this.cmbWagType_SelectedValueChanged);
             // 
             // lblEngType
             // 
@@ -293,7 +294,7 @@ namespace CasaSoft.vrt.Modeling
             // txtEngSize1
             // 
             this.txtEngSize1.Location = new System.Drawing.Point(6, 73);
-            this.txtEngSize1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize1.Margin = new System.Windows.Forms.Padding(2);
             this.txtEngSize1.Name = "txtEngSize1";
             this.txtEngSize1.Size = new System.Drawing.Size(75, 20);
             this.txtEngSize1.TabIndex = 11;
@@ -302,7 +303,7 @@ namespace CasaSoft.vrt.Modeling
             // txtEngSize2
             // 
             this.txtEngSize2.Location = new System.Drawing.Point(87, 73);
-            this.txtEngSize2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize2.Margin = new System.Windows.Forms.Padding(2);
             this.txtEngSize2.Name = "txtEngSize2";
             this.txtEngSize2.Size = new System.Drawing.Size(75, 20);
             this.txtEngSize2.TabIndex = 12;
@@ -311,7 +312,7 @@ namespace CasaSoft.vrt.Modeling
             // txtEngSize3
             // 
             this.txtEngSize3.Location = new System.Drawing.Point(168, 73);
-            this.txtEngSize3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize3.Margin = new System.Windows.Forms.Padding(2);
             this.txtEngSize3.Name = "txtEngSize3";
             this.txtEngSize3.Size = new System.Drawing.Size(75, 20);
             this.txtEngSize3.TabIndex = 13;
@@ -326,7 +327,7 @@ namespace CasaSoft.vrt.Modeling
             this.tabRef.Controls.Add(this.txtRefClass);
             this.tabRef.Location = new System.Drawing.Point(4, 22);
             this.tabRef.Name = "tabRef";
-            this.tabRef.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabRef.Padding = new System.Windows.Forms.Padding(3);
             this.tabRef.Size = new System.Drawing.Size(559, 135);
             this.tabRef.TabIndex = 2;
             this.tabRef.Text = "Ref";
@@ -383,7 +384,7 @@ namespace CasaSoft.vrt.Modeling
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 261);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "stForm";
             this.Text = "stForm";
             this.Shown += new System.EventHandler(this.stForm_Shown);

@@ -94,6 +94,7 @@ namespace CasaSoft.vrt.Modeling
             lblEngType.Text = "Eng Type";
             lblWagType.Text = "Wag Type";
 
+            tabControl.Enabled = false;
             btnSave.Enabled = false;
         }
 
@@ -110,35 +111,8 @@ namespace CasaSoft.vrt.Modeling
             e.Handled = !char.IsDigit(e.KeyChar) & e.KeyChar != (char)Keys.Back & e.KeyChar != '.' & e.KeyChar != '-';
         }
         #endregion
-
-        private void fileOpener_FileTextChanged(object sender, EventArgs e)
-        {
-            MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
-            s = sf.shape;
-            name = Path.GetFileNameWithoutExtension(fileOpener.FileName);
-
-            txtBB1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.X);
-            txtBB2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Y);
-            txtBB3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Z);
-            txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
-            txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
-            txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
-
-            txtEngSize1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.X - s.MinPoint.X));
-            txtEngSize2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Y - s.MinPoint.Y));
-            txtEngSize3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Z - s.MinPoint.Z));
-
-            txtRefDesc.Text = name;
-
-            setSaveButton(tabControl.SelectedIndex);
-        }
-
+        
         #region save
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            setSaveButton(((TabControl)sender).SelectedIndex);
-        }
-
         private void setSaveButton(int mode)
         {
             switch (mode)
@@ -153,7 +127,8 @@ namespace CasaSoft.vrt.Modeling
                     break;
 
                 case 1:
-                    btnSave.Enabled = false;
+                    setSaveDialog4eng();
+                    btnSave.Enabled = true;
                     break;
 
                 case 2:
@@ -167,6 +142,9 @@ namespace CasaSoft.vrt.Modeling
             }
         }
 
+        /// <summary>
+        /// Save dialog settings for .ref file
+        /// </summary>
         private void setSaveDialog4ref()
         {
             saveFileDialog.DefaultExt = ".ref";
@@ -187,6 +165,27 @@ namespace CasaSoft.vrt.Modeling
         }
 
         /// <summary>
+        /// Save dialog settings for Eng/Wag
+        /// </summary>
+        private void setSaveDialog4eng()
+        {
+            saveFileDialog.CheckFileExists = false;
+            saveFileDialog.OverwritePrompt = true;
+            if (((ComboboxItem)cmbWagType.SelectedItem).Value.ToString() == "Engine")
+            {
+                saveFileDialog.Title = catalog.GetString("Create Eng file");
+                saveFileDialog.Filter = catalog.GetString("Eng file (*.eng)|*.eng|All files|*.*");
+                saveFileDialog.DefaultExt = ".eng";
+            }
+            else
+            {
+                saveFileDialog.Title = catalog.GetString("Create Wag file");
+                saveFileDialog.Filter = catalog.GetString("Wag file (*.wag)|*.wag|All files|*.*");
+                saveFileDialog.DefaultExt = ".wag";
+            }
+        }
+
+        /// <summary>
         /// Converts textbox input to float
         /// </summary>
         /// <param name="s">string to parse</param>
@@ -203,7 +202,7 @@ namespace CasaSoft.vrt.Modeling
             switch (tabControl.SelectedIndex)
             {
                 case 0:
-                    SaveSd saveSd = new SaveSd(string.Format("{0}.s", name), 
+                    SaveSd saveSd = new SaveSd(string.Format("{0}.s", this.name), 
                         Convert.ToInt16(numSdDetail.Value),
                         Convert.ToInt16(((ComboboxItem)cmbSdTexture.SelectedItem).Value),
                         new float[6] {
@@ -218,10 +217,19 @@ namespace CasaSoft.vrt.Modeling
                     break;
 
                 case 1:
+                    SaveEng saveEng = new SaveEng(((ComboboxItem)cmbWagType.SelectedItem).Value.ToString(),
+                        ((ComboboxItem)cmbEngType.SelectedItem).Value.ToString(),
+                        this.name,
+                        new float[3] {
+                            parse4float(txtEngSize1.Text),
+                            parse4float(txtEngSize2.Text),
+                            parse4float(txtEngSize3.Text)
+                        });
+                    saveEng.Write(filename);
                     break;
 
                 case 2:
-                    SaveRef saveRef = new SaveRef(name, txtRefClass.Text, txtRefDesc.Text);
+                    SaveRef saveRef = new SaveRef(this.name, txtRefClass.Text, txtRefDesc.Text);
                     if(chkRefAppend.Checked)
                     {
                         saveRef.Append(filename);
@@ -238,9 +246,53 @@ namespace CasaSoft.vrt.Modeling
         }
         #endregion
 
+        #region Event handlers
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            setSaveButton(((TabControl)sender).SelectedIndex);
+        }
+
+        private void fileOpener_FileTextChanged(object sender, EventArgs e)
+        {
+            MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
+            s = sf.shape;
+            name = Path.GetFileNameWithoutExtension(fileOpener.FileName);
+
+            txtBB1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.X);
+            txtBB2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Y);
+            txtBB3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Z);
+            txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
+            txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
+            txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
+
+            txtEngSize1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.X - s.MinPoint.X));
+            txtEngSize2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Y - s.MinPoint.Y));
+            txtEngSize3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Z - s.MinPoint.Z));
+
+            txtRefDesc.Text = name;
+
+            tabControl.Enabled = true;
+            setSaveButton(tabControl.SelectedIndex);
+        }
+
         private void chkRefAppend_CheckedChanged(object sender, EventArgs e)
         {
             setSaveDialog4ref();
         }
+
+        private void cmbWagType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            setSaveDialog4eng();
+            if (((ComboboxItem)cmbWagType.SelectedItem).Value.ToString() == "Engine")
+            {
+                cmbEngType.Enabled = true;
+            }
+            else
+            {
+                cmbEngType.Enabled = false;
+            }
+        }
+        #endregion
+
     }
 }
