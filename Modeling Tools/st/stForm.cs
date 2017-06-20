@@ -80,6 +80,20 @@ namespace CasaSoft.vrt.Modeling
             lblRefDesc.Text = catalog.GetString("Description");
             chkRefAppend.Text = catalog.GetString("Append to existing file");
 
+            cmbWagType.Items.Add(new ComboboxItem { Value = "Engine", Text = catalog.GetString("Engine") });
+            cmbWagType.Items.Add(new ComboboxItem { Value = "Carriage", Text = catalog.GetString("Carriage") });
+            cmbWagType.Items.Add(new ComboboxItem { Value = "Freight", Text = catalog.GetString("Freight") });
+            cmbWagType.Items.Add(new ComboboxItem { Value = "Tender", Text = catalog.GetString("Tender") });
+            cmbWagType.SelectedIndex = 0;
+
+            cmbEngType.Items.Add(new ComboboxItem { Value = "Electric", Text = catalog.GetString("Electric") });
+            cmbEngType.Items.Add(new ComboboxItem { Value = "Diesel", Text = catalog.GetString("Diesel") });
+            cmbEngType.Items.Add(new ComboboxItem { Value = "Steam", Text = catalog.GetString("Steam") });
+            cmbEngType.SelectedIndex = 0;
+
+            lblEngType.Text = "Eng Type";
+            lblWagType.Text = "Wag Type";
+
             btnSave.Enabled = false;
         }
 
