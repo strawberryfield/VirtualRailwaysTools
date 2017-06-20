@@ -419,6 +419,8 @@ namespace CasaSoft.vrt.Modeling
         private System.Windows.Forms.TabPage tabENG;
         private System.Windows.Forms.Label lblSdTexture;
         private System.Windows.Forms.ComboBox cmbSdTexture;
+        private System.Windows.Forms.ComboBox cmbWagType;
+        private System.Windows.Forms.ComboBox cmbEngType;
         private System.Windows.Forms.Label lblSdDetail;
         private System.Windows.Forms.NumericUpDown numSdDetail;
         private System.Windows.Forms.TabPage tabRef;
@@ -431,8 +433,14 @@ namespace CasaSoft.vrt.Modeling
         private System.Windows.Forms.TextBox txtBB1;
         private System.Windows.Forms.Label lblRefDesc;
         private System.Windows.Forms.Label lblRefClass;
+        private System.Windows.Forms.Label lblEngType;
+        private System.Windows.Forms.Label lblWagType;
         private System.Windows.Forms.TextBox txtRefDesc;
         private System.Windows.Forms.TextBox txtRefClass;
         private System.Windows.Forms.CheckBox chkRefAppend;
+        private System.Windows.Forms.Label lblEngSize;
+        private System.Windows.Forms.TextBox txtEngSize1;
+        private System.Windows.Forms.TextBox txtEngSize2;
+        private System.Windows.Forms.TextBox txtEngSize3;
     }
 }
