@@ -51,7 +51,7 @@ namespace CasaSoft.vrt.Modeling
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("Static (\n\t Class( {0} )\n\tFilename ( {1}.s )\n\tAlign ( None )\n\tDescription ( {2} )\n)\n",
+            return string.Format("Static (\n\tClass( {0} )\n\tFilename ( {1}.s )\n\tAlign ( None )\n\tDescription ( {2} )\n)\n",
                 clas, name, desc);
         }
 

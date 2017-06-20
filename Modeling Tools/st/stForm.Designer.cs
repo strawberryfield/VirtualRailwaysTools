@@ -68,9 +68,14 @@ namespace CasaSoft.vrt.Modeling
             this.lblRefClass = new System.Windows.Forms.Label();
             this.lblRefDesc = new System.Windows.Forms.Label();
             this.chkRefAppend = new System.Windows.Forms.CheckBox();
+            this.lblEngSize = new System.Windows.Forms.Label();
+            this.txtEngSize3 = new System.Windows.Forms.TextBox();
+            this.txtEngSize2 = new System.Windows.Forms.TextBox();
+            this.txtEngSize1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabSD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSdDetail)).BeginInit();
+            this.tabENG.SuspendLayout();
             this.tabRef.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -218,6 +223,10 @@ namespace CasaSoft.vrt.Modeling
             // 
             // tabENG
             // 
+            this.tabENG.Controls.Add(this.lblEngSize);
+            this.tabENG.Controls.Add(this.txtEngSize3);
+            this.tabENG.Controls.Add(this.txtEngSize2);
+            this.tabENG.Controls.Add(this.txtEngSize1);
             this.tabENG.Location = new System.Drawing.Point(4, 22);
             this.tabENG.Name = "tabENG";
             this.tabENG.Padding = new System.Windows.Forms.Padding(3);
@@ -286,6 +295,39 @@ namespace CasaSoft.vrt.Modeling
             this.chkRefAppend.UseVisualStyleBackColor = true;
             this.chkRefAppend.CheckedChanged += new System.EventHandler(this.chkRefAppend_CheckedChanged);
             // 
+            // lblEngSize
+            // 
+            this.lblEngSize.AutoSize = true;
+            this.lblEngSize.Location = new System.Drawing.Point(3, 57);
+            this.lblEngSize.Name = "lblEngSize";
+            this.lblEngSize.Size = new System.Drawing.Size(27, 13);
+            this.lblEngSize.TabIndex = 14;
+            this.lblEngSize.Text = "Size";
+            // 
+            // txtEngSize3
+            // 
+            this.txtEngSize3.Location = new System.Drawing.Point(169, 73);
+            this.txtEngSize3.Name = "txtEngSize3";
+            this.txtEngSize3.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize3.TabIndex = 13;
+            this.txtEngSize3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtEngSize2
+            // 
+            this.txtEngSize2.Location = new System.Drawing.Point(87, 73);
+            this.txtEngSize2.Name = "txtEngSize2";
+            this.txtEngSize2.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize2.TabIndex = 12;
+            this.txtEngSize2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtEngSize1
+            // 
+            this.txtEngSize1.Location = new System.Drawing.Point(6, 73);
+            this.txtEngSize1.Name = "txtEngSize1";
+            this.txtEngSize1.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize1.TabIndex = 11;
+            this.txtEngSize1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // stForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +345,8 @@ namespace CasaSoft.vrt.Modeling
             this.tabSD.ResumeLayout(false);
             this.tabSD.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSdDetail)).EndInit();
+            this.tabENG.ResumeLayout(false);
+            this.tabENG.PerformLayout();
             this.tabRef.ResumeLayout(false);
             this.tabRef.PerformLayout();
             this.ResumeLayout(false);
@@ -330,5 +374,9 @@ namespace CasaSoft.vrt.Modeling
         private System.Windows.Forms.TextBox txtRefDesc;
         private System.Windows.Forms.TextBox txtRefClass;
         private System.Windows.Forms.CheckBox chkRefAppend;
+        private System.Windows.Forms.Label lblEngSize;
+        private System.Windows.Forms.TextBox txtEngSize3;
+        private System.Windows.Forms.TextBox txtEngSize2;
+        private System.Windows.Forms.TextBox txtEngSize1;
     }
 }
