@@ -124,6 +124,10 @@ namespace CasaSoft.vrt.Modeling
             txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
             txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
 
+            txtEngSize1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.X - s.MinPoint.X));
+            txtEngSize2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Y - s.MinPoint.Y));
+            txtEngSize3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Z - s.MinPoint.Z));
+
             txtRefDesc.Text = name;
 
             setSaveButton(tabControl.SelectedIndex);

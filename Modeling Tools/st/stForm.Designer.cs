@@ -62,20 +62,20 @@ namespace CasaSoft.vrt.Modeling
             this.lblSdDetail = new System.Windows.Forms.Label();
             this.numSdDetail = new System.Windows.Forms.NumericUpDown();
             this.tabENG = new System.Windows.Forms.TabPage();
+            this.cmbEngType = new System.Windows.Forms.ComboBox();
+            this.cmbWagType = new System.Windows.Forms.ComboBox();
+            this.lblEngType = new System.Windows.Forms.Label();
+            this.lblWagType = new System.Windows.Forms.Label();
+            this.lblEngSize = new System.Windows.Forms.Label();
+            this.txtEngSize1 = new System.Windows.Forms.TextBox();
+            this.txtEngSize2 = new System.Windows.Forms.TextBox();
+            this.txtEngSize3 = new System.Windows.Forms.TextBox();
             this.tabRef = new System.Windows.Forms.TabPage();
             this.chkRefAppend = new System.Windows.Forms.CheckBox();
             this.lblRefDesc = new System.Windows.Forms.Label();
             this.lblRefClass = new System.Windows.Forms.Label();
             this.txtRefDesc = new System.Windows.Forms.TextBox();
             this.txtRefClass = new System.Windows.Forms.TextBox();
-            this.cmbWagType = new System.Windows.Forms.ComboBox();
-            this.lblWagType = new System.Windows.Forms.Label();
-            this.lblEngType = new System.Windows.Forms.Label();
-            this.cmbEngType = new System.Windows.Forms.ComboBox();
-            this.lblEngSize = new System.Windows.Forms.Label();
-            this.txtEngSize3 = new System.Windows.Forms.TextBox();
-            this.txtEngSize2 = new System.Windows.Forms.TextBox();
-            this.txtEngSize1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabSD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSdDetail)).BeginInit();
@@ -97,11 +97,10 @@ namespace CasaSoft.vrt.Modeling
             this.tabControl.Controls.Add(this.tabSD);
             this.tabControl.Controls.Add(this.tabENG);
             this.tabControl.Controls.Add(this.tabRef);
-            this.tabControl.Location = new System.Drawing.Point(16, 80);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl.Location = new System.Drawing.Point(12, 65);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(756, 198);
+            this.tabControl.Size = new System.Drawing.Size(567, 161);
             this.tabControl.TabIndex = 9;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -118,11 +117,10 @@ namespace CasaSoft.vrt.Modeling
             this.tabSD.Controls.Add(this.cmbSdTexture);
             this.tabSD.Controls.Add(this.lblSdDetail);
             this.tabSD.Controls.Add(this.numSdDetail);
-            this.tabSD.Location = new System.Drawing.Point(4, 25);
-            this.tabSD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSD.Location = new System.Drawing.Point(4, 22);
             this.tabSD.Name = "tabSD";
-            this.tabSD.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabSD.Size = new System.Drawing.Size(748, 169);
+            this.tabSD.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSD.Size = new System.Drawing.Size(559, 135);
             this.tabSD.TabIndex = 0;
             this.tabSD.Text = "SD";
             this.tabSD.UseVisualStyleBackColor = true;
@@ -130,69 +128,62 @@ namespace CasaSoft.vrt.Modeling
             // lblBB
             // 
             this.lblBB.AutoSize = true;
-            this.lblBB.Location = new System.Drawing.Point(8, 70);
-            this.lblBB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBB.Location = new System.Drawing.Point(6, 57);
             this.lblBB.Name = "lblBB";
-            this.lblBB.Size = new System.Drawing.Size(95, 17);
+            this.lblBB.Size = new System.Drawing.Size(73, 13);
             this.lblBB.TabIndex = 10;
             this.lblBB.Text = "Bounding Box";
             // 
             // txtBB6
             // 
-            this.txtBB6.Location = new System.Drawing.Point(548, 90);
-            this.txtBB6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB6.Location = new System.Drawing.Point(411, 73);
             this.txtBB6.Name = "txtBB6";
-            this.txtBB6.Size = new System.Drawing.Size(99, 22);
+            this.txtBB6.Size = new System.Drawing.Size(75, 20);
             this.txtBB6.TabIndex = 9;
             this.txtBB6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB5
             // 
-            this.txtBB5.Location = new System.Drawing.Point(440, 90);
-            this.txtBB5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB5.Location = new System.Drawing.Point(330, 73);
             this.txtBB5.Name = "txtBB5";
-            this.txtBB5.Size = new System.Drawing.Size(99, 22);
+            this.txtBB5.Size = new System.Drawing.Size(75, 20);
             this.txtBB5.TabIndex = 8;
             this.txtBB5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB4
             // 
-            this.txtBB4.Location = new System.Drawing.Point(332, 90);
-            this.txtBB4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB4.Location = new System.Drawing.Point(249, 73);
             this.txtBB4.Name = "txtBB4";
-            this.txtBB4.Size = new System.Drawing.Size(99, 22);
+            this.txtBB4.Size = new System.Drawing.Size(75, 20);
             this.txtBB4.TabIndex = 7;
             this.txtBB4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB3
             // 
-            this.txtBB3.Location = new System.Drawing.Point(224, 90);
-            this.txtBB3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB3.Location = new System.Drawing.Point(168, 73);
             this.txtBB3.Name = "txtBB3";
-            this.txtBB3.Size = new System.Drawing.Size(99, 22);
+            this.txtBB3.Size = new System.Drawing.Size(75, 20);
             this.txtBB3.TabIndex = 6;
             this.txtBB3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB2
             // 
-            this.txtBB2.Location = new System.Drawing.Point(116, 90);
-            this.txtBB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB2.Location = new System.Drawing.Point(87, 73);
             this.txtBB2.Name = "txtBB2";
-            this.txtBB2.Size = new System.Drawing.Size(99, 22);
+            this.txtBB2.Size = new System.Drawing.Size(75, 20);
             this.txtBB2.TabIndex = 5;
             this.txtBB2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
             // 
             // txtBB1
             // 
-            this.txtBB1.Location = new System.Drawing.Point(8, 90);
-            this.txtBB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBB1.Location = new System.Drawing.Point(6, 73);
             this.txtBB1.Name = "txtBB1";
-            this.txtBB1.Size = new System.Drawing.Size(99, 22);
+            this.txtBB1.Size = new System.Drawing.Size(75, 20);
             this.txtBB1.TabIndex = 4;
             this.txtBB1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBB1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeric_KeyPress);
@@ -200,55 +191,131 @@ namespace CasaSoft.vrt.Modeling
             // lblSdTexture
             // 
             this.lblSdTexture.AutoSize = true;
-            this.lblSdTexture.Location = new System.Drawing.Point(117, 10);
-            this.lblSdTexture.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSdTexture.Location = new System.Drawing.Point(88, 8);
             this.lblSdTexture.Name = "lblSdTexture";
-            this.lblSdTexture.Size = new System.Drawing.Size(127, 17);
+            this.lblSdTexture.Size = new System.Drawing.Size(96, 13);
             this.lblSdTexture.TabIndex = 3;
             this.lblSdTexture.Text = "Alternative Texture";
             // 
             // cmbSdTexture
             // 
             this.cmbSdTexture.FormattingEnabled = true;
-            this.cmbSdTexture.Location = new System.Drawing.Point(121, 30);
-            this.cmbSdTexture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSdTexture.Location = new System.Drawing.Point(91, 24);
             this.cmbSdTexture.Name = "cmbSdTexture";
-            this.cmbSdTexture.Size = new System.Drawing.Size(232, 24);
+            this.cmbSdTexture.Size = new System.Drawing.Size(175, 21);
             this.cmbSdTexture.TabIndex = 2;
             // 
             // lblSdDetail
             // 
             this.lblSdDetail.AutoSize = true;
-            this.lblSdDetail.Location = new System.Drawing.Point(4, 10);
-            this.lblSdDetail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSdDetail.Location = new System.Drawing.Point(3, 8);
             this.lblSdDetail.Name = "lblSdDetail";
-            this.lblSdDetail.Size = new System.Drawing.Size(82, 17);
+            this.lblSdDetail.Size = new System.Drawing.Size(63, 13);
             this.lblSdDetail.TabIndex = 1;
             this.lblSdDetail.Text = "Detail Level";
             // 
             // numSdDetail
             // 
-            this.numSdDetail.Location = new System.Drawing.Point(8, 30);
-            this.numSdDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSdDetail.Location = new System.Drawing.Point(6, 24);
             this.numSdDetail.Maximum = new decimal(new int[] {
             9,
             0,
             0,
             0});
             this.numSdDetail.Name = "numSdDetail";
-            this.numSdDetail.Size = new System.Drawing.Size(80, 22);
+            this.numSdDetail.Size = new System.Drawing.Size(60, 20);
             this.numSdDetail.TabIndex = 0;
             this.numSdDetail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tabENG
             // 
+            this.tabENG.Controls.Add(this.cmbEngType);
+            this.tabENG.Controls.Add(this.cmbWagType);
+            this.tabENG.Controls.Add(this.lblEngType);
+            this.tabENG.Controls.Add(this.lblWagType);
+            this.tabENG.Controls.Add(this.lblEngSize);
+            this.tabENG.Controls.Add(this.txtEngSize1);
+            this.tabENG.Controls.Add(this.txtEngSize2);
+            this.tabENG.Controls.Add(this.txtEngSize3);
             this.tabENG.Location = new System.Drawing.Point(4, 22);
+            this.tabENG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabENG.Name = "tabENG";
-            this.tabENG.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabENG.Size = new System.Drawing.Size(748, 169);
+            this.tabENG.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabENG.Size = new System.Drawing.Size(559, 135);
             this.tabENG.TabIndex = 1;
             this.tabENG.Text = "Eng / Wag";
             this.tabENG.UseVisualStyleBackColor = true;
+            // 
+            // cmbEngType
+            // 
+            this.cmbEngType.FormattingEnabled = true;
+            this.cmbEngType.Location = new System.Drawing.Point(152, 24);
+            this.cmbEngType.Name = "cmbEngType";
+            this.cmbEngType.Size = new System.Drawing.Size(131, 21);
+            this.cmbEngType.TabIndex = 5;
+            // 
+            // cmbWagType
+            // 
+            this.cmbWagType.FormattingEnabled = true;
+            this.cmbWagType.Location = new System.Drawing.Point(6, 24);
+            this.cmbWagType.Name = "cmbWagType";
+            this.cmbWagType.Size = new System.Drawing.Size(131, 21);
+            this.cmbWagType.TabIndex = 3;
+            // 
+            // lblEngType
+            // 
+            this.lblEngType.AutoSize = true;
+            this.lblEngType.Location = new System.Drawing.Point(149, 7);
+            this.lblEngType.Name = "lblEngType";
+            this.lblEngType.Size = new System.Drawing.Size(53, 13);
+            this.lblEngType.TabIndex = 6;
+            this.lblEngType.Text = "Eng Type";
+            // 
+            // lblWagType
+            // 
+            this.lblWagType.AutoSize = true;
+            this.lblWagType.Location = new System.Drawing.Point(4, 7);
+            this.lblWagType.Name = "lblWagType";
+            this.lblWagType.Size = new System.Drawing.Size(57, 13);
+            this.lblWagType.TabIndex = 4;
+            this.lblWagType.Text = "Wag Type";
+            // 
+            // lblEngSize
+            // 
+            this.lblEngSize.AutoSize = true;
+            this.lblEngSize.Location = new System.Drawing.Point(5, 58);
+            this.lblEngSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEngSize.Name = "lblEngSize";
+            this.lblEngSize.Size = new System.Drawing.Size(27, 13);
+            this.lblEngSize.TabIndex = 14;
+            this.lblEngSize.Text = "Size";
+            // 
+            // txtEngSize1
+            // 
+            this.txtEngSize1.Location = new System.Drawing.Point(6, 73);
+            this.txtEngSize1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize1.Name = "txtEngSize1";
+            this.txtEngSize1.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize1.TabIndex = 11;
+            this.txtEngSize1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtEngSize2
+            // 
+            this.txtEngSize2.Location = new System.Drawing.Point(87, 73);
+            this.txtEngSize2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize2.Name = "txtEngSize2";
+            this.txtEngSize2.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize2.TabIndex = 12;
+            this.txtEngSize2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtEngSize3
+            // 
+            this.txtEngSize3.Location = new System.Drawing.Point(168, 73);
+            this.txtEngSize3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEngSize3.Name = "txtEngSize3";
+            this.txtEngSize3.Size = new System.Drawing.Size(75, 20);
+            this.txtEngSize3.TabIndex = 13;
+            this.txtEngSize3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tabRef
             // 
@@ -257,11 +324,10 @@ namespace CasaSoft.vrt.Modeling
             this.tabRef.Controls.Add(this.lblRefClass);
             this.tabRef.Controls.Add(this.txtRefDesc);
             this.tabRef.Controls.Add(this.txtRefClass);
-            this.tabRef.Location = new System.Drawing.Point(4, 25);
-            this.tabRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabRef.Location = new System.Drawing.Point(4, 22);
             this.tabRef.Name = "tabRef";
-            this.tabRef.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabRef.Size = new System.Drawing.Size(748, 169);
+            this.tabRef.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabRef.Size = new System.Drawing.Size(559, 135);
             this.tabRef.TabIndex = 2;
             this.tabRef.Text = "Ref";
             this.tabRef.UseVisualStyleBackColor = true;
@@ -271,10 +337,9 @@ namespace CasaSoft.vrt.Modeling
             this.chkRefAppend.AutoSize = true;
             this.chkRefAppend.Checked = true;
             this.chkRefAppend.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRefAppend.Location = new System.Drawing.Point(8, 138);
-            this.chkRefAppend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkRefAppend.Location = new System.Drawing.Point(6, 112);
             this.chkRefAppend.Name = "chkRefAppend";
-            this.chkRefAppend.Size = new System.Drawing.Size(168, 21);
+            this.chkRefAppend.Size = new System.Drawing.Size(129, 17);
             this.chkRefAppend.TabIndex = 4;
             this.chkRefAppend.Text = "Append to existing file";
             this.chkRefAppend.UseVisualStyleBackColor = true;
@@ -283,117 +348,42 @@ namespace CasaSoft.vrt.Modeling
             // lblRefDesc
             // 
             this.lblRefDesc.AutoSize = true;
-            this.lblRefDesc.Location = new System.Drawing.Point(8, 70);
-            this.lblRefDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRefDesc.Location = new System.Drawing.Point(6, 57);
             this.lblRefDesc.Name = "lblRefDesc";
-            this.lblRefDesc.Size = new System.Drawing.Size(79, 17);
+            this.lblRefDesc.Size = new System.Drawing.Size(60, 13);
             this.lblRefDesc.TabIndex = 3;
             this.lblRefDesc.Text = "Description";
             // 
             // lblRefClass
             // 
             this.lblRefClass.AutoSize = true;
-            this.lblRefClass.Location = new System.Drawing.Point(8, 10);
-            this.lblRefClass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRefClass.Location = new System.Drawing.Point(6, 8);
             this.lblRefClass.Name = "lblRefClass";
-            this.lblRefClass.Size = new System.Drawing.Size(42, 17);
+            this.lblRefClass.Size = new System.Drawing.Size(32, 13);
             this.lblRefClass.TabIndex = 2;
             this.lblRefClass.Text = "Class";
             // 
             // txtRefDesc
             // 
-            this.txtRefDesc.Location = new System.Drawing.Point(8, 90);
-            this.txtRefDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRefDesc.Location = new System.Drawing.Point(6, 73);
             this.txtRefDesc.Name = "txtRefDesc";
-            this.txtRefDesc.Size = new System.Drawing.Size(521, 22);
+            this.txtRefDesc.Size = new System.Drawing.Size(392, 20);
             this.txtRefDesc.TabIndex = 1;
             // 
             // txtRefClass
             // 
-            this.txtRefClass.Location = new System.Drawing.Point(8, 30);
-            this.txtRefClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRefClass.Location = new System.Drawing.Point(6, 24);
             this.txtRefClass.Name = "txtRefClass";
-            this.txtRefClass.Size = new System.Drawing.Size(211, 22);
+            this.txtRefClass.Size = new System.Drawing.Size(159, 20);
             this.txtRefClass.TabIndex = 0;
-            // 
-            // cmbWagType
-            // 
-            this.cmbWagType.FormattingEnabled = true;
-            this.cmbWagType.Location = new System.Drawing.Point(8, 30);
-            this.cmbWagType.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbWagType.Name = "cmbWagType";
-            this.cmbWagType.Size = new System.Drawing.Size(173, 24);
-            this.cmbWagType.TabIndex = 3;
-            // 
-            // lblWagType
-            // 
-            this.lblWagType.AutoSize = true;
-            this.lblWagType.Location = new System.Drawing.Point(5, 9);
-            this.lblWagType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblWagType.Name = "lblWagType";
-            this.lblWagType.Size = new System.Drawing.Size(73, 17);
-            this.lblWagType.TabIndex = 4;
-            this.lblWagType.Text = "Wag Type";
-            // 
-            // lblEngType
-            // 
-            this.lblEngType.AutoSize = true;
-            this.lblEngType.Location = new System.Drawing.Point(199, 9);
-            this.lblEngType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEngType.Name = "lblEngType";
-            this.lblEngType.Size = new System.Drawing.Size(69, 17);
-            this.lblEngType.TabIndex = 6;
-            this.lblEngType.Text = "Eng Type";
-            // 
-            // cmbEngType
-            // 
-            this.cmbEngType.FormattingEnabled = true;
-            this.cmbEngType.Location = new System.Drawing.Point(202, 30);
-            this.cmbEngType.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbEngType.Name = "cmbEngType";
-            this.cmbEngType.Size = new System.Drawing.Size(173, 24);
-            this.cmbEngType.TabIndex = 5;
-            // 
-            // lblEngSize
-            // 
-            this.lblEngSize.AutoSize = true;
-            this.lblEngSize.Location = new System.Drawing.Point(3, 57);
-            this.lblEngSize.Name = "lblEngSize";
-            this.lblEngSize.Size = new System.Drawing.Size(27, 13);
-            this.lblEngSize.TabIndex = 14;
-            this.lblEngSize.Text = "Size";
-            // 
-            // txtEngSize3
-            // 
-            this.txtEngSize3.Location = new System.Drawing.Point(169, 73);
-            this.txtEngSize3.Name = "txtEngSize3";
-            this.txtEngSize3.Size = new System.Drawing.Size(75, 20);
-            this.txtEngSize3.TabIndex = 13;
-            this.txtEngSize3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtEngSize2
-            // 
-            this.txtEngSize2.Location = new System.Drawing.Point(87, 73);
-            this.txtEngSize2.Name = "txtEngSize2";
-            this.txtEngSize2.Size = new System.Drawing.Size(75, 20);
-            this.txtEngSize2.TabIndex = 12;
-            this.txtEngSize2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtEngSize1
-            // 
-            this.txtEngSize1.Location = new System.Drawing.Point(6, 73);
-            this.txtEngSize1.Name = "txtEngSize1";
-            this.txtEngSize1.Size = new System.Drawing.Size(75, 20);
-            this.txtEngSize1.TabIndex = 11;
-            this.txtEngSize1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // stForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 321);
+            this.ClientSize = new System.Drawing.Size(585, 261);
             this.Controls.Add(this.tabControl);
-            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "stForm";
             this.Text = "stForm";
             this.Shown += new System.EventHandler(this.stForm_Shown);
