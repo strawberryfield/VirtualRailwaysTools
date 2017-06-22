@@ -252,27 +252,43 @@ namespace CasaSoft.vrt.Modeling
         /// </summary>
         protected override void doOpenFile()
         {
-            base.doOpenFile();
+            string file = fileOpener.FileName;
+            MstsShapeFile sf = null;
 
-            MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
-            s = sf.shape;
-            name = Path.GetFileNameWithoutExtension(fileOpener.FileName);
+            if (!string.IsNullOrWhiteSpace(file))
+            {
+                try
+                {
+                    sf = new MstsShapeFile(fileOpener.FileName);
+                }
+                catch (Exception ex)
+                {
+                    Balloon(catalog.GetString("Error processing file '{0}':\n{1}", file, ex.Message));
+                }
 
-            txtBB1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.X);
-            txtBB2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Y);
-            txtBB3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Z);
-            txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
-            txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
-            txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
+                if (sf != null)
+                {
+                    s = sf.shape;
+                    name = Path.GetFileNameWithoutExtension(file);
 
-            txtEngSize1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.X - s.MinPoint.X));
-            txtEngSize2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Y - s.MinPoint.Y));
-            txtEngSize3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Z - s.MinPoint.Z));
+                    txtBB1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.X);
+                    txtBB2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Y);
+                    txtBB3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MinPoint.Z);
+                    txtBB4.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.X);
+                    txtBB5.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Y);
+                    txtBB6.Text = string.Format(CultureInfo.InvariantCulture, "{0}", s.MaxPoint.Z);
 
-            txtRefDesc.Text = name;
+                    txtEngSize1.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.X - s.MinPoint.X));
+                    txtEngSize2.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Y - s.MinPoint.Y));
+                    txtEngSize3.Text = string.Format(CultureInfo.InvariantCulture, "{0}", Math.Abs(s.MaxPoint.Z - s.MinPoint.Z));
 
-            tabControl.Enabled = true;
-            setSaveButton(tabControl.SelectedIndex);
+                    txtRefDesc.Text = name;
+
+                    tabControl.Enabled = true;
+                    setSaveButton(tabControl.SelectedIndex);
+                    base.doOpenFile();
+                }
+            }
         }
 
         private void chkRefAppend_CheckedChanged(object sender, EventArgs e)
