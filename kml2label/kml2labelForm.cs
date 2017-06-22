@@ -37,11 +37,13 @@ namespace CasaSoft.vrt.forms
             InitializeComponent();
             Text = getProgramTitle();
             btnClip.Text = catalog.GetString("Clipboard");
+            btnClip.Enabled = false;
         }
 
         protected override void AfterFileOpenerChanged()
         {
             base.AfterFileOpenerChanged();
+            btnClip.Enabled = true;
             R3Dorigin.SetKml(kml);
         }
 

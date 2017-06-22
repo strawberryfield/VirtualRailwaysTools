@@ -91,6 +91,7 @@ namespace CasaSoft.vrt.Modeling
         {
             conv = new mm2mConverter();
             conv.ReadFile(fileOpener.FileName);
+            base.doOpenFile();
         }
     }
 }

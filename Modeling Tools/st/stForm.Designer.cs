@@ -87,7 +87,6 @@ namespace CasaSoft.vrt.Modeling
             // 
             this.fileOpener.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileOpener.FileTextChanged += new System.EventHandler(this.fileOpener_FileTextChanged);
             // 
             // tabControl
             // 

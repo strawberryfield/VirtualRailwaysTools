@@ -97,6 +97,7 @@ namespace CasaSoft.vrt.forms
                 if (kml != null)
                 {
                     AfterFileOpenerChanged();
+                    base.doOpenFile();
                 }
             }
 

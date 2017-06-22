@@ -45,6 +45,7 @@ namespace CasaSoft.vrt.forms
         public FileOpenerForm(Assembly program, CultureInfo locale) : base(program, locale)
         {
             InitializeComponent();
+            btnSave.Enabled = false;
         }
         #endregion
 
@@ -68,7 +69,7 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         protected virtual void doOpenFile()
         {
-            // virtual
+            btnSave.Enabled = true;
         }
 
 

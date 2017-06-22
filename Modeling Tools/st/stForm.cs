@@ -95,7 +95,6 @@ namespace CasaSoft.vrt.Modeling
             lblWagType.Text = "Wag Type";
 
             tabControl.Enabled = false;
-            btnSave.Enabled = false;
         }
 
         private void stForm_Shown(object sender, EventArgs e)
@@ -123,21 +122,17 @@ namespace CasaSoft.vrt.Modeling
                     saveFileDialog.DefaultExt = ".sd";
                     saveFileDialog.CheckFileExists = false;
                     saveFileDialog.OverwritePrompt = true;
-                    btnSave.Enabled = true;
                     break;
 
                 case 1:
                     setSaveDialog4eng();
-                    btnSave.Enabled = true;
                     break;
 
                 case 2:
                     setSaveDialog4ref();
-                    btnSave.Enabled = true;
                     break;
 
                 default:
-                    btnSave.Enabled = false;
                     break;
             }
         }
@@ -252,8 +247,13 @@ namespace CasaSoft.vrt.Modeling
             setSaveButton(((TabControl)sender).SelectedIndex);
         }
 
-        private void fileOpener_FileTextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Open file dirty work
+        /// </summary>
+        protected override void doOpenFile()
         {
+            base.doOpenFile();
+
             MstsShapeFile sf = new MstsShapeFile(fileOpener.FileName);
             s = sf.shape;
             name = Path.GetFileNameWithoutExtension(fileOpener.FileName);
