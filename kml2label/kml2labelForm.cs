@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools

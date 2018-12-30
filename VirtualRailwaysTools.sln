@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kml2mkrc", "kml2mkrc\kml2mkrc.csproj", "{7CA6F8EF-5EA1-4619-A2D8-3E98DF266EF0}"
 EndProject
@@ -84,6 +84,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "st", "Modeling Tools\st\st.csproj", "{2E913657-FCA9-48D8-B851-FE3E2D37AA2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTSshape", "Modeling Tools\MSTSshape\MSTSshape.csproj", "{12432253-3DE8-433B-A7B4-B12B5D35B825}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{A025FBCC-406B-4A81-B986-C9A9C401FE9F}"
+	ProjectSection(SolutionItems) = preProject
+		Samples\GPS device.kml = Samples\GPS device.kml
+		Samples\GPS device.mkr = Samples\GPS device.mkr
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -222,5 +228,8 @@ Global
 		{570709FA-0C8A-4B1D-BA2D-D9455AFD9B5C} = {6667A0A9-D25B-4444-ACB5-471A12E46685}
 		{2E913657-FCA9-48D8-B851-FE3E2D37AA2D} = {FAA20F92-278D-4B69-A177-B914E8DE4354}
 		{12432253-3DE8-433B-A7B4-B12B5D35B825} = {FAA20F92-278D-4B69-A177-B914E8DE4354}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90285E0F-ED53-455B-A8BA-31AC70590BE3}
 	EndGlobalSection
 EndGlobal

@@ -79,6 +79,12 @@ namespace CasaSoft.vrt.KmlLib
         string PolyBody();
 
         /// <summary>
+        /// Returns converted data of all polygons
+        /// </summary>
+        /// <returns></returns>
+        string TrackBody();
+
+        /// <summary>
         /// Sets the data to convert from an instance of <see cref="T:CasaSoft.vrt.KmlLib.KmlLib"/> 
         /// </summary>
         /// <param name="kmlLib"></param>

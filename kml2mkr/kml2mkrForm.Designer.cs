@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -53,11 +53,19 @@ namespace CasaSoft.vrt.forms
             this.rdText = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(494, 245);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(12, 245);
+            // 
             // rdMkr
             // 
             this.rdMkr.AutoSize = true;
             this.rdMkr.Checked = true;
-            this.rdMkr.Location = new System.Drawing.Point(12, 148);
+            this.rdMkr.Location = new System.Drawing.Point(12, 160);
             this.rdMkr.Name = "rdMkr";
             this.rdMkr.Size = new System.Drawing.Size(129, 17);
             this.rdMkr.TabIndex = 7;
@@ -68,7 +76,7 @@ namespace CasaSoft.vrt.forms
             // rdFlyTo
             // 
             this.rdFlyTo.AutoSize = true;
-            this.rdFlyTo.Location = new System.Drawing.Point(12, 171);
+            this.rdFlyTo.Location = new System.Drawing.Point(12, 183);
             this.rdFlyTo.Name = "rdFlyTo";
             this.rdFlyTo.Size = new System.Drawing.Size(131, 17);
             this.rdFlyTo.TabIndex = 8;
@@ -79,7 +87,7 @@ namespace CasaSoft.vrt.forms
             // rdText
             // 
             this.rdText.AutoSize = true;
-            this.rdText.Location = new System.Drawing.Point(12, 194);
+            this.rdText.Location = new System.Drawing.Point(12, 206);
             this.rdText.Name = "rdText";
             this.rdText.Size = new System.Drawing.Size(61, 17);
             this.rdText.TabIndex = 9;
@@ -91,12 +99,16 @@ namespace CasaSoft.vrt.forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 261);
+            this.ClientSize = new System.Drawing.Size(585, 277);
             this.Controls.Add(this.rdText);
             this.Controls.Add(this.rdFlyTo);
             this.Controls.Add(this.rdMkr);
             this.Name = "kml2mkrForm";
             this.Text = "kml2mkrForm";
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
+            this.Controls.SetChildIndex(this.ContentSelector, 0);
             this.Controls.SetChildIndex(this.rdMkr, 0);
             this.Controls.SetChildIndex(this.rdFlyTo, 0);
             this.Controls.SetChildIndex(this.rdText, 0);

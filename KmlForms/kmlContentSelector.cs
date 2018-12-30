@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -57,6 +57,13 @@ namespace CasaSoft.vrt.forms
         /// </summary>
         [Description("status of Polys chechbox"), Category()]
         public bool PolysSelected { get { return chkPolys.Checked; } }
+
+        /// <summary>
+        /// Return status of Tracks chechbox
+        /// </summary>
+        [Description("status of Tracks chechbox"), Category()]
+        public bool TracksSelected { get { return chkTracks.Checked; } }
+
         #endregion
 
         #region controls management
@@ -70,6 +77,7 @@ namespace CasaSoft.vrt.forms
             chkPlacemarks.Tag = catalog.GetString("Placemarks");
             chkPaths.Tag = catalog.GetString("Paths");
             chkPolys.Tag = catalog.GetString("Polygons");
+            chkTracks.Tag = catalog.GetString("Tracks");
 
             resetControls();
         }
@@ -82,14 +90,17 @@ namespace CasaSoft.vrt.forms
             chkPlacemarks.Text = (string)chkPlacemarks.Tag;
             chkPaths.Text = (string)chkPaths.Tag;
             chkPolys.Text = (string)chkPolys.Tag;
+            chkTracks.Text = (string)chkTracks.Tag;
 
             chkPlacemarks.Enabled = false;
             chkPaths.Enabled = false;
             chkPolys.Enabled = false;
+            chkTracks.Enabled = false;
 
             chkPlacemarks.Checked = false;
             chkPaths.Checked = false;
             chkPolys.Checked = false;
+            chkTracks.Checked = false;
         }
 
         /// <summary>
@@ -116,6 +127,13 @@ namespace CasaSoft.vrt.forms
                 chkPolys.Enabled = true;
                 chkPolys.Checked = true;
             }
+            chkTracks.Text = string.Format("{0} ({1})", chkTracks.Tag, kml.CountTracks());
+            if (kml.CountTracks() > 0)
+            {
+                chkTracks.Enabled = true;
+                chkTracks.Checked = true;
+            }
+
         }
         #endregion
 

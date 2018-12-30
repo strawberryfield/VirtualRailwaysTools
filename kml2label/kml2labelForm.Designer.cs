@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -52,6 +52,10 @@ namespace CasaSoft.vrt.forms
             this.btnClip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // ContentSelector
+            // 
+            this.ContentSelector.Location = new System.Drawing.Point(12, 70);
+            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(494, 291);
@@ -62,7 +66,7 @@ namespace CasaSoft.vrt.forms
             // 
             // R3Dorigin
             // 
-            this.R3Dorigin.Location = new System.Drawing.Point(12, 130);
+            this.R3Dorigin.Location = new System.Drawing.Point(267, 70);
             this.R3Dorigin.Name = "R3Dorigin";
             this.R3Dorigin.Size = new System.Drawing.Size(312, 152);
             this.R3Dorigin.TabIndex = 10;

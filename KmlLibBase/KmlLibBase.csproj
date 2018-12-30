@@ -55,6 +55,7 @@
     <Compile Include="Placemark.cs" />
     <Compile Include="Polygon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Track.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

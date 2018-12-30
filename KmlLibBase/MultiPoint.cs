@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -53,7 +53,11 @@ namespace CasaSoft.vrt.KmlLib
         public void SetData(XmlNode pmdata, XmlNamespaceManager ns, string coords)
         {
             Nodes = new List<IKmlItem>();
-            Name = pmdata.SelectSingleNode("ns:name", ns).InnerText;
+            XmlNode nodeName = pmdata.SelectSingleNode("ns:name", ns);
+            if (nodeName != null)
+                Name = nodeName.InnerText;
+            else
+                Name = "No Name";
             string re = @" ";
             string[] result = Regex.Split(coords, re);
             foreach (string item in result)

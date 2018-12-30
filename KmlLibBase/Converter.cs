@@ -194,6 +194,16 @@ namespace CasaSoft.vrt.KmlLib
         {
             return MultiPointBody(kml.PolyList);
         }
+
+        /// <summary>
+        /// Decodes all Polygon items
+        /// </summary>
+        /// <returns></returns>
+        public virtual string TrackBody()
+        {
+            return MultiPointBody(kml.TrackList);
+        }
+
         #endregion
 
         #region output to file

@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -84,6 +84,8 @@ namespace CasaSoft.vrt.forms
                 ret += conv.PathBody();
             if (ContentSelector.PolysSelected)
                 ret += conv.PolyBody();
+            if (ContentSelector.TracksSelected)
+                ret += conv.TrackBody();
             return ret;
         }
         #endregion

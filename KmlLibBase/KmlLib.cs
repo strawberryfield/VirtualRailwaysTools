@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -43,6 +43,10 @@ namespace CasaSoft.vrt.KmlLib
         /// List of polygon placemarks
         /// </summary>
         public List<IKmlItem> PolyList { protected set; get; }
+        /// <summary>
+        /// List of tracks placemarks
+        /// </summary>
+        public List<IKmlItem> TrackList { protected set; get; }
 
         #endregion
 
@@ -89,10 +93,15 @@ namespace CasaSoft.vrt.KmlLib
             // XML parser
             XmlNamespaceManager ns = new XmlNamespaceManager(Kml.NameTable);
             ns.AddNamespace("ns", "http://www.opengis.net/kml/2.2");
+            ns.AddNamespace("kml", "http://www.opengis.net/kml/2.2");
+            ns.AddNamespace("gx", "http://www.google.com/kml/ext/2.2");
+            ns.AddNamespace("atom", "http://www.w3.org/2005/Atom");
             XmlNodeList pmList = Kml.GetElementsByTagName("Placemark");
             PmList = new List<IKmlItem>();
             PathList = new List<IKmlItem>();
             PolyList = new List<IKmlItem>();
+            TrackList = new List<IKmlItem>();
+
             foreach (XmlNode nodo in pmList)
             {
                 if (nodo.SelectSingleNode("ns:Point", ns) != null)
@@ -113,7 +122,14 @@ namespace CasaSoft.vrt.KmlLib
                     po.SetData(nodo, ns);
                     PolyList.Add(po);
                 }
+                if (nodo.SelectSingleNode("gx:Track", ns) != null)
+                {
+                    Track tr = new Track();
+                    tr.SetData(nodo, ns);
+                    TrackList.Add(tr);
+                }
             }
+
         }
         #endregion
 
@@ -144,6 +160,16 @@ namespace CasaSoft.vrt.KmlLib
         {
             return PolyList.Count;
         }
+
+        /// <summary>
+        /// Returns number of tracks in file
+        /// </summary>
+        /// <returns></returns>
+        public int CountTracks()
+        {
+            return TrackList.Count;
+        }
+
         #endregion
 
         #region items lists
@@ -190,6 +216,16 @@ namespace CasaSoft.vrt.KmlLib
         {
             return ItemsNames(PolyList);
         }
+
+        /// <summary>
+        /// Lists all names of tracks in object array useful for comboboxes
+        /// </summary>
+        /// <returns></returns>
+        public object[] TracksNames()
+        {
+            return ItemsNames(TrackList);
+        }
+
         #endregion
 
         #region getElementByName

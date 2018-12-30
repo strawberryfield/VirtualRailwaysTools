@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -51,6 +51,7 @@ namespace CasaSoft.vrt.forms
             this.chkPlacemarks = new System.Windows.Forms.CheckBox();
             this.chkPaths = new System.Windows.Forms.CheckBox();
             this.chkPolys = new System.Windows.Forms.CheckBox();
+            this.chkTracks = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // chkPlacemarks
@@ -86,15 +87,27 @@ namespace CasaSoft.vrt.forms
             this.chkPolys.Text = "Polygons";
             this.chkPolys.UseVisualStyleBackColor = true;
             // 
+            // chkTracks
+            // 
+            this.chkTracks.AutoSize = true;
+            this.chkTracks.Location = new System.Drawing.Point(3, 72);
+            this.chkTracks.Name = "chkTracks";
+            this.chkTracks.Size = new System.Drawing.Size(59, 17);
+            this.chkTracks.TabIndex = 3;
+            this.chkTracks.Tag = "Tracks";
+            this.chkTracks.Text = "Tracks";
+            this.chkTracks.UseVisualStyleBackColor = true;
+            // 
             // kmlContentSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chkTracks);
             this.Controls.Add(this.chkPolys);
             this.Controls.Add(this.chkPaths);
             this.Controls.Add(this.chkPlacemarks);
             this.Name = "kmlContentSelector";
-            this.Size = new System.Drawing.Size(150, 66);
+            this.Size = new System.Drawing.Size(150, 90);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +118,6 @@ namespace CasaSoft.vrt.forms
         private System.Windows.Forms.CheckBox chkPlacemarks;
         private System.Windows.Forms.CheckBox chkPaths;
         private System.Windows.Forms.CheckBox chkPolys;
+        private System.Windows.Forms.CheckBox chkTracks;
     }
 }

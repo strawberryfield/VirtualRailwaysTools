@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -51,22 +51,33 @@ namespace CasaSoft.vrt.forms
             this.ContentSelector = new CasaSoft.vrt.forms.kmlContentSelector();
             this.SuspendLayout();
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(494, 258);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(12, 258);
+            // 
             // ContentSelector
             // 
             this.ContentSelector.Location = new System.Drawing.Point(12, 57);
             this.ContentSelector.Name = "ContentSelector";
-            this.ContentSelector.Size = new System.Drawing.Size(147, 67);
+            this.ContentSelector.Size = new System.Drawing.Size(147, 93);
             this.ContentSelector.TabIndex = 8;
             // 
             // KmlUtilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 271);
+            this.ClientSize = new System.Drawing.Size(595, 297);
             this.Controls.Add(this.ContentSelector);
             this.Name = "KmlUtilForm";
             this.Text = "KmlUtilForm";
             this.Shown += new System.EventHandler(this.KmlUtilForm_Shown);
+            this.Controls.SetChildIndex(this.btnSave, 0);
+            this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.fileOpener, 0);
             this.Controls.SetChildIndex(this.ContentSelector, 0);
             this.ResumeLayout(false);
 

@@ -1,4 +1,4 @@
-﻿// copyright (c) 2017 Roberto Ceccarelli - CasaSoft
+﻿// copyright (c) 2017,2019 Roberto Ceccarelli - CasaSoft
 // http://strawberryfield.altervista.org 
 // 
 // This file is part of CasaSoft Virtual Railways Tools
@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CasaSoft")]
 [assembly: AssemblyProduct("CasaSoft Virtual Railways Tools")]
-[assembly: AssemblyCopyright("Copyright ©  2017 Roberto Ceccarelli - CasaSoft")]
+[assembly: AssemblyCopyright("Copyright ©  2017,2019 Roberto Ceccarelli - CasaSoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
